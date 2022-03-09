@@ -13,7 +13,7 @@ Paginas similares:
 
 
 Integrantes:
-Emerson Leonardo Chapeta
+Emerson Leonardo Chapeta.
 Ariel Pagani
 Ignacio Oteiza
 Alexis Ariel Bello
