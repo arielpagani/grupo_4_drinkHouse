@@ -1,7 +1,7 @@
 # grupo_4_drinkHouse
 
 Drink House
-Nuestro sitio web tiene por objetivo brindar un servicio de venta de bebidas alcohólicas con envío a domicilio para empresas y personas particulares +18. La idea de nuestro e-comerce surge en el año 2022 cuando sus cuatro fundadores, provenientes de diferentes ámbitos laborales, se conocen en un curso de programación realizado en Digital House. 
+Nuestro sitio web tiene por objetivo brindar un servicio de venta de bebidas alcohólicas con envío a domicilio para empresas y personas particulares +18. La idea de nuestro eCommerce surge en el año 2022 cuando sus cuatro fundadores, provenientes de diferentes ámbitos laborales, se conocen en un curso de programación realizado en Digital House. 
 Nuestros valores se basan en:
 Calidad, búsqueda constante de la excelencia de todas nuestras acciones.
 Responsabilidad, con nuestros clientes y proveedores.
