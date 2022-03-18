@@ -18,5 +18,6 @@ Integrantes:
 Emerson Leonardo Chapeta.
 Ariel Pagani
 Ignacio Oteiza
+24 años, estudiante, aficionado a los videojuegos. Me gusta aprender sobre tecnologias innovadoras y todo aquello que me genera intriga y me presenta un desafio.
 Alexis Ariel Bello
 Arquitecto, 36 años, padre de dos hijos, hincha de Boca. Como profesional me apasiona la dinámica de resolver problemas concretos en obra y poder descubrir, junto al cliente, el diseño para sus proyectos. Me siento cómodo trabajando en equipos interdiciplinarios, donde considero que se aprende mucho desde el aporte de cada integrante.
