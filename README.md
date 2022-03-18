@@ -7,7 +7,7 @@ Calidad, búsqueda constante de la excelencia de todas nuestras acciones.
 Responsabilidad, con nuestros clientes y proveedores.
 Flexibilidad, capacidad para adaptarnos a las diversas circunstancias sociales y económicas del entorno.
 
-El wireframe del proyecto se encuenta en la carpeta "wireframe" dentro del repositorio.
+El wireframe del proyecto se encuenta en la carpeta "wireframe.pdf" dentro del repositorio.
 
 El logo del proyecto se encuenta en la carpeta Images con el nombre "Drink_House_SVG.svg" dentro del repositorio.  
 
