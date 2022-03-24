@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Rajdhani';
+    background-color: rgb(137,104,237);
+}
+
+header div.logo img{
+    width: 20%;
+
+}
+
+footer div.logo img{
+    width: 20%;
+}
+
+
+header{
+    background-color: rgb(137,104,237);
+}
+
+header nav{
+    font-size: 20px;
+    text-align: right;
+}
+
+header nav a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+header div.busqueda{
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+section.banner img{
+    width: 80%;
+    background-color: rgb(137,104,237);
+}
+
+section.banner-categorias img{
+    width: 100%;
+}
+
+footer div ul li{
+    background-color: white;
+    font-size: 17px;
+    padding: 2px;
+}
+
+footer div ul li a{
+    text-decoration: none;
+}
+
+footer div ul.contacto{
+    text-align: left;
+}
+
+footer div ul.preguntas-frecuentes{
+    text-align: center;
+}
+
+footer div ul.redes{
+    text-align: right;
+}
