@@ -1,0 +1,155 @@
+body {
+    font-family: "Rajdhani";
+    background-color: gray;
+}
+header {
+    color: white;
+    border-radius: 10px;
+}
+
+.encabezado {
+    width: 95%;
+    max-width: 95%;
+    margin: auto;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 5px;
+}
+
+header .logo {
+    font-size: 50px;
+    line-height: 50px;
+    float: left;
+    height: 70px;
+}
+
+header .logo img{
+    height: 70px;
+}
+
+header nav {
+    float: right;
+    line-height: 50px;
+    margin: 10px;
+}
+
+header nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 3px 15px;
+    line-height: normal;
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+header nav a:hover {
+    background: rgb(170,255,0);
+    border-radius: 50px;
+    color: black;
+}
+
+header nav input {
+    height: 20px;
+    width: 250px;
+    border-radius: 20px;
+    font-family: "Rajdhani";
+    font-weight: bold;
+}
+#botonDeBusqueda {
+    height: 25px;
+    width: 28px;
+    border-radius: 7px;
+}
+
+section {
+    max-width: 95%;
+    padding: 10px 0 10px 0;
+    overflow: hidden;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+section img {
+    width: 700px;
+    height: 450px;
+    padding: 10px 510px 10px 510px;
+    background-color: black;
+    margin: auto;
+}
+
+.contenedor {
+    width: 100%;
+    height: 40%;
+    border: 10px;
+}
+
+.botones{
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: rgb(170,255,0.7);;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: black;
+    box-shadow: 0 0 10px rgba(134, 182, 38, 0.993);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3 ease;
+}
+
+.botones:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+.atras{
+    left: 2%;
+    top: 250px;
+}
+
+.adelante{
+    right: 2%;
+    top: 250px;
+}
+
+footer {
+    color: white;
+    border-radius: 10px;
+}
+
+.pie {
+    width: 95%;
+    max-width: 95%;
+    margin: auto;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 5px;
+}
+
+footer .logo {
+    font-size: 50px;
+    line-height: 50px;
+    float: left;
+    height: 70px;
+}
+
+footer .logo img{
+    height: 70px;
+}
+
+footer nav {
+    line-height: 50px;
+    margin: 10px;
+}
+
+footer nav ul {
+    list-style: none;
+    text-decoration: none;
+}
