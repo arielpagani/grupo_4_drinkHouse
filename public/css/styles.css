@@ -1,6 +1,6 @@
 body {
     font-family: "Rajdhani";
-    background-color: gray;
+    background-color: white;
 }
 header {
     color: white;
@@ -110,12 +110,12 @@ section img {
 }
 
 .atras{
-    left: 2%;
+    left: 10%;
     top: 250px;
 }
 
 .adelante{
-    right: 2%;
+    right: 10%;
     top: 250px;
 }
 
@@ -147,9 +147,40 @@ footer .logo img{
 footer nav {
     line-height: 50px;
     margin: 10px;
+    display: flex;
+    margin: auto;
 }
 
-footer nav ul {
+footer nav div {
     list-style: none;
     text-decoration: none;
+    margin: auto;
+    line-height: normal;
+}
+
+footer nav div ul {
+    list-style: none;
+    line-height: normal;
+    padding: 0;
+    margin: 0px;
+}
+
+.productos h1 {
+    margin: 0px;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 0 10px 0;
+}
+.productos div i {
+    color:  rgb(137,104,237);
+    padding: 5px;
+    border: 2px solid;
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+    text-align: center;
+    margin: 0 10px 0;
+
+}.productos div {
+    text-align: center;
 }
