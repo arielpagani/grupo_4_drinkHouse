@@ -1,64 +1,65 @@
 body {
     font-family: "Rajdhani";
     background-color: white;
-}
-header {
-    color: white;
-    border-radius: 10px;
+    margin: 5px;
 }
 
-.encabezado {
-    width: 95%;
-    max-width: 95%;
-    margin: auto;
-    overflow: hidden;
+header .encabezado {
+    width: 100%;
     background-color: black;
-    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .logo {
-    font-size: 50px;
-    line-height: 50px;
-    float: left;
-    height: 70px;
+body header img{
+    width: 100%;
+    padding: 10px 0;
 }
 
-header .logo img{
-    height: 70px;
-}
-
-header nav {
-    float: right;
-    line-height: 50px;
-    margin: 10px;
-}
-
-header nav a {
-    display: inline-block;
+header div a {
     color: white;
     text-decoration: none;
-    padding: 3px 15px;
-    line-height: normal;
-    font-size: 15px;
     font-weight: bold;
+    min-width: 50px;
+    padding: 2px 5px;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
-header nav a:hover {
+.navegador a:hover {
     background: rgb(170,255,0);
     border-radius: 50px;
     color: black;
 }
 
-header nav input {
-    height: 20px;
-    width: 250px;
+.encabezado div input {
+    max-height: 20px;
+    max-width: 300px;
+    padding: 0 100px;
+    text-align: center;
+    font-weight: bold;
     border-radius: 20px;
     font-family: "Rajdhani";
-    font-weight: bold;
 }
+
+.navegador{
+    color: white;
+}
+
+.encabezado div:first-child {
+    width: 100px;
+    height: 80px;
+}
+
+.navegador {
+    padding: 15px 0;
+}
+
 #botonDeBusqueda {
     height: 25px;
     width: 28px;
@@ -66,25 +67,24 @@ header nav input {
 }
 
 section {
-    max-width: 95%;
     padding: 10px 0 10px 0;
     overflow: hidden;
     margin: auto;
     box-sizing: border-box;
 }
 
-section img {
-    width: 700px;
-    height: 450px;
-    padding: 10px 510px 10px 510px;
-    background-color: black;
+.centrar {
     margin: auto;
+    display: block;
+    min-width: 300px;
+    max-width: 500px;
 }
-
 .contenedor {
-    width: 100%;
     height: 40%;
     border: 10px;
+    display: flex;
+    margin:10px 0;
+    background-color: black;
 }
 
 .botones{
@@ -111,26 +111,18 @@ section img {
 
 .atras{
     left: 10%;
-    top: 250px;
+    top: 225px;
 }
 
 .adelante{
     right: 10%;
-    top: 250px;
-}
-
-footer {
-    color: white;
-    border-radius: 10px;
+    top: 225px;
 }
 
 .pie {
-    width: 95%;
-    max-width: 95%;
-    margin: auto;
-    overflow: hidden;
     background-color: black;
-    border-radius: 5px;
+    
+    color: white;
 }
 
 footer .logo {
@@ -142,20 +134,20 @@ footer .logo {
 
 footer .logo img{
     height: 70px;
+    padding: 10px 0;
 }
 
 footer nav {
-    line-height: 50px;
-    margin: 10px;
     display: flex;
-    margin: auto;
+    flex-wrap: wrap;
 }
 
 footer nav div {
     list-style: none;
     text-decoration: none;
     margin: auto;
-    line-height: normal;
+    line-height: 1px;
+    padding: 0 0 10px 0;
 }
 
 footer nav div ul {
@@ -164,6 +156,63 @@ footer nav div ul {
     padding: 0;
     margin: 0px;
 }
+
+
+@media (max-width: 460px){
+    header div input {
+        height: 20px;
+        width: 100px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 20px;
+        font-family: "Rajdhani";
+    }
+
+    .botones{
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 50%;
+        background-color: rgb(170,255,0.7);;
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        color: black;
+        box-shadow: 0 0 10px rgba(134, 182, 38, 0.993);
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3 ease;
+    }
+
+    .atras{
+        top: 280px;
+    }
+    
+    .adelante{
+        top: 280px;
+    }
+
+    header .encabezado {
+        width: 100%;
+        background-color: black;
+        padding: 0 20px 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*
+
+
+
+
 
 .productos h1 {
     margin: 0px;
@@ -183,4 +232,4 @@ footer nav div ul {
 
 }.productos div {
     text-align: center;
-}
+}*/
