@@ -4,16 +4,11 @@ body {
     margin: 5px;
 }
 
-<<<<<<< HEAD
 .encabezado {
     width: 99%;
     max-width: 99%;
     margin: auto;
     overflow: hidden;
-=======
-header .encabezado {
-    width: 100%;
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
     background-color: black;
     padding: 0 20px 0 20px;
     box-sizing: border-box;
@@ -53,11 +48,8 @@ header div a {
     font-weight: bold;
     border-radius: 20px;
     font-family: "Rajdhani";
-<<<<<<< HEAD
     font-weight: bold;
     text-align: center;
-=======
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
 }
 
 .navegador{
@@ -80,26 +72,18 @@ header div a {
 }
 
 section {
-<<<<<<< HEAD
     max-width: 99%;
     padding: 0px 0 10px 0;
-=======
-    padding: 10px 0 10px 0;
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
     overflow: hidden;
     margin: auto;
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 section img {
     width: 700px;
     height: 380px;
     padding: 10px 510px 10px 510px;
     background-color: black;
-=======
-.centrar {
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
     margin: auto;
     display: block;
     min-width: 300px;
@@ -108,13 +92,7 @@ section img {
 .contenedor {
     height: 40%;
     border: 10px;
-<<<<<<< HEAD
     padding: 10px 0 0 0;
-=======
-    display: flex;
-    margin:10px 0;
-    background-color: black;
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
 }
 
 .botones{
@@ -150,7 +128,6 @@ section img {
 }
 
 .pie {
-<<<<<<< HEAD
     width: 99%;
     max-width: 99%;
     margin: auto;
@@ -158,10 +135,6 @@ section img {
     background-color: black;
     border-radius: 5px;
     font-size: 12px;
-=======
-    background-color: black;
-    color: white;
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
 }
 
 footer .logo {
@@ -172,14 +145,9 @@ footer .logo {
 }
 
 footer .logo img{
-<<<<<<< HEAD
     height: 55px;
     width: 35px;
     padding: 7px 30px;
-=======
-    height: 70px;
-    padding: 10px 0;
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
 }
 
 footer nav {
@@ -192,11 +160,7 @@ footer nav div {
     text-decoration: none;
     margin: auto;
     line-height: 1px;
-<<<<<<< HEAD
     padding: 5px 0 0 0;
-=======
-    padding: 0 0 10px 0;
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
 }
 
 footer nav div ul {
@@ -217,7 +181,6 @@ footer nav div ul {
     padding: 0 0 10px 0;
 }
 
-<<<<<<< HEAD
 .contenedor-flex > div {
     width: 115px;
 }
@@ -229,20 +192,6 @@ footer nav div ul {
 }
 
 .productos i{
-=======
-.productos div{
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-
-.productos i:hover{
-    background: rgb(137,104,237);
-    color: rgb(255, 255, 255);
-}
-
-.productos div i {
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
     color:  rgb(137,104,237);
     padding: 5px;
     border: 2px solid;
@@ -250,11 +199,7 @@ footer nav div ul {
     height: 100px;
     font-size: 100px;
     text-align: center;
-<<<<<<< HEAD
     margin: auto
-=======
-    margin: 0 10px 0;
->>>>>>> aafc8563a2776912e47eb455d83778785428dd15
 }
 
 .productos div {
