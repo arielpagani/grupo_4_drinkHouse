@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DrinkHouse</title>
     <script src="/carrusel.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
@@ -15,17 +15,19 @@
 <body>
     <header>
         <div class="encabezado">
-        <div class="logo">
-            <img src="/images/Drink_House_SVG.svg" width="150" alt="logo de Drink House"></div>
-        <nav>
-            <input type="text" placeholder="¿Que vas a pedir?">
+            <div>
+                <img src="/images/Drink_House_SVG.svg" alt="logo de Drink House">
+            </div>
+            <div>
+                <input type="text" placeholder="¿Que vas a pedir?">
                     <button id="botonDeBusqueda"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="navegador">
             <a href="/views/login"><i class="far fa-user"></i>  Login</a>
             <i class="fas fa-ellipsis-v"></i>
             <a href="/views/product"><i class="fas fa-shopping-cart"></i>  Carrito</a>
             <i class="fas fa-ellipsis-v"></i>
             <a href="/views/register"><i class="far fa-list-alt"></i>  Registro</a>
-        </nav>
         </div>           
     </header>
     <section class="contenedor">
@@ -35,11 +37,12 @@
         <div class="adelante botones">
             &#62  
         </div>
-        <img src="images/img1.jpg" alt="Imagen promo">
+        <img class="centrar" src="images/img1.jpg" alt="Imagen promo">
         </div>
     </section>  
     <section class="productos">
         <h1>PRODUCTOS</h1>
+<<<<<<< HEAD
         <i class="fas fa-beer"></i>
         <i class="fas fa-wine-glass-alt"></i>
         <i class="fas fa-glass-whiskey"></i>
@@ -49,6 +52,13 @@
             <div>VINOS</div>
             <div>WHISKEYS</div>
             <div>LICORES</div>
+=======
+        <div>
+        <a href="/views/cervezas"><i class="fas fa-beer"></i></a>
+        <a href="/views/vinos"><i class="fas fa-wine-glass-alt"></i></a>
+        <a href="/views/whiskeys"><i class="fas fa-glass-whiskey"></i></a>
+        <a href="/views/licores"><i class="fas fa-wine-bottle"></i></a>
+>>>>>>> aafc8563a2776912e47eb455d83778785428dd15
         </div>
     </section>
     <footer>
