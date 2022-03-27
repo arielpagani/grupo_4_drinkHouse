@@ -11,8 +11,8 @@ header .encabezado {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 body header img{
@@ -87,6 +87,14 @@ section {
     background-color: black;
 }
 
+.flex-item-left {
+    display: flex;
+}
+
+.flex-item-right {
+    display: flex;
+}
+
 .botones{
     font-size: 30px;
     width: 70px;
@@ -132,13 +140,14 @@ footer .logo {
 }
 
 footer .logo img{
-    height: 70px;
-    padding: 10px 0;
+    height: 45px;
+    padding: 6px 0;
 }
 
 footer nav {
     display: flex;
     flex-wrap: wrap;
+    font-size: 10px;
 }
 
 footer nav div {
@@ -157,16 +166,11 @@ footer nav div ul {
 }
 
 .productos h1 {
+    font-size: 40px;
     margin: 0px;
     text-align: center;
     font-weight: bold;
     padding: 0 0 10px 0;
-}
-
-.productos div{
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
 }
 
 .productos i:hover{
@@ -185,12 +189,31 @@ footer nav div ul {
     margin: 0 10px 0;
 }
 
-.productos div {
+.flex-container {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+} 
+
+.productos div a p {
+    color:black;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
 }
 
-.contenedor-login{
-    height: 540px;
+.productos div a {
+    text-decoration: none;
+    justify-content: center;
+}
+
+.contenedor-register{
+    height: 555px;
     font-size: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -198,9 +221,23 @@ footer nav div ul {
     border: black 10px solid;
     justify-content: center;
 }
-.contenedor-login div ul{
+.contenedor-register div ul{
     display: flex;
     flex-direction: column;
+}
+
+.contenedor-register h1{
+    font-size: 30px;
+    padding: 0 0 0 30px;
+    margin: 0px;
+}
+
+.contenedor-register div ul il {
+    width: 170px;
+}
+
+.contenedor-register div ul il input {
+    margin: 0 45px 0 0;
 }
 
 @media (max-width: 460px){
@@ -239,13 +276,7 @@ footer nav div ul {
     }
 
     header .encabezado {
-        width: 100%;
-        background-color: black;
-        padding: 0 20px 0 20px;
-        box-sizing: border-box;
-        display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     footer nav {
@@ -258,14 +289,35 @@ footer nav div ul {
     }
 
     .productos div i {
-        color:  rgb(137,104,237);
-        padding: 5px;
-        border: 2px solid;
-        width: 50px;
-        height: 50px;
-        font-size: 50px;
-        text-align: center;
-        margin: 0 10px 0;
-    
+        width: 130px;
+        height: 130px;
+        font-size: 130px;
     }
+
+    .productos h1 {
+        font-size: 25px;
+    }
+
+    .productos div a p {
+        font-size: 20px;
+    }
+
+    #botonDeBusqueda {
+        display: none;
+    }
+    
+    .flex-item-left {
+        flex: 50%;
+        justify-content: center;
+    }
+    
+    .flex-item-right {
+        flex: 50%;
+        justify-content: center;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
 }
