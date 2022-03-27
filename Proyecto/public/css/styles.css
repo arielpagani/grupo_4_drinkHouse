@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: black;
+}
+
+/* HEADER */
+
+header {
+    background-color: black;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .contenedor .logo img {
+    width: 180px;
+}
+
+header .contenedor .busqueda {
+    display: flex;
+    justify-content: center;
+}
+
+header .contenedor .busqueda input {
+    border-radius: 8px;
+    height: 30px;
+    border: 2px solid #8968ED;
+    width: 300px;
+}
+
+header .contenedor .busqueda button {
+    border-radius: 8px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #8968ED;
+}
+
+header .contenedor .listas {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+header .contenedor .listas .productos {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    flex-wrap: wrap;
+}
+
+header .contenedor .listas .productos li {
+    list-style-type: none;
+}
+
+header .contenedor .listas .productos li a {
+    color: white;
+    font-weight: bold;
+}
+
+header .contenedor .listas .usuario {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    flex-wrap: wrap;
+}
+
+header .contenedor .listas .usuario li {
+    list-style-type: none;
+}
+
+header .contenedor .listas .usuario li a {
+    color: white;
+    font-weight: bold;
+}
+
+/*  MAIN  */
+
+main {
+    font-family: 'Rajdhani', sans-serif;
+    background: white;
+}
+
+main .main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+main .main-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    background: white;
+}
+
+main .main-container div img {
+    width: 400px;
+}
+
+main .main-container div .description {
+    display: inline;
+    text-align: center;
+}
+
+main .main-container div .description h2 {
+    font-size: x-large;    
+}
+
+/* FOOTER */
+
+footer {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container .footer-img-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container .footer-img-centrado img {    
+    width: 90px;
+}
+
+.footer-container div {
+    background: black;
+    width: 19%;
+    height: 150px;
+}
+
+.footer-container div .footer-title {
+    font-size: Large;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-container div p {
+    line-height: 1;
+    color: white;
+}
