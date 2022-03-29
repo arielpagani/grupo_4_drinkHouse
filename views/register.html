@@ -20,19 +20,28 @@
             </div>
     </header>
     <div class="contenedor-register">
-        <h1>Ingresar</h1>
+        <h1>Regístrate</h1>
         <div>
             <form action="/login" method="post">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+                
+                <label for="Apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" required>
 
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required>
 
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" required>
+
+                <label for="start">Fecha de Nacimiento:</label>
+                <input type="date" id="start" name="fecha de nacimiento"
+                value="1990-07-22"
+                min="1900-01-01" max="2022-03-28" required> 
                 
-                <a href="/views/login">¿Olvidaste la contraseña?</a>
-                
-                <button type="submit">Ingresar</button>
+                <button type="reset">Reiniciar</button>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
