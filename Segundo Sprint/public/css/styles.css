@@ -298,6 +298,8 @@ header div form {
     .flex-encabezado #navegador {
         margin: 2px auto;
     }
+}
+
 @media (max-width: 460px){
     .flex-encabezado #logo {
         margin: auto;
@@ -372,5 +374,4 @@ header div form {
     .flex-container {
         flex-direction: column;
     }
-
 }
