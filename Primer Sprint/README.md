@@ -11,6 +11,8 @@ El wireframe del proyecto se encuenta en la carpeta "wireframe.pdf" dentro del r
 
 El logo del proyecto se encuenta en la carpeta Images con el nombre "Drink_House_SVG.svg" dentro del repositorio.  
 
+La URL de Trello es https://trello.com/b/ZbMf57cI/grupo-4-full-stack-digital-house
+
 Paginas referentes:
 1) https://www.appbar.com.ar/ Por lo simple e intuitivo de la interfaz.
 2) https://salimosfuerte.com/ Se ajustó con la estética de la página pricipal.

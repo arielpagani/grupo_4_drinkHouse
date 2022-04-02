@@ -1,4 +1,4 @@
-let imagenes = ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg"];
+let imagenes = ["images/img1.PNG", "images/img2.PNG", "images/img3.PNG", "images/img4.PNG"];
 let cont = 0;
 
 function carrousel(contenedor){
