@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.png">
 </head>
 <body>
     <header>
@@ -23,75 +24,127 @@
                     <button id="botonDeBusqueda"><i class="fas fa-search"></i></button>
             </div>
             <div id="navegador">
-            <a href="/views/login"><i class="far fa-user"></i>  Login</a>
+            <a href="/views/login"><i class="far fa-user"></i>  Ingresa</a>
             <i class="fas fa-ellipsis-v"></i>
             <a href="/views/product"><i class="fas fa-shopping-cart"></i>  Carrito</a>
             <i class="fas fa-ellipsis-v"></i>
-            <a href="/views/register"><i class="far fa-list-alt"></i>  Registro</a>
+            <a href="/views/register"><i class="far fa-list-alt"></i>  Crea tu cuenta</a>
         </div>           
     </header>
+<main>
     <section class="contenedor">
+
+    <div class="botones-slider">
+        
         <div class="atras botones">
             &#60 
         </div>
         <div class="adelante botones">
             &#62  
         </div>
+
+    </div>
         <img class="centrar" src="images/img1.PNG" alt="Imagen promo">
         </div>
     </section>  
     <section class="productos">
-        <h1>PRODUCTOS</h1>
+        <h2>PRODUCTOS</h2>
         <div class="flex-container">
             <div class="flex-item-left">
                 <div>
-                    <a href="/views/productDetail"><i class="fas fa-beer"></i><p>Cervezas</p></a>
+                    <a href="/views/productDetail"><i class="fas fa-beer all-centrado"></i><p>Cervezas</p></a>
                 </div>
                 <div>
-                    <a href="/views/productDetail"><i class="fas fa-wine-glass-alt"></i><p>Vinos</p></a>
+                    <a href="/views/productDetail"><i class="fas fa-wine-glass-alt all-centrado"></i><p>Vinos</p></a>
                 </div>
             </div>
             <div class="flex-item-right">
                 <div>
-                    <a href="/views/productDetail"><i class="fas fa-glass-whiskey"></i><p>Whiskeys</p></a>
+                    <a href="/views/productDetail"><i class="fas fa-glass-whiskey all-centrado"></i><p>Whiskeys</p></a>
                 </div>
                 <div>
-                    <a href="/views/productDetail"><i class="fas fa-wine-bottle"></i><p>Licores</p></a>
+                    <a href="/views/productDetail"><i class="fas fa-wine-bottle all-centrado"></i><p>Licores</p></a>
                 </div>
+
+                <div class="flex-item-final">
+                <div>
+                    <a href="/views/catalogo"><i class="fas fa-list all-centrado"></i><p>Catálogo</p></a>
+                </div>
+            </div>
             </div>
         </div>
     </section>
+
+
+
+    <section class="marcas">
+
+        <div class="contenedor-marcas">
+            <img class="img-marcas" src="/images/marcas/branca.png" alt="logo branca">
+        </div>
+ 
+        <div class="contenedor-marcas">
+            <img class="img-marcas"  src="/images/marcas/buchanans.png" alt="logo buchanans">    
+        </div>
+
+        <div class="contenedor-marcas">
+            <img class="img-marcas"  src="/images/marcas/budweiser.png" alt="logo budweiser">    
+        </div>
+
+        <div class="contenedor-marcas">
+            <img class="img-marcas"  src="/images/marcas/concha.png" alt="logo concha y toro">    
+        </div>
+            
+        <div class="contenedor-marcas">
+            <img class="img-marcas" src="/images/marcas/jager.png" alt="logo jagermaister">    
+        </div>
+
+    </section>
+
+
+
+    
+    <a class="fab fa-whatsapp" href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" target="_blank"></a>
+
+
+</main>
+
     <footer>
         <div class="pie">
             <div class="logo">
-                <img src="/images/Drink_House_SVG.svg" width="150" alt="logo de Drink House"></div>
+                <img src="/images/Drink_House_SVG.svg" width="150" alt="logo de Drink House">
+                
+            </div>
+
+            
+
             <nav>
                 <div>
-                <h1>Contactos</h1>
+                <h2>Contactos</h2>
                 <ul>
-                    <li><i class="fas fa-phone-alt"></i> 011-4865-4569</li>
-                    <li><i class="far fa-envelope"></i> drinkhouse@gmail.com</li>
+                    <li><i class="fas fa-phone-alt"></i><a href="#"> 011-4865-4569</a></li>
+                    <li><i class="far fa-envelope"></i><a href="#"> drinkhouse@gmail.com</a></li>
                 </ul>
                 </div>
                 <div>
-                <h1>¿Quienes Somos?</h1>
+                <h2>¿Quienes Somos?</h2>
                 <ul>
-                    <li>Empresa</li>
-                    <li>Trabajá con nosotros</li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Trabajá con nosotros</a></li>
                 </ul>
                 </div>
                 <div>
-                <h1>¿Como Comprar?</h1>
+                <h2>¿Como Comprar?</h2>
                 <ul>
-                    <li>Ayuda</li>
-                    <li>Seguridad</li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Seguridad</a></li>
                 </ul>
                 </div>
                 <div>
-                <h1>Redes</h1>
+                <h2>Redes</h2>
                 <ul>
-                    <li><i class="fab fa-facebook"></i> facebook</li>
-                    <li><i class="fab fa-instagram"></i> Instagram</li>
+                    <li><i class="fab fa-facebook"></i><a href="#"> Facebook</a></li>
+                    <li><i class="fab fa-instagram"></i><a href="#"> Instagram</a></li>
                 </ul>
                 </div>
             </nav>
