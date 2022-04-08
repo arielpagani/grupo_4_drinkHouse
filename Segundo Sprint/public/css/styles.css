@@ -4,8 +4,6 @@ body {
     background-color: white;
     margin: 0px;
 }
-<<<<<<< HEAD
-=======
 
 a{
     text-decoration: none;
@@ -94,7 +92,6 @@ footer .fab{
         align-items: center;
       }
 
->>>>>>> main
 .flex-encabezado {
     display: flex;
     justify-content: space-around;
@@ -677,24 +674,9 @@ border: 1px solid #4f4f4f;
     .flex-encabezado #navegador {
         margin: 2px auto;
     }
-<<<<<<< HEAD
-}  
-@media (max-width: 460px){
-    .flex-encabezado #logo {
-        margin: auto;
-    }
-
-    .flex-encabezado #busqueda button {
-        display: none;
-    }
-
-    .botones{
-        font-size: 20px;
-=======
 
     .botones {
         font-size: 30px;
->>>>>>> main
         width: 35px;
         height: 35px;
         border-radius: 50%;
