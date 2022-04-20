@@ -7,9 +7,11 @@ body {
 
 a{
     text-decoration: none;
-    
 }
 
+.atras-botones {
+    color: #4f4f4f;
+}
 
 .marcas{
     background-color: rgb(137, 104, 237);
@@ -74,7 +76,6 @@ width: auto;
 }
 
 .contenedor-articulos article .caja-articulo{
-    box-shadow: 0 0 10px rgb(100, 100, 100);
     border-radius: 10px;
     margin-top: -15px;
     margin-bottom: -20px;
@@ -100,7 +101,7 @@ footer .fab{
 }
 
 .flex-encabezado>div {
-    width: 300px;
+    width: 305px;
     margin: auto 0;
     text-align: center;
     font-size: 15px;
@@ -166,7 +167,6 @@ section {
     height: 40%;
     border: 10px;
     display: flex;
-    margin: 10px 0;
     background-color: black;
 }
 
@@ -208,8 +208,7 @@ left: 5%;
     ;
     text-align: center;
     font-weight: bold;
-    color: black;
-    box-shadow: 0 0 10px rgba(134, 182, 38, 0.993);
+    color: white;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3 ease;
@@ -218,8 +217,8 @@ left: 5%;
 .botones:hover {
     cursor: pointer;
     transform: scale(1.2, 1.2);
+    box-shadow: 0 0 10px rgba(134, 182, 38, 0.993);
 }
-
 
 .pie {
     background-color: black;
@@ -286,6 +285,7 @@ footer nav div ul {
     text-align: center;
     margin: 0 5px 0;
     border-radius: 100px;
+    box-sizing: border-box;
 }
 
 .flex-container {
@@ -308,12 +308,30 @@ footer nav div ul {
     justify-content: center;
 }
 
+.contenedor-register form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-register form a{
+    color: black;
+    padding: 6px 0;
+}
+
 .contenedor-register {
-    height: 555px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 520px;
+    background-color: #e7e5e5;
+    border-radius: 30px;
     font-size: 20px;
     width: 215px;
-    margin: auto;
-    padding: 100px;
+    margin: 30px auto;
+    color: black;
+    font-size: 15px;
+    padding: 50px;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
@@ -346,11 +364,13 @@ header div form {
 .contenedor-register input {
     margin: 0 0 15px 0;
     border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .contenedor-register h1 {
     font-size: 40px;
-    padding: 10px 0;
     margin: 0px;
 }
 
@@ -393,19 +413,6 @@ header div form {
     display: flex;
 }
 
-/* .productos-carrito {
-    margin: auto;
-    display: flex;
-}
-
-.productos-carrito h1 {
-    justify-content: center;
-    display: flex;
-} */
-/* 
-.carro{
-} */
-
 .productos-carrito nav {
     justify-content: center;
     padding-top: 200px;
@@ -426,28 +433,6 @@ header div form {
     display: flex;
 }
 
-/* .productos-carrito button {
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: bold;
-    margin: auto;
-    color: white;
-    background-color: black;
-    display: flex;
-} */
-
-/* .productos-carrito nav input {
-    padding: 5px 33px;
-    border: 3px solid rgb(137, 104, 237);
-    border-radius: 10px;
-}
-
-.productos-carrito p {
-    text-align: center;
-    font-size: 22px;
-    margin: auto;
-} */
-
  /* CARRITO EMERSON*/
  main h2{
      display: flex;
@@ -456,10 +441,8 @@ header div form {
 
  .celdita-carrito{
        border-bottom: inset;
-
-    /* margin: 20px 50px 20px 50px;
-    padding:20px; */
   }
+
 .descripcion-principal{
     display: flex;
     justify-content:center ;
@@ -471,13 +454,11 @@ header div form {
     display: flex;
 }
 
-
-
 .informacion form{
     display: flex;
     justify-content: center;
-align-items:inherit;
-padding-top: 10px;
+    align-items:inherit;
+    padding-top: 10px;
 }
 
 .cantidad{
@@ -493,7 +474,6 @@ padding-top: 10px;
 .precio p{
     margin-left: 10px;
 }
-
 
 .totalizador{
     display: flex;
@@ -518,7 +498,6 @@ padding-top: 10px;
     margin: 10px;
     color: white;
     background-color: black;
-
 }
 
 button:hover {
@@ -526,26 +505,16 @@ button:hover {
     color: rgb(0, 0, 0);
 }   
 
-
 input{
 margin: 0 0 15px 0;
     border-radius: 5px;
 }
 
 /* detail-page */
-
-
 .boton-precio{
     display: flex;
     font-size: 20px;
-    
-
 }
-
-
-
-
-
 
 /* whatsapp */
 
@@ -557,14 +526,12 @@ margin: 0 0 15px 0;
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
-
     }
     
     .fab:hover  {
         transform: scale(1.1,1.1);
      }
     
-
     .fa-whatsapp {
     background: rgb(170, 255, 0);
     color: white;
@@ -573,21 +540,17 @@ margin: 0 0 15px 0;
     bottom: 150px;
     }
 
-        /* fin de whatsapp */
-
-
+    /* fin de whatsapp */
 
     /* CSS DESCRIPCION EMERSON */
         
             .contenedor-descripcion{
                     box-shadow: #4f4f4f;
-
             }
 
             section{
                 border-bottom: inset;
             }
-
 
             .contenedor-itr{
                 display:flex;
@@ -605,72 +568,64 @@ margin: 0 0 15px 0;
             }
 
             .contenedor-dpb{
-padding: 0;
+                padding: 0;
 
             }
 
-          
-
             .contenedor-bp{
                 display: flex;
-    flex-direction: column;
-    align-items: center;
+                flex-direction: column;
+                align-items: center;
             }
 
             .clase-dinero{
                 display: flex;
             }
             .clase-dinero > p{
-margin: 10px;
-font-weight: 700;    
-font-size: 2em;     
-   }
+                margin: 10px;
+                font-weight: 700;    
+                font-size: 2em;     
+            }
 
-   .mas-informacion h2{
-       text-align: center;
+            .mas-informacion h2{
+                text-align: center;
+            }
 
+            .contenedor-tabla{
+                display: flex;    
+                justify-content: center;
+                flex-direction: column;
+            } 
+            .tabla{
+                display: flex;
+                justify-content: center;
+            }
 
-       }
+            .celda-l{
+                background-color: #8d8d8d;
+                width: 150px;
+                padding-left: 10px;
+                border: 1px solid #4f4f4f;
+            }
+            .celda-r{
+                background-color: #afafaf;
+                width: 150px;
+                padding-left: 10px;
+                border: 1px solid #4f4f4f;
+            }
 
-       .contenedor-tabla{
-display: flex;    
-justify-content: center;
-flex-direction: column;
-} 
-   .tabla{
-       display: flex;
-       justify-content: center;
-   }
-
- .celda-l{
-background-color: #8d8d8d;
-width: 150px;
-padding-left: 10px;
-border: 1px solid #4f4f4f;
-
-   }
-.celda-r{
-    background-color: #afafaf;
-    width: 150px;
-    padding-left: 10px;
-    border: 1px solid #4f4f4f;
-}
-
-
-
-/* ////////////////////// */
+/*Inicio de Desktop*/
 @media (max-width: 768px) {
     .flex-encabezado {
         flex-direction: column;
         margin: auto;
     }
+
     .flex-encabezado #logo {
         margin: 1px auto;
     }
-    .flex-encabezado #busqueda {
-        margin: 2px auto;
-    }
-    .flex-encabezado #navegador {
+
+    .flex-encabezado #busqueda, .flex-encabezado #navegador {
         margin: 2px auto;
     }
 
@@ -680,7 +635,6 @@ border: 1px solid #4f4f4f;
         height: 35px;
         border-radius: 50%;
         background-color: rgb(170, 255, 0.7);
-        ;
         text-align: center;
         font-weight: bold;
         color: black;
@@ -690,13 +644,10 @@ border: 1px solid #4f4f4f;
         transition: all .3 ease;
     }
 
-  
-
     footer .logo {
         line-height: 200px;
         float: left;
     }
-
 
      /* whtasappp Media tablet */
 
@@ -706,25 +657,22 @@ border: 1px solid #4f4f4f;
         position: fixed;
         right: 20px;
         bottom: 80px;
-        }
-
-      
+        } 
 }
+
+/*Inicio de Mobile*/
+
     @media  (max-width: 460px) {
         .flex-encabezado #logo {
             margin: auto;
         }
-        .flex-encabezado #busqueda button {
-            display: none;
-        }
+         
         .botones {
             font-size: 30px;
             width: 35px;
             height: 35px;
-            /* line-height: 37px; */
             border-radius: 50%;
             background-color: rgb(170, 255, 0.7);
-            ;
             text-align: center;
             font-weight: bold;
             color: black;
@@ -733,19 +681,23 @@ border: 1px solid #4f4f4f;
             -o-transition: all .3s ease;
             transition: all .3 ease;
         }
-
-
         .flex-encabezado {
             flex-direction: column;
-      }
         }
+
+      footer .logo img, .marcas, .flex-encabezado #busqueda button{
+          display: none;
+      }
+    } 
+    
+    /*Fin del mobile*/
+
         .pie {
             display:block;
         }
 
-        
         .productos div i {
-            width: 100 px;
+            width: 100px;
             height: 100px;
             font-size: 50px;
             border-radius: 100px;
@@ -755,12 +707,9 @@ border: 1px solid #4f4f4f;
             font-size: 20px;
         }
        
-
         .contenedor-articulos article{
             max-width: 150px;
         }
-
-
 
         /* whtasappp */
 
