@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>register</title>
-    <script src="/carrusel.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,19 +22,23 @@
     <main>
     <div class="contenedor-register">
         <h1>Regístrate</h1>
+        <h3>Completá con tus datos!</h3>
         <div>
             <form action="/login" method="post">
-                <label for="Nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" required>
+                <label for="Nombre"></label>
+                <input type="text" name="nombre" placeholder="Ingresá tu nombre" id="nombre" required>
                 
-                <label for="Apellido">Apellido:</label>
-                <input type="text" name="apellido" id="apellido" required>
+                <label for="Apellido"></label>
+                <input type="text" name="apellido" placeholder="Ingresá tu apellido" id="apellido" required>
 
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
+                <label for="email"></label>
+                <input type="email" name="email" placeholder="Email" id="email" required>
 
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
+                <label for="password"></label>
+                <input type="password" name="password" placeholder="Password"id="password" required>
+
+                <label for="password"></label>
+                <input type="password" name="password" placeholder="Repetí tu password"id="password" required>
 
                 <label for="start">Fecha de Nacimiento:</label>
                 <input type="date" id="start" name="fecha de nacimiento"
@@ -48,42 +51,9 @@
         </div>
     </div>
 </main>
-    <footer>
-        <div class="pie">
-            <div class="logo">
-                <img src="/images/Drink_House_SVG.svg" width="150" alt="logo de Drink House"></div>
-            <nav>
-                <div>
-                <h1>Contactos</h1>
-                <ul>
-                    <li><i class="fas fa-phone-alt"></i><a href="#"> 011-4865-4569</a></li>
-                    <li><i class="far fa-envelope"></i><a href="#"> drinkhouse@gmail.com</a></li>
-                </ul>
-                </div>
-                <div>
-                <h1>¿Quienes Somos?</h1>
-                <ul>
-                    <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Trabajá con nosotros</a></li>
-                </ul>
-                </div>
-                <div>
-                <h1>¿Como Comprar?</h1>
-                <ul>
-                    <li><a href="#">Ayuda</a></li>
-                    <li><a href="#">Seguridad</a></li>
-                </ul>
-                </div>
-                <div>
-                <h1>Redes</h1>
-                <ul>
-                    <li><i class="fab fa-facebook"></i><a href="#"> Facebook</a></li>
-                    <li><i class="fab fa-instagram"></i><a href="#"> Instagram</a></li>
-                </ul>
-                </div>
-            </nav>
-            </div>           
-    </footer>
+
+    <!-- footer -->
+<%- include("./partials/footer") %>
     
 </body>
 </html>
