@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="flex-encabezado">
+            <div id="logo">
+                <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House"></a>
+            </div>
+    </header>
+    <div class="contenedor-register">
+        <h1>Hola!</h1>
+        <h3>Bienvenido nuevamente!</h3>
+        <div>
+            <form action="/login" method="post">
+
+                <label for="email"></label>
+                <input type="email" name="email" placeholder="Ingresá tu usuario" id="email" required>
+
+                <label for="password"></label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+            <div class="checkbox-recuerdame">
+                <label for="Nombre">Recuérdame</label>
+                <input type="checkbox" name="nombre" id="nombre" required>
+            </div>
+                <a href="/views/login">¿Olvidaste la contraseña?</a>
+                <a href="/views/register">¿Todavía no estás registrado?</a>
+                
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/favicon.png">
+</head>
+
+<body>
+    <header>
+        <div class="flex-encabezado">
+            <div id="logo">
+                <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House"></a>
+            </div>
+            <div id="busqueda">
+                <input type="text" placeholder="¿Que vas a pedir?">
+                <button id="botonDeBusqueda"><i class="fas fa-search"></i></button>
+            </div>
+            <div id="navegador">
+                <a href="/views/login"><i class="far fa-user"></i>  Login</a>
+                <a href="/views/product"><i class="fas fa-shopping-cart"></i>  Carrito</a>
+                <a href="/views/register"><i class="far fa-list-alt"></i>  Registro</a>
+            </div>
+    </header>
+    <main>
+        <h2>Carrito de compras</h2>
+
+        <!-- <div class="celda-carrito"> -->
+            <div class="celdita-carrito">
+                <div class="informacion">
+                    <div class="descripcion-principal">
+                    <img src="/images/[5027] RUTINI CABERNET FRANC MALBEC 750ml.png" alt="RUTINI CABERNET FRANC MALBEC 750ml" class="thumbnail">
+                    <h3>RUTINI CABERNET FRANC MALBEC 750ml</h3>
+                </div>
+                    <form action="">
+                        <label>Cantidad: </label>
+                        <input list="cantidad" class="cantidad" style="width: 40px;">
+                        <datalist id="cantidad">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                            <option value="4">
+                            <option value="5">
+                        </datalist>
+                    </form>
+                    <div class="precio">
+                        <h4>Sub total</h4>
+                        <p>$2500</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="celdita-carrito">
+                <div class="informacion">
+                    <div class="descripcion-principal">
+                    <img src="/images/[5027] RUTINI CABERNET FRANC MALBEC 750ml.png" alt="RUTINI CABERNET FRANC MALBEC 750ml" class="thumbnail">
+                    <h3>RUTINI CABERNET FRANC MALBEC 750ml</h3>
+                </div>
+                    <form action="">
+                        <label>Cantidad: </label>
+                        <input list="cantidad" class="cantidad" style="width: 40px;">
+                        <datalist id="cantidad">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                            <option value="4">
+                            <option value="5">
+                        </datalist>
+                    </form>
+                    <div class="precio">
+                        <h4>Sub total</h4>
+                        <p>$2500</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+           
+
+
+        <!-- </div> -->
+        <!-- ______________________________________ -->
+<div class="contenedor-bp">
+        <div class="clase-dinero">
+<p>Total</p>
+<p>$5000</p>
+</div>
+
+        <div class="contenedor-botones">
+            <button class="vaciar" type="reset">Vaciar Carrito</button>
+            <button class="pagar" type="submit">Pagar</button>
+          
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    </main>
+</body>
+
+<!-- footer -->
+<%- include("./partials/footer") %>
+
+</body>
+
+</html>

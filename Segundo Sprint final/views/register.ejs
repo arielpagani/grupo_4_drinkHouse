@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="flex-encabezado">
+            <div id="logo">
+                <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House"></a>
+            </div>
+    </header>
+    <main>
+    <div class="contenedor-register">
+        <h1>Regístrate</h1>
+        <h3>Completá con tus datos!</h3>
+        <div>
+            <form action="/login" method="post">
+                <label for="Nombre"></label>
+                <input type="text" name="nombre" placeholder="Ingresá tu nombre" id="nombre" required>
+                
+                <label for="Apellido"></label>
+                <input type="text" name="apellido" placeholder="Ingresá tu apellido" id="apellido" required>
+
+                <label for="email"></label>
+                <input type="email" name="email" placeholder="Email" id="email" required>
+
+                <label for="password"></label>
+                <input type="password" name="password" placeholder="Password"id="password" required>
+
+                <label for="password"></label>
+                <input type="password" name="password" placeholder="Repetí tu password"id="password" required>
+
+                <label for="start">Fecha de Nacimiento:</label>
+                <input type="date" id="start" name="fecha de nacimiento"
+                value="1990-07-22"
+                min="1900-01-01" max="2022-03-28" required> 
+                
+                <button type="reset">Reiniciar</button>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+    <!-- footer -->
+<%- include("./partials/footer") %>
+    
+</body>
+</html>
