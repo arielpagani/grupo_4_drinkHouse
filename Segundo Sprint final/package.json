@@ -1,7 +1,7 @@
 {
   "name": "proyecto-integrador-02-abril---copia",
   "version": "1.0.0",
-  "description": "Drink House abril",
+  "description": "Drink House",
   "main": "app.js",
   "dependencies": {
     "abbrev": "^1.1.1",

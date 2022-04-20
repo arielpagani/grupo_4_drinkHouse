@@ -166,7 +166,6 @@ section {
     height: 40%;
     border: 10px;
     display: flex;
-    margin: 10px 0;
     background-color: black;
 }
 
@@ -287,6 +286,7 @@ footer nav div ul {
     text-align: center;
     margin: 0 10px 0;
     border-radius: 100px;
+    box-sizing: border-box;
 }
 
 .flex-container {
@@ -657,8 +657,6 @@ border: 1px solid #4f4f4f;
     border: 1px solid #4f4f4f;
 }
 
-
-
 /* ////////////////////// */
 @media (max-width: 768px) {
     .flex-encabezado {
@@ -668,10 +666,7 @@ border: 1px solid #4f4f4f;
     .flex-encabezado #logo {
         margin: 1px auto;
     }
-    .flex-encabezado #busqueda {
-        margin: 2px auto;
-    }
-    .flex-encabezado #navegador {
+    .flex-encabezado #busqueda, .flex-encabezado #navegador {
         margin: 2px auto;
     }
 
@@ -711,13 +706,14 @@ border: 1px solid #4f4f4f;
 
       
 }
+
+/*Inicio de Mobile*/
+
     @media  (max-width: 460px) {
         .flex-encabezado #logo {
             margin: auto;
         }
-        .flex-encabezado #busqueda button {
-            display: none;
-        }
+         
         .botones {
             font-size: 30px;
             width: 35px;
@@ -734,19 +730,23 @@ border: 1px solid #4f4f4f;
             -o-transition: all .3s ease;
             transition: all .3 ease;
         }
-
-
         .flex-encabezado {
             flex-direction: column;
       }
-        }
+      footer .logo img, .marcas, .flex-encabezado #busqueda button{
+          display: none;
+      }
+
+    
+    } /*Fin del mobile*/
+
         .pie {
             display:block;
         }
 
         
         .productos div i {
-            width: 100 px;
+            width: 100px;
             height: 100px;
             font-size: 50px;
             border-radius: 100px;
