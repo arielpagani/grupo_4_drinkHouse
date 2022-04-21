@@ -1,9 +1,29 @@
+const articulo = [
+    {
+        marca: 'Rutini',
+        descuento: '5% off',
+        precio: '9999'
+    },
+    {
+        marca: 'Rutini',
+        descuento: '5% off',
+        precio: '9999'
+    },
+    {
+        marca: 'Rutini',
+        descuento: '5% off',
+        precio: '9999'
+    }
+]
+
+
+
 const home = (req, res) => {
     res.render ("home");
 };
 
 const catalago = (req, res) => {
-    res.render ("catalogo")
+    res.render ("catalogo", {arreglo:articulo})
 };
 
 const login = (req, res) => {
