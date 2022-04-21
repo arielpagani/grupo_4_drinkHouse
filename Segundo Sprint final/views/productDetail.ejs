@@ -1,35 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de producto</title>
-    <link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" href="/images/favicon.png">
-</head>
+<!-- head -->
+<%- include("./partials/head") %>
 
 <body>
-    <header>
-        <div class="flex-encabezado">
-            <div id="logo">
-                <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House"></a>
-            </div>
-            <div id="busqueda">
-                <input type="text" placeholder="¿Que vas a pedir?">
-                    <button id="botonDeBusqueda"><i class="fas fa-search"></i></button>
-            </div>
-            <div id="navegador">
-            <a href="/views/login"><i class="far fa-user"></i>  Login</a>
-            <a href="/views/product"><i class="fas fa-shopping-cart"></i>  Carrito</a>
-            <a href="/views/register"><i class="far fa-list-alt"></i>  Registro</a>
-        </div>           
-    </header>
+     <!-- header -->
+     <%- include("./partials/header") %>
 
 <!-- 
     SECCION DESCRIPTIVA DEL PRODUCTO -->

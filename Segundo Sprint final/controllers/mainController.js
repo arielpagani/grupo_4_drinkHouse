@@ -1,9 +1,43 @@
+const carrito = [
+{
+    img: '/Images/[5004] NORTON SEXY FISH MALBEC 750ml.png',
+    marca: 'Rutini',
+    precio: '3200',
+    cantidad: '1',
+
+}
+]
+
+const articulos = [
+    {
+        marca: 'Rutini',
+        descuento: '5% off',
+        precio: '3200',
+        img: '/Images/[5004] NORTON SEXY FISH MALBEC 750ml.png'
+
+    },
+
+    {
+        marca: 'Rutini',
+        descuento: '5% off',
+        precio: '3200',
+        img: '/Images/[5004] NORTON SEXY FISH MALBEC 750ml.png'
+    },
+
+    {
+        marca: 'Rutini',
+        descuento: '5% off',
+        precio: '3200',
+        img: '/Images/[5004] NORTON SEXY FISH MALBEC 750ml.png'
+    }
+]
+
 const home = (req, res) => {
     res.render ("home");
 };
 
 const catalago = (req, res) => {
-    res.render ("catalogo")
+    res.render ("catalogo",{arreglo:articulos})
 };
 
 const login = (req, res) => {
