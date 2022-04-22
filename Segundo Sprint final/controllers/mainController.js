@@ -18,7 +18,7 @@ const articulos = [
     },
 
     {
-        marca: 'Rutini',
+        marca: 'Norton',
         descuento: '5% off',
         precio: '3200',
         img: '/Images/[5004] NORTON SEXY FISH MALBEC 750ml.png'
