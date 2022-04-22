@@ -1,5 +1,6 @@
 
 Utilizando como base la dinámica de estrella de mar hicimos una retrospectiva de como venimos trabajando en el proyecto integrador.
+
 •	Comenzar a hacer: Como primer paso nos pusimos de acuerdo en cómo pretendíamos en que debería verse nuestro sitio. Se realizaron propuestas y llegamos a una idea en la que todos estuvimos de acuerdo. También definimos el funcionamiento y la organización de sitio. 
 En este punto no tuvimos mayores inconvenientes y supimos resolverlo de manera rápida y ágil.
 •	Mas de: Llegado el momento de ponernos a codear nos dividimos las tareas para poder llegar a entregar todo. A medida que cada integrante del grupo avanzaba con su parte se fue metiendo en otras tareas y terminamos haciendo casi todas las tareas de manera individual. Lo positivo de que haya ocurrido de esta manera fue que se aportaron muchas ideas que hicieron crecer el proyecto y podíamos imaginarnos más cosas para mejorar. Lo negativo es que nos costó poder llegar con todos los puntos del entregable.

@@ -536,7 +536,7 @@ margin: 0 0 15px 0;
         transform: scale(1.1,1.1);
      }
     
-    .fa-whatsapp {
+    .fa-whatsapp, .boton-editar {
     background: rgb(170, 255, 0);
     color: white;
     position: fixed;
@@ -544,6 +544,25 @@ margin: 0 0 15px 0;
     bottom: 150px;
     }
 
+    .boton-editar {
+        position: fixed;
+        right: 20px;
+        bottom: 150px;
+        border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 10px;
+    color: white;
+    background-color: black;
+}
+
+
+
+.boton-editar:hover {
+    background: rgb(170, 255, 0);
+    color: rgb(0, 0, 0);
+} 
+        
     /* fin de whatsapp */
 
     /* CSS DESCRIPCION EMERSON */

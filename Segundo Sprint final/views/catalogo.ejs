@@ -10,15 +10,25 @@
     <section class="contenedor-articulos">
         <% for ( let i = 0; i < arreglo.length; i++ ) { %>
             <div>
-            <a href="/views/productDetail"></a>
+            <a href="/views/productDetail">
                 <article>
                     <img src="<%= arreglo[i].img %>" alt="imagen de articulo">
                     <div class="caja-articulo">
+                        <p> <%= arreglo[i].categoria %></p>
+                        
                         <h2> <%= arreglo[i].marca %> </h2>
-                        <p> <%= arreglo[i].descuento %> </p>
+                        <!-- <p>Código: <%= arreglo[i].codigo %></p> -->
                         <p> <%= arreglo[i].precio %> </p>
+                        <p> <%= arreglo[i].descuento %> off</p>
+                        <p> <%= arreglo[i].descripcion %> </p>
+                        <p> Stock <%= arreglo[i].stock %> </p>
+
+
+                
+
                     </div>
                 </article>
+            </a>
             </div>
         <% } %>
     </section>

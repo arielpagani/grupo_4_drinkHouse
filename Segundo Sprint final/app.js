@@ -11,6 +11,8 @@ app.use("/", mainRouter);
 
 app.use("/views/productDetail", mainRouter);
 
+app.use("/views/productDetailAdmin", mainRouter);
+
 app.use("/views/product", mainRouter);
 
 app.use("/views/login", mainRouter);
@@ -18,6 +20,8 @@ app.use("/views/login", mainRouter);
 app.use("/views/register", mainRouter);
 
 app.use("/views/catalogo", mainRouter);
+
+app.use("/views/createProducts", mainRouter);
 
 app.listen (3000, () => {console.log ("Servidor Funcionando");})
 

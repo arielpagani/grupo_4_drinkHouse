@@ -14,6 +14,10 @@ router.get("/views/product", mainController.product);
 
 router.get("/views/productDetail", mainController.productDetail);
 
+router.get("/views/productDetailAdmin", mainController.productDetailAdmin);
+
 router.get("/views/register", mainController.register);
+
+router.get("/views/createProducts", mainController.createProducts);
 
 module.exports = router;
