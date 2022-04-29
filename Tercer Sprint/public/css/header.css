@@ -1,0 +1,39 @@
+.flex-encabezado {                          /* contenedor de logo-barra-nav */
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.flex-encabezado>div {                          /* contenedor de logo-barra-nav-contenedor-general */
+    margin: auto 0;
+    text-align: center;
+}
+
+.flex-encabezado #busqueda input {          /* contenedor de logo-barra-nav-barra-busqueda */
+    padding: 3px 33px;
+    text-align: center;
+    font-size: 15px;
+    border: 3px solid rgb(137, 104, 237);
+    border-radius: 14px;
+}
+
+.flex-encabezado #logo {          /* contenedor de logo-barra-nav-imagen-logo */
+    width: 150px;
+}
+
+.flex-encabezado #navegador {          /* contenedor de logo-barra-nav-estilos-palabras */
+    font-weight: bold;
+}
+
+.flex-encabezado #navegador a {          /* contenedor de logo-barra-nav-estilos-botones */
+    color: white;
+    padding: 2px 5px;
+    transition: all 500ms ease;             /*cambiar el all*/
+}
+
+.flex-encabezado #navegador a:hover {          /* contenedor de logo-barra-nav-estilos-botones */
+    background: rgb(170, 255, 0);
+    border-radius: 50px;
+    color: black;
+}
+

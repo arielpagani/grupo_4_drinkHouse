@@ -1,0 +1,35 @@
+.celdita-carrito{                  /*carrito*/
+    border-bottom: inset;
+}
+
+.descripcion-principal{                  /*carrito*/
+ display: flex;
+ justify-content:center ;
+ align-items: center;
+}
+
+.descripcion-principal img {                  /*carrito*/
+ height: 150px;
+ display: flex;
+}
+
+.informacion form{                     /*carrito*/
+ display: flex;
+ justify-content: center;
+ align-items:inherit;
+ /*padding-top: 10px;*/
+}
+
+.cantidad{
+ margin-left: 10px;
+}
+
+.precio{                  /*carrito*/
+ display: flex;
+ align-items: baseline;
+ justify-content: center;
+}
+
+.precio p{                  /*carrito*/
+ margin-left: 10px;
+}

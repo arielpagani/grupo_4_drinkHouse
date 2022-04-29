@@ -1,0 +1,83 @@
+.contenedor-botones button{             /*estilos-productDetail-boton-posible-boton-general*/
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 10px;
+    color: white;
+    background-color: black;
+}
+
+button:hover {
+    background: rgb(170, 255, 0);
+    color: rgb(0, 0, 0);
+}   
+
+.contenedor-descripcion{                 /*estilos-productDetail*/
+    box-shadow: #4f4f4f;
+}
+
+section{                                 /*estilos-productDetail-mas-informacion*/
+    /*hacerlo mas especifico*/
+border-bottom: inset;
+}
+
+.contenedor-itr{                         /*estilos-productDetail*/
+display:flex;
+align-items: center;
+max-width: 720px;
+margin: auto;
+}
+
+.contenedor-itr img{                    /*estilos-productDetail*/
+height: 200px;
+}
+
+.contenedor-bp{                         /*estilos-productDetail*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.clase-dinero{                        /*estilos-productDetail*/
+    display: flex;
+}
+
+.clase-dinero > p{                  /*estilos-productDetail*/
+    margin: 10px;  
+    font-weight: 700;    
+    font-size: 2em;     
+}
+
+.mas-informacion h2{                             /*productDetail*/
+    text-align: center;
+}
+
+.contenedor-tabla{                          /*productDetail*/
+    display: flex;    
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.tabla{                                    /*productDetail*/
+    display: flex;
+    justify-content: center;
+}
+
+.celda-l{                                 /*productDetail*/
+    background-color: #8d8d8d;
+    width: 150px;
+    padding-left: 10px;
+    border: 1px solid #4f4f4f;
+}
+            
+.celda-r{                                    /*productDetail*/
+    background-color: #afafaf;
+    width: 150px;
+    padding-left: 10px;
+    border: 1px solid #4f4f4f;
+}
+
+.create-button{
+    display: flex;
+}
