@@ -1,0 +1,162 @@
+[
+  {
+    "categoria": "vino",
+    "marca": "Norton",
+    "codigo": 1,
+    "precio": 700,
+    "descuento": 5,
+    "descripcion": "Sexy Fish Cabernet Franc es el nuevo vino de bodega Norton, muy frutado, facil de tomar, ideal para acompañar carnes rojas asadas y picadas de quesos blandos.",
+    "img": "/Images/Vinos/vino1.png",
+    "stock": 100
+  },
+  {
+    "categoria": "vino",
+    "marca": "Rutini",
+    "codigo": 2,
+    "precio": 1100,
+    "descuento": 5,
+    "descripcion": "Rojo rubí profundo. El dúo de cepas de origen francés da como resultado un tinto armonioso y equilibrado: la Cabernet Sauvignon entrega su carácter corpóreo y pleno, y la Malbec matiza el corte con taninos suaves y dulces, realzando una combinación única de aromas y sabores frutados.",
+    "img": "/Images/Vinos/vino2.png",
+    "stock": 100
+  },
+  {
+    "categoria": "vino",
+    "marca": "Ruca Malen",
+    "codigo": 3,
+    "precio": 480,
+    "descuento": 5,
+    "descripcion": "De color rojo violáceo con destellos azules. Respirás su frescura y te envuelve en aromas de frutos rojos, intensas violetas, chocolate y vainilla. En boca es un vino fresco, fluido y elegante.",
+    "img": "/Images/Vinos/vino3.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "vino",
+    "marca": "Benjamin",
+    "codigo": 4,
+    "precio": 500,
+    "descuento": 5,
+    "descripcion": "Aroma a romas y ciruela madura y mermelada de frutos rojos.",
+    "img": "/Images/Vinos/vino4.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "cerveza",
+    "marca": "Stella Artoise",
+    "codigo": 5,
+    "precio": 115,
+    "descuento": 5,
+    "descripcion": "Tradición y excelencia desde el año 1366. La cerveza Lager que simboliza el estilo y la sofisticación europea. De destacado aroma a lúpulo y fino amargor, su sabor intenso y distintivo es disfrutado en todo el mundo. Stella Artois nos invita a probar una nueva forma de disfrutar la receta de siempre en la lata de 473ml.",
+    "img": "/Images/Cervezas/cerveza1.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "cerveza",
+    "marca": "Temple",
+    "codigo": 6,
+    "precio": 125,
+    "descuento": 5,
+    "descripcion": "Cerveza rubia artesanal con una graduación alcohólica de 5,8%, de sabor intenso y cuerpo espeso",
+    "img": "/Images/Cervezas/cerveza2.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "cerveza",
+    "marca": "Brahma",
+    "codigo": 7,
+    "precio": 95,
+    "descuento": 5,
+    "descripcion": "Cerveza rubia con una graduación alcohólica de 4,8%, de sabor suave y cuerpo liviano",
+    "img": "/Images/Cervezas/cerveza3.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "cerveza",
+    "marca": "Andes Origen",
+    "codigo": 8,
+    "precio": 145,
+    "descuento": 5,
+    "descripcion": "Cerveza negra. Una cerveza pensada para aquellas personas que valoran su tiempo libre, para quienes disfrutan de los pequeños momentos de la vida. La opción ideal para quienes quieren mimarse.",
+    "img": "/Images/Cervezas/cerveza4.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "whisky",
+    "marca": "Johnnie Walker",
+    "codigo": 9,
+    "precio": 10500,
+    "descuento": 5,
+    "descripcion": "Johnnie Walker Blue Label recrea el sabor de los whiskies del siglo XIX. Johnnie Walker Blue Label contiene algunos de los whiskies más raros y excepcionales de las reservas de la familia, madurados a la perfeccion en barricas. Tan solo 1 de cada 10.000 barricas procedentes de toda Escocia son seleccionadas para utilizar en este blend. Johnnie Walker Blue Label es el Blended Scotch Whiskys Ultra Premium que más se vende en el mundo. De sabor opulento, profundo y poderoso. Densas capas de miel y humo cubren el paladar, notas de especias y chocolate otorgan un largo final, pleno de fumosidad y dulzor.",
+    "img": "/Images/Whiskeys/whiskey1.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "whisky",
+    "marca": "Bulleit Bourbon",
+    "codigo": 10,
+    "precio": 6800,
+    "descuento": 5,
+    "descripcion": "Bulleit Bourbon es un whiskey americano que se produce y embotella en Kentucky, USA. Conocido por su alto contenido de centeno y maíz, es producido en pequeños lotes y es el favorito entre los bartenders en el mundo.",
+    "img": "/Images/Whiskeys/whiskey2.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "whisky",
+    "marca": "Old Parr",
+    "codigo": 11,
+    "precio": 4200,
+    "descuento": 5,
+    "descripcion": "Un Whiskys Blend de 12 años de añejamiento y ofrece un sabor lleno de carácter. Se desataca por su distintiva botella cuadrada redondeada con textura craquelada.",
+    "img": "/Images/Whiskeys/whiskey3.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "whisky",
+    "marca": "Vat 69",
+    "codigo": 12,
+    "precio": 680,
+    "descuento": 5,
+    "descripcion": "El whisky escoces creado hace más de 100 años por William Sanderson, lanza sus variantes infusionadas con especias o y/o frutas para adaptarse a diferentes gustos: Honey (miel), Apple (manzana) y Guaraná. Tómalos solos o con gaseosa cola.",
+    "img": "/Images/Whiskeys/whiskey4.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "licor",
+    "marca": "Sheridan",
+    "codigo": 13,
+    "precio": 3800,
+    "descuento": 5,
+    "descripcion": "Sheridan es una opción magnífica en lo que licores se refiere. Su botella es única y original: consiste en dos botellas independientes, una con licor de café y whisky, la otra con licor de chocolate blanco. Ambas se fusionan al servir gracias al dosificador en la tapa, que tiene la medida justa para lograr un trago excepcional, que se asemeja a un exquisito café Irlandés.",
+    "img": "/Images/Licores/licor1.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "licor",
+    "marca": "Baileys",
+    "codigo": 14,
+    "precio": 2900,
+    "descuento": 5,
+    "descripcion": "Baileys Original es un licor de crema irlandesa, la base del licor es un blend de Whiskys irlandés cuya receta es secreta. Su sabor característico es el resultado de la combinación de ingredientes como el chocolate, vainilla, caramelo, azúcar y canela, que hacen que esta bebida potencie los sabores en el paladar.",
+    "img": "/Images/Licores/licor2.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "licor",
+    "marca": "Legui",
+    "codigo": 15,
+    "precio": 550,
+    "descuento": 5,
+    "descripcion": "Legui es un licor fino argentino extraído de la caña de azúcar, elaborado con una infusión de hierbas aromáticas, caramelo y cítricos macerados en alcohol. Es de producción 100% argentina, nació en 1950 homenajeando a uno de los máximos referentes del turf rioplatense, Irineo Leguizamo, ganador de más de 3.200 carreras e íntimo amigo de Carlos Gardel.",
+    "img": "/Images/Licores/licor3.jpg",
+    "stock": 100
+  },
+  {
+    "categoria": "licor",
+    "marca": "Baileys",
+    "codigo": 16,
+    "precio": 3700,
+    "descuento": 5,
+    "descripcion": "Baileys Salted Caramel con una sensación sedosa, suave y deliciosa de la crema mezclada con el whiskey es una innovación de sabor, diseñado bajo el tradicional sabor del caramelo y un toque muy ligero de sal que te harán disfrutar de un verdadero placer.",
+    "img": "/Images/Licores/licor4.jpg",
+    "stock": 100
+  }
+]
