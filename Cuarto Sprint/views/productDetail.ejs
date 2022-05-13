@@ -7,16 +7,13 @@
     <%- include("./partials/header") %>
     <div class="product-container">
         <div class="ruta">
-            <h4><a href="/">DrinkHouse</a> > <a href="/views/product/<%=arreglo.categoria%>"><%=arreglo.categoria%></a></h4>
+            <h4><a href="/">DrinkHouse</a> > <a href="/views/product/catalogo">Catalogo</a> > <a href="/views/product/<%=arreglo.categoria%>"><%=arreglo.categoria%></a> > <%=arreglo.marca%></h4>
         </div>
         <div class="product-middle-container">
             <div class="product-imagenes">
                 <img src="<%=arreglo.img%>" alt="imagen-producto">
             </div>
-            <div class="product-description">
-                <h4>Descripcion</h4>
-                <%=arreglo.descripcion%>
-            </div>
+            
             <div class="product-details">
                 <div class="product-details-top">
                     <h2><%=arreglo.marca%></h2>
@@ -29,7 +26,30 @@
                 </div>
             </div>
         </div>
-    </div>   
+        <div class="product-description">
+            <h4>Descripcion</h4>
+            <%=arreglo.descripcion%>
+        </div>
+    </div> 
+
+    <section class="contenedor-articulos">
+        <% for ( let i = 0; i < similares.length; i++ ) { %>
+        <div>
+            <a href="/views/productDetail/<%= similares[i].codigo %>">
+            <article>
+                <img src="<%= similares[i].img %>" alt="imagen de articulo">
+                <div class="caja-articulo">
+                    <h2> <%= similares[i].marca %> </h2>
+                    <p> $<%= similares[i].precio %> </p>
+                    <p> Descuento: <%= similares[i].descuento %> % off</p>
+                </div>
+            </article>
+            </a>
+        </div>
+        <% } %>
+    </section>
+    
+    
     <!-- footer -->
     <%- include("./partials/footer") %>
 </body>

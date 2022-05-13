@@ -69,8 +69,10 @@ const productDetail = (req, res) => {
     const id = req.params.codigo;
     const converted_id = parseInt(id);    
     const productoDetallado = articulos.find(product => product.codigo == converted_id);
-    res.render("productDetail", {arreglo:productoDetallado});
-};
+    const productosSimilares = articulos.filter(product => ((product.categoria == productoDetallado.categoria) && (product.codigo != converted_id)));
+    res.render("productDetail", {arreglo:productoDetallado, similares:productosSimilares});
+    
+}
 
 const editProducts = (req, res) => {
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
