@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>register</title>
+    <script src="/carrusel.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="flex-encabezado">
+            <div id="logo">
+                <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House"></a>
+            </div>
+    </header>
+    <div class="contenedor-register">
+        <h1>Ingresar</h1>
+        <div>
+            <form action="/login" method="post">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+                
+                <a href="/views/login">¿Olvidaste la contraseña?</a>
+                
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="pie">
+            <div class="logo">
+                <img src="/images/Drink_House_SVG.svg" width="150" alt="logo de Drink House"></div>
+            <nav>
+                <div>
+                <h1>Contactos</h1>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i><a href="#"> 011-4865-4569</a></li>
+                    <li><i class="far fa-envelope"></i><a href="#"> drinkhouse@gmail.com</a></li>
+                </ul>
+                </div>
+                <div>
+                <h1>¿Quienes Somos?</h1>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                </ul>
+                </div>
+                <div>
+                <h1>¿Como Comprar?</h1>
+                <ul>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Seguridad</a></li>
+                </ul>
+                </div>
+                <div>
+                <h1>Redes</h1>
+                <ul>
+                    <li><i class="fab fa-facebook"></i><a href="#"> Facebook</a></li>
+                    <li><i class="fab fa-instagram"></i><a href="#"> Instagram</a></li>
+                </ul>
+                </div>
+            </nav>
+            </div>           
+    </footer>
+</body>
+</html>

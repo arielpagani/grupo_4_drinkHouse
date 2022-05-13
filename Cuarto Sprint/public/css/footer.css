@@ -1,0 +1,47 @@
+footer .fab{
+    padding: 0px;
+}
+
+footer .logo {                      /*logo del footer*/
+    line-height: 160px;
+    float: left;
+}
+
+footer .logo img {                  /* tamanio imagen logo */
+    height: 60px;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+}
+
+footer nav div {
+    padding: 2px;              
+    flex: 130px;                
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    align-items: center;
+}
+
+footer nav div ul {
+    list-style: none;
+    line-height: normal;
+    padding: 0;
+}
+
+.pie {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.pie nav div ul li a {
+    color: white;
+    font-size: 13px;
+}
