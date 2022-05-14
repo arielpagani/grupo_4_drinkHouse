@@ -8,14 +8,14 @@
     padding: 0 10px;
     display: flex;
     width: 70%;
-    height: 110px;
+    height: 160px;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
 }
 
 .contenedor-producto img{
-    width: 100px;
+    width: 75px;
 }
 
 .contenedor-detalle-compra{

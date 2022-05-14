@@ -3,6 +3,9 @@ body {
     font-size: 18px;
     background-color: white;
     margin: 0px;
+    position: relative;
+    padding-bottom: 10em;
+    min-height: 100vh;
 }
 
 a{

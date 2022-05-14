@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <h2>Vinos</h2>
+        <section class="contenedor-articulos">
+            <% for ( let i = 0; i < arreglo.length; i++ ) { %>
+            <div>
+                <a href="/views/productDetail/<%= arreglo[i].codigo %>">
+                <article>
+                    <img src="<%= arreglo[i].img %>" alt="imagen de articulo">
+                    <div class="caja-articulo">
+                        <h2> <%= arreglo[i].marca %> </h2>
+                        <p> $<%= arreglo[i].precio %> </p>
+                        <p> Descuento: <%= arreglo[i].descuento %> off</p>
+                    </div>
+                </article>
+                </a>
+            </div>
+            <% } %>
+        </section>
+    </main>
+<!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>

@@ -36,6 +36,9 @@ footer nav div ul {
 .pie {
     background-color: black;
     color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .pie nav div ul li a {

@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin: 80px 0;
 }
 
 .contenedor-marcas{                                       /*home-marcas*/
@@ -63,7 +64,7 @@ width: 100px;
     color: white;
     position: fixed;
     right: 20px;
-    bottom: 70px;
+    bottom: 160px;
 }
 
 .all-centrado{              /*home-centrado*/
@@ -109,4 +110,8 @@ width: 100px;
 main h2{                   /*home-palabra-productos*/ 
     display: flex;
     justify-content: center;
+}
+
+.productos {
+    margin: 70px 0 0;
 }

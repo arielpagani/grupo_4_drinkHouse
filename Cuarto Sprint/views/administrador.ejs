@@ -10,36 +10,53 @@
         <a id="crear-producto" href="/views/createProducts">Crear Producto +</a>
 
         <section class="contenedor-articulos-admin">
+            <div class="itemizado">
+                <div>
+                <h3>Categoria</h3>
+                </div>
+                <div>
+                <h3>Marca</h3>
+                </div>
+                <div>
+                <h3>Código</h3>
+                </div>
+                <div>
+                <h3>Stock</h3>
+                </div>
+                <div>
+                <h3>Ver</h3>
+                </div>
+                <div>
+                <h3>Editar</h3>
+                </div>
+                <div>
+                <h3>Eliminar</h3>
+                </div>
+            </div>
+
             <% for ( let i = 0; i < arreglo.length; i++ ) { %>
             <div>
                 <article>
                     <div class="caja-articulo-admin">
                     <div>
-                        <h3>Categoria</h3> 
                         <p><%= arreglo[i].categoria %></p>
                     </div>
                     <div>
-                        <h3>Marca</h3>
                         <p><%= arreglo[i].marca %> </p>
                     </div>
                     <div>
-                        <h3>Código</h3>
                         <p><%= arreglo[i].codigo %></p>
                     </div>
                     <div>
-                        <h3>Stock</h3>
                         <p><%= arreglo[i].stock %> </p>
                     </div>
                     <div>
-                        <h3>Ver</h3>
                         <a href="/views/productDetail/<%= arreglo[i].codigo %>"><i class="far fa-eye"></i></a>
                     </div>
                     <div>
-                        <h3>Editar</h3>
                         <a href="/administrador/<%= arreglo[i].codigo %>/editproducts"><i class="far fa-edit"></i></a>
                     </div>
                     <div>
-                        <h3>Eliminar</h3>
                         <a href="/administrador/eliminarProduct/<%= arreglo[i].codigo %>"><i class="far fa-trash-alt"></i></i></a>
                     </div>
                     </div>

@@ -17,7 +17,7 @@
 
 .caja-articulo-admin div i{
     color: black;
-    margin: 7px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .caja-articulo-admin div h3{
@@ -42,4 +42,16 @@
 #crear-producto:hover{
     background-color: rgb(170, 255, 0);
     color: black;
+}
+
+.itemizado {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.itemizado div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
