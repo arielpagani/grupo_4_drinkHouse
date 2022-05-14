@@ -8,12 +8,17 @@ const path = require("path");
 const home = (req, res) => {
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
 
-    //Productos random de busquedas similares
+    //Productos random de busquedas Destacadas
+    //Acá declaro cuantos productos son en total del catalogo
     const cantidadDeProductosFiltrados= articulos.length
+    // constante declarada donde se guardan los productos
     const productosAleatorios=[]
+    // cuantos productos quiero mostrar
     const cantidadDeProductos=4
+    // convierto en numero entero la cantidad de productos
     const cantidadDeProductosAMostrar= parseInt(cantidadDeProductosFiltrados)
 
+    // funcion que genera numeros de forma aleatoria de la cantidad de productos y devuelve 4
     function llenarAleatorios(a){
         var v=Math.floor(Math.random()*cantidadDeProductosAMostrar);
         if (!a.some(function(e){return e == v})){
@@ -24,12 +29,15 @@ const home = (req, res) => {
         llenarAleatorios(productosAleatorios)
     }
 
-    // Esto hay que mejorarlo(funciona pero es horrible)
+    // Esto hay que mejorarlo(funciona pero es horrible) 
+    // aca le digo que de los 4 numeros aleatorios entre el 0 y la cantidad total de productos los busque entre todos los productos y los agregue a productosSimilaresAleatorios 
     const productosSimilaresAleatorios = []
     const push_1= productosSimilaresAleatorios.push(articulos[productosAleatorios[0]])
     const push_2= productosSimilaresAleatorios.push(articulos[productosAleatorios[1]])
     const push_3= productosSimilaresAleatorios.push(articulos[productosAleatorios[2]])
     const push_4= productosSimilaresAleatorios.push(articulos[productosAleatorios[3]])
+
+    // le pido que me renderice home con productosSimilaresAleatorios
     res.render ("home", {arreglo:productosSimilaresAleatorios});
 };
 
@@ -94,7 +102,7 @@ const productDetail = (req, res) => {
     const productoDetallado = articulos.find(product => product.codigo == converted_id);
     const productosSimilares = articulos.filter(product => ((product.categoria == productoDetallado.categoria) && (product.codigo != converted_id)));
 
-    //Productos random de busquedas similares
+    //Productos random de busquedas similares (la explicacion esta en el controlador home)
     const cantidadDeProductosFiltrados= productosSimilares.length
     const productosAleatorios=[]
     const cantidadDeProductos=3
