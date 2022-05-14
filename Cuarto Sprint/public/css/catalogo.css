@@ -1,7 +1,7 @@
 .contenedor-articulos{                  /*catalogo Articulos*/
     display: flex;
     flex-wrap: wrap;
-    padding: 5px 15%;
+    padding: 0 15% 15px;
     margin: 15px 0 0 0;
 }
 

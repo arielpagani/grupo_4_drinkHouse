@@ -7,7 +7,30 @@ const path = require("path");
 
 const home = (req, res) => {
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
-    res.render ("home");
+
+    //Productos random de busquedas similares
+    const cantidadDeProductosFiltrados= articulos.length
+    const productosAleatorios=[]
+    const cantidadDeProductos=4
+    const cantidadDeProductosAMostrar= parseInt(cantidadDeProductosFiltrados)
+
+    function llenarAleatorios(a){
+        var v=Math.floor(Math.random()*cantidadDeProductosAMostrar);
+        if (!a.some(function(e){return e == v})){
+            a.push(v)
+        }
+    }
+    while(productosAleatorios.length < cantidadDeProductos && cantidadDeProductos <= cantidadDeProductosAMostrar){
+        llenarAleatorios(productosAleatorios)
+    }
+
+    // Esto hay que mejorarlo(funciona pero es horrible)
+    const productosSimilaresAleatorios = []
+    const push_1= productosSimilaresAleatorios.push(articulos[productosAleatorios[0]])
+    const push_2= productosSimilaresAleatorios.push(articulos[productosAleatorios[1]])
+    const push_3= productosSimilaresAleatorios.push(articulos[productosAleatorios[2]])
+    const push_4= productosSimilaresAleatorios.push(articulos[productosAleatorios[3]])
+    res.render ("home", {arreglo:productosSimilaresAleatorios});
 };
 
 const login = (req, res) => {
@@ -70,8 +93,30 @@ const productDetail = (req, res) => {
     const converted_id = parseInt(id);    
     const productoDetallado = articulos.find(product => product.codigo == converted_id);
     const productosSimilares = articulos.filter(product => ((product.categoria == productoDetallado.categoria) && (product.codigo != converted_id)));
-    res.render("productDetail", {arreglo:productoDetallado, similares:productosSimilares});
+
+    //Productos random de busquedas similares
+    const cantidadDeProductosFiltrados= productosSimilares.length
+    const productosAleatorios=[]
+    const cantidadDeProductos=3
+    const cantidadDeProductosAMostrar= parseInt(cantidadDeProductosFiltrados)
+
+    function llenarAleatorios(a){
+        var v=Math.floor(Math.random()*cantidadDeProductosAMostrar);
+        if (!a.some(function(e){return e == v})){
+            a.push(v)
+        }
+    }
+    while(productosAleatorios.length < cantidadDeProductos && cantidadDeProductos <= cantidadDeProductosAMostrar){
+        llenarAleatorios(productosAleatorios)
+    }
+
+    // Esto hay que mejorarlo(funciona pero es horrible)
+    const productosSimilaresAleatorios = []
+    const push_1= productosSimilaresAleatorios.push(productosSimilares[productosAleatorios[0]])
+    const push_2= productosSimilaresAleatorios.push(productosSimilares[productosAleatorios[1]])
+    const push_3= productosSimilaresAleatorios.push(productosSimilares[productosAleatorios[2]])
     
+    res.render("productDetail", {arreglo:productoDetallado, similares:productosSimilaresAleatorios});
 }
 
 const editProducts = (req, res) => {
