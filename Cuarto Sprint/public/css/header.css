@@ -23,9 +23,12 @@
 
 .flex-encabezado #navegador {          /* contenedor de logo-barra-nav-estilos-palabras */
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
-.flex-encabezado #navegador a {          /* contenedor de logo-barra-nav-estilos-botones */
+.flex-encabezado #navegador a { 
+    display: grid;         /* contenedor de logo-barra-nav-estilos-botones */
     color: white;
     padding: 2px 5px;
     transition: all 500ms ease;             /*cambiar el all*/
@@ -33,7 +36,7 @@
 
 .flex-encabezado #navegador a:hover {          /* contenedor de logo-barra-nav-estilos-botones */
     background: rgb(170, 255, 0);
-    border-radius: 50px;
+    border-radius: 10px;
     color: black;
 }
 

@@ -37,7 +37,7 @@ footer nav div ul {
     background-color: black;
     color: white;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
 }
 

@@ -1,8 +1,8 @@
 .contenedor-articulos{                  /*catalogo Articulos*/
     display: flex;
     flex-wrap: wrap;
-    padding: 0 15% 15px;
-    margin: 15px 0 0 0;
+    padding: 0 16%;
+    margin: 15px 0 15px 0;
 }
 
 .contenedor-articulos article{
@@ -63,6 +63,7 @@
     justify-content: space-around;
     background-color: black;
     margin: 0 0 15px;
+    flex-wrap: wrap;
 }
 
 .nav_catalogo a{                           
@@ -87,3 +88,11 @@
     margin: 10px 0 0 0;
 }
 
+
+                                 /* Media query para se muestren de a 2 articulos en tablets */
+@media (max-width: 768px){
+    .contenedor-articulos div{
+        flex: 45%;
+        
+    }
+}

@@ -4,8 +4,9 @@ body {
     background-color: white;
     margin: 0px;
     position: relative;
-    padding-bottom: 10em;
+    /* padding-bottom: 10em;                     Esta es la propiedad que nos daba problema con el footer */
     min-height: 100vh;
+
 }
 
 a{
