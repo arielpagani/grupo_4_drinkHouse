@@ -4,7 +4,8 @@
 }
 
 .contenedor-carrito {
-    flex: 45%;
+    flex: 20%;
+    margin-left: 5%;
 }
 
 .detalleCarrito {
@@ -39,7 +40,7 @@ justify-content: center;
 .contenedorFixed{
     display: flex;
     justify-content: center;
-    flex: 30%;
+    flex: 20%;
     
 }
 
@@ -73,6 +74,7 @@ flex-direction: column;
 .columnasCarrito button {
     border-radius: 10px;
     padding: 10px 20px;
+    margin: 10px ;
     font-weight: bold;
     color: white;
     background-color: black;
