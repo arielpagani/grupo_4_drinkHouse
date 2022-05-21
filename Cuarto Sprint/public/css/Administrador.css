@@ -1,0 +1,61 @@
+.contenedor-articulos-admin {
+    margin: 30px;
+}
+
+.background-admin{
+    background-color: white;
+}
+
+.caja-articulo-admin{
+    display: flex;
+    padding: 0 10px;
+    border-bottom: 2px solid black;
+}
+
+.caja-articulo-admin div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.caja-articulo-admin div i{
+    color: black;
+    margin: 20px 0 0 0;
+}
+
+.caja-articulo-admin div h3{
+    margin: 7px 0 0 0;
+}
+
+.caja-articulo-admin div i:hover{
+    color: blue;
+}
+
+#crear-producto{
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    margin: 15px 15px;
+    font-weight: bold;
+}
+
+#crear-producto:hover{
+    background-color: rgb(170, 255, 0);
+    color: black;
+}
+
+.itemizado {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.itemizado div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

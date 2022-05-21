@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <% if (url == 'catalogo') { %>
+        <script>document.title = 'Catalogo | DrinkHouse'</script>
+    <% } else { %>
+        <% const titulo = arreglo[0].categoria.charAt(0).toUpperCase() + arreglo[0].categoria.slice(1) + ' | Drinkhouse'; %> 
+        <script>
+            document.title =  '<%= titulo %>';
+        </script> 
+    <% } %>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <h3 class="titulo-h3">Categorías</h3> <!-- Esto quizas debería ser un nav -->
+        <div class="nav_catalogo">
+            <a href="/views/product/catalogo">Catálogo</a>
+            <a href="/views/product/cerveza">Cervezas</a>
+            <a href="/views/product/whisky">Whiskeys</a>
+            <a href="/views/product/licor">Licores</a>
+            <a href="/views/product/vino">Vinos</a>
+        </div>
+        <section class="contenedor-articulos">
+            <% for ( let i = 0; i < arreglo.length; i++ ) { %>
+            <div>
+                <a href="/views/productDetail/<%= arreglo[i].codigo %>">
+                <article>
+                    <img src="<%= arreglo[i].img %>" alt="imagen de articulo">
+                    <div class="caja-articulo">
+                        <h2> <%= arreglo[i].marca %> </h2>
+                        <p> $<%= arreglo[i].precio %> </p>
+                        <p> Descuento: <%= arreglo[i].descuento %> % off</p>
+                    </div>
+                </article>
+                </a>
+            </div>
+            <% } %>
+        </section>
+    </main>
+<!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>
+
+<!--categoria resume las vistas de product-->

@@ -1,0 +1,99 @@
+.contenedor-articulos{                  /*catalogo Articulos*/
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    margin: 5px;
+    background-color: white;
+}
+
+.contenedor-articulos article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 150px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.contenedor-articulos article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-radius: 20px;
+    transform: scale(1.1,1.1);
+}
+
+.contenedor-articulos div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 25%;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.contenedor-articulos .caja-articulo{
+    border-top: 2px solid gray;
+}
+
+.contenedor-articulos .caja-articulo p{
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    margin: 15px 0 0;
+    font-weight: bold;
+}
+
+.contenedor-articulos .caja-articulo .precio{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contenedor-articulos a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_catalogo{                          /*Nav del catalogo*/   
+    display: flex;
+    padding: 15px 30%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    background-color: black;
+    margin: 0 0 15px;
+    flex-wrap: wrap;
+}
+
+.nav_catalogo a{                           
+    color: white;
+    font-weight: bold;
+    transition: all 500ms ease;
+}
+
+.nav_catalogo a:hover{                           
+    color: black;
+    background-color: rgb(170, 255, 0);;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.titulo-h3{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    padding: 10px 0 0 0;
+    margin: 10px 0 0 0;
+}
+
+
+                                 /* Media query para se muestren de a 2 articulos en tablets */
+@media (max-width: 768px){
+    .contenedor-articulos div{
+        flex: 45%;
+        
+    }
+}

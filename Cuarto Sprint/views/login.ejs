@@ -1,0 +1,31 @@
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <script>
+        document.title = 'Iniciar Sesion | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <div class="contenedor-register">
+        <h1>Hola!</h1>
+        <h3>Bienvenido nuevamente!</h3>
+        <div>
+            <form action="/login" method="post">
+                <label for="email"></label>
+                <input type="email" name="email" placeholder="Ingresá tu usuario" id="email" required>
+                <label for="password"></label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+            <div class="checkbox-recuerdame">
+                <label for="Nombre">Recuérdame</label>
+                <input type="checkbox" name="nombre" id="nombre" required>
+            </div>
+                <a href="/views/login">¿Olvidaste la contraseña?</a>
+                <a href="/views/register">¿Todavía no estás registrado?</a>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+    <%- include("./partials/footer") %>
+</body>
+</html>
