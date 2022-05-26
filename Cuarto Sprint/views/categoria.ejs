@@ -14,13 +14,18 @@
     <!-- header -->
     <%- include("./partials/header") %>
     <main>
-        <h3 class="titulo-h3">Categorías</h3> <!-- Esto quizas debería ser un nav -->
-        <div class="nav_catalogo">
-            <a href="/views/product/catalogo">Catálogo</a>
-            <a href="/views/product/cerveza">Cervezas</a>
-            <a href="/views/product/whisky">Whiskeys</a>
-            <a href="/views/product/licor">Licores</a>
-            <a href="/views/product/vino">Vinos</a>
+        <div class="contenedor-nav-opciones">
+            <h3><a href="/views/product/catalogo">Categorías</a></h3>
+            <div class="nav-catalogo">
+                <div class="nav-left-catalogo">
+                    <a href="/views/product/cerveza"><i class="fas fa-beer"></i>Cervezas</a>
+                    <a href="/views/product/whisky"><i class="fas fa-glass-whiskey"></i>Whiskeys</a>
+                </div>
+                <div class="nav-right-catalogo">
+                    <a href="/views/product/licor"><i class="fas fa-glass-martini-alt"></i>Licores</a>
+                    <a href="/views/product/vino"><i class="fas fa-wine-glass-alt"></i>Vinos</a>
+                </div>
+            </div>
         </div>
         <section class="contenedor-articulos">
             <% for ( let i = 0; i < arreglo.length; i++ ) { %>

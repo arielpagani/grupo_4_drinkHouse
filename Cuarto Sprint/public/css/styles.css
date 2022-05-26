@@ -9,10 +9,6 @@ body {
 
 }
 
-a{
-    text-decoration: none;
-}
-
 #botonDeBusqueda {
     height: 28px;
     width: 29;
@@ -164,6 +160,7 @@ input{
 
 /*Inicio de Mobile*/
 
+/*
 @media  (max-width: 460px) {
 
     .botones {
@@ -181,11 +178,12 @@ input{
         transition: all .3 ease;
     }
         
-    footer .logo img, .marcas, .flex-encabezado #busqueda button{          /* contenedor de logo-barra-nav (lupa) */
+    footer .logo img, .marcas, .flex-encabezado #busqueda button{          /* contenedor de logo-barra-nav (lupa) *
         display: none;
     }
 } 
-    
+*/
+
 /*Fin del mobile*/
 
 /*Inicio de Desktop*/
@@ -228,6 +226,14 @@ input{
         width: 45%;
     }
 
+    .contenedor-nav-opciones .nav-catalogo{
+        flex-direction: row;
+    }
+
+    .nav-catalogo .nav-left-catalogo,
+    .nav-catalogo .nav-right-catalogo{
+        width: 45%;
+    }
 }
 
 @media (min-width: 768px){
@@ -235,12 +241,13 @@ input{
     .header-container{
         flex-direction: row;
     }
+    
     .header-container .header-logo-busqueda{
         width: 49%;
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+    
 
     .header-container .header-busqueda{
         width: 60%;
@@ -254,9 +261,19 @@ input{
         width: 49%;
     }
 
+    /*
     .header-container .header-busqueda label{
         justify-content: space-evenly;
         padding: 5px;
     }
+    */
+    
+    .contenedor-nav-opciones .nav-catalogo{
+        flex-direction: row;
+    }
 
+    .nav-catalogo .nav-left-catalogo,
+    .nav-catalogo .nav-right-catalogo{
+        width: 45%;
+    }
 }

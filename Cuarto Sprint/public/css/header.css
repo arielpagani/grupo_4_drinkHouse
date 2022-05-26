@@ -32,22 +32,26 @@ header{                                     /*header*/
 
 .header-busqueda label{                /* contenedor de logo-barra-nav-barra-busqueda */
     padding: 3px 30px;
-    text-align: center;
+    /*text-align: center;
     font-size: 15px;
-    border-radius: 15px;
+    border-radius: 15px;*/
     background-color: white;
-    font-weight: bold;
+    /*font-weight: bold;
     display: flex;
-    justify-content: center;
+    justify-content: center;*/
     border: 3px solid rgb(137, 104, 237);
-    border-radius: 14px;
+    border-radius: 20px;
 }
 
 .header-busqueda button{              /*contenedor boton lupita*/
     border-style: none;
-    color: black;
     background-color: white;
-    padding: 0;
+    /*color: black;
+    padding: 0;*/
+    width: 80%;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 .header-nav-container i{
@@ -55,11 +59,11 @@ header{                                     /*header*/
 }
 
 .header-nav{
-    text-align: center;
+    /*text-align: center;*/
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2px;
+    /*margin-top: 2px;*/
 }
 
 .nav-left{
