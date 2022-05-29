@@ -3,20 +3,110 @@
 <!-- head -->
 <%- include("./partials/head") %>
 <body>
+    <script>
+        document.title = 'Carrito de Compras | DrinkHouse'
+    </script>
     <!-- header -->
     <%- include("./partials/header") %>
+
+    <h3 class="titulo-h3">Carrito de compras</h3>
+
+    <div class="columnasCarrito">
     <div class="contenedor-carrito">
+
         <div class="contenedor-producto">
-            <img src="<%=arreglo.img%>" alt="imagen-producto">
-            <h2><%=arreglo.categoria%></h2>
+            <div><img src="<%=arreglo.img%>" alt="imagen-producto"></div>
+            <div class="detalleCarrito"><h2><%=arreglo.categoria%></h2>
             <h2><%=arreglo.marca%></h2>
             <input type="number" name="stock" value="1"  id="stock" min="1" max="<%=arreglo.stock%>">
             <h3>$<%=arreglo.precio%>,00</h3>
             <div class="botones-carrito">
                 <button>Eliminar</button>
+                </div> 
             </div>
         </div>
+
+        <div class="contenedor-producto">
+            <div><img src="<%=arreglo.img%>" alt="imagen-producto"></div>
+            <div class="detalleCarrito"><h2><%=arreglo.categoria%></h2>
+            <h2><%=arreglo.marca%></h2>
+            <input type="number" name="stock" value="1"  id="stock" min="1" max="<%=arreglo.stock%>">
+            <h3>$<%=arreglo.precio%>,00</h3>
+            <div class="botones-carrito">
+                <button>Eliminar</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="contenedor-producto">
+            <div><img src="<%=arreglo.img%>" alt="imagen-producto"></div>
+            <div class="detalleCarrito"><h2><%=arreglo.categoria%></h2>
+            <h2><%=arreglo.marca%></h2>
+            <input type="number" name="stock" value="1"  id="stock" min="1" max="<%=arreglo.stock%>">
+            <h3>$<%=arreglo.precio%>,00</h3>
+            <div class="botones-carrito">
+                <button>Eliminar</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="contenedor-producto">
+            <div><img src="<%=arreglo.img%>" alt="imagen-producto"></div>
+            <div class="detalleCarrito"><h2><%=arreglo.categoria%></h2>
+            <h2><%=arreglo.marca%></h2>
+            <input type="number" name="stock" value="1"  id="stock" min="1" max="<%=arreglo.stock%>">
+            <h3>$<%=arreglo.precio%>,00</h3>
+            <div class="botones-carrito">
+                <button>Eliminar</button>
+                </div> 
+            </div>
+        </div>
+
+
+        <div class="contenedor-producto">
+            <div><img src="<%=arreglo.img%>" alt="imagen-producto"></div>
+            <div class="detalleCarrito"><h2><%=arreglo.categoria%></h2>
+            <h2><%=arreglo.marca%></h2>
+            <input type="number" name="stock" value="1"  id="stock" min="1" max="<%=arreglo.stock%>">
+            <h3>$<%=arreglo.precio%>,00</h3>
+            <div class="botones-carrito">
+                <button>Eliminar</button>
+                </div> 
+            </div>
+        </div>
+
+
+
+        <div class="contenedor-producto">
+            <div><img src="<%=arreglo.img%>" alt="imagen-producto"></div>
+            <div class="detalleCarrito"><h2><%=arreglo.categoria%></h2>
+            <h2><%=arreglo.marca%></h2>
+            <input type="number" name="stock" value="1"  id="stock" min="1" max="<%=arreglo.stock%>">
+            <h3>$<%=arreglo.precio%>,00</h3>
+            <div class="botones-carrito">
+                <button>Eliminar</button>
+                </div> 
+            </div>
+        </div>
+
+
+
+        <div class="contenedor-producto">
+            <div><img src="<%=arreglo.img%>" alt="imagen-producto"></div>
+            <div class="detalleCarrito"><h2><%=arreglo.categoria%></h2>
+            <h2><%=arreglo.marca%></h2>
+            <input type="number" name="stock" value="1"  id="stock" min="1" max="<%=arreglo.stock%>">
+            <h3>$<%=arreglo.precio%>,00</h3>
+            <div class="botones-carrito">
+                <button>Eliminar</button>
+                </div> 
+            </div>
+        </div>
+    </div> 
+
+        <div class="contenedorFixed">
         <div class="contenedor-detalle-compra">
+           
             <div class="subtotales">
                 <h4>Subtotal:</h4>
                 <h4>$<%=arreglo.precio%>,00</h4>
@@ -32,6 +122,8 @@
             </div>
         </div>
     </div> 
+</div>
+
 <!-- footer -->
 <%- include("./partials/footer") %>
 </body>

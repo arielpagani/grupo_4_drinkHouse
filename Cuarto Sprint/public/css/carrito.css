@@ -1,52 +1,87 @@
-.contenedor-carrito{
+.columnasCarrito {
     display: flex;
+    margin:20px 0;
+    background-color: white;
 }
 
-.contenedor-producto{
-    border: 1px solid gray;
-    margin: 20px;
-    padding: 0 10px;
+.contenedor-carrito {
+    flex: 20%;
+    margin-left: 5%;
+}
+
+.detalleCarrito {
+    flex: 60%;
     display: flex;
-    width: 70%;
-    height: 160px;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.contenedor-producto img{
-    width: 75px;
-}
-
-.contenedor-detalle-compra{
-    margin: 20px;
+    flex-wrap: wrap;
+    align-items: flex-end;
     flex-direction: column;
-    padding: 10px 10px;
+}
+
+.contenedor-producto {
     display: flex;
-    width: 30%;
-    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    border-radius: 20px;
+    margin: 20px 5px;
+    flex-wrap: wrap;
+    padding: 20px;
     align-items: center;
-    box-sizing: border-box;
-    background-color: rgb(238, 237, 237);
 }
 
-.botones-carrito button{
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    width: 90%;
-    height: 40px;
+.contenedor-producto div{
+flex: 40%;
+display: flex;
+justify-content: center;
+
+}
+
+.contenedor-producto img {
+    height: 200px;
+}
+
+.contenedorFixed{
+    display: flex;
+    justify-content: center;
+    flex: 20%;
+    
+}
+
+.contenedor-detalle-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e7e5e5;
+    border-radius: 30px;
     margin: 10px;
-    border-radius: 7px;
+    padding: 10px;
+    position: fixed;
+   
 }
 
-.botones-carrito button:hover{             
+.subtotales {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.subtotales h4, h3 {
+margin: 10px 0;
+}
+
+.botones-carrito{
+    display: flex;
+flex-direction: column;
+}
+
+
+.columnasCarrito button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px ;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+.columnasCarrito button:hover{
     background: rgb(170, 255, 0);
     color: rgb(0, 0, 0);
-}
-
-.contenedor-detalle-compra .subtotales{
-    display: flex;
-    width: 55%;
-    justify-content: space-between;
 }

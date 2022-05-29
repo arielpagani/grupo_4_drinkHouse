@@ -4,8 +4,11 @@
 <%- include("./partials/head") %>
 
 <body>
+    <script>
+        document.title = 'Editar Producto | DrinkHouse'
+    </script>
     <!-- header -->
-    <%- include("./partials/headerSimple") %>
+    <%- include("./partials/header") %>
     <main>
         <div class="contenedor-register">
             <form action="/administrador/<%= articulo.codigo %>/editproducts?_method=PUT" method="POST" enctype="multipart/form-data">

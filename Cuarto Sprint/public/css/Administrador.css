@@ -2,6 +2,10 @@
     margin: 30px;
 }
 
+.background-admin{
+    background-color: white;
+}
+
 .caja-articulo-admin{
     display: flex;
     padding: 0 10px;

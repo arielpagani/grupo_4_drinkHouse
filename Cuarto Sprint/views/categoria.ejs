@@ -3,6 +3,14 @@
 <!-- head -->
 <%- include("./partials/head") %>
 <body>
+    <% if (url == 'catalogo') { %>
+        <script>document.title = 'Catalogo | DrinkHouse'</script>
+    <% } else { %>
+        <% const titulo = arreglo[0].categoria.charAt(0).toUpperCase() + arreglo[0].categoria.slice(1) + ' | Drinkhouse'; %> 
+        <script>
+            document.title =  '<%= titulo %>';
+        </script> 
+    <% } %>
     <!-- header -->
     <%- include("./partials/header") %>
     <main>

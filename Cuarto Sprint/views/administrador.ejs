@@ -3,9 +3,12 @@
 <!-- head -->
 <%- include("./partials/head") %>
 <body>
+    <script>
+        document.title = 'Administrador | DrinkHouse'
+    </script>
     <!-- header -->
-    <%- include("./partials/headerSimple") %>
-    <main>
+    <%- include("./partials/header") %>
+    <main class="background-admin">
         <h2>Catálogo de Productos</h2>
         <a id="crear-producto" href="/views/createProducts">Crear Producto +</a>
 

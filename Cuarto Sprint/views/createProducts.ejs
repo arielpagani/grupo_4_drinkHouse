@@ -4,8 +4,11 @@
 <%- include("./partials/head") %>
 
 <body>
+    <script>
+        document.title = 'Crear Producto | DrinkHouse'
+    </script>
     <!-- header -->
-    <%- include("./partials/headerSimple") %>
+    <%- include("./partials/header") %>
     <main>
         <div class="contenedor-register">
             <form action="/views/createProducts" method="POST" enctype="multipart/form-data">
