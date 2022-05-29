@@ -73,6 +73,10 @@
     transition: all 500ms ease;
 }
 
+.nav_catalogo a .fa-wine-bottle{                           
+    transform: rotate(-45deg);
+}
+
 .nav_catalogo a:hover{                           
     color: black;
     background-color: rgb(170, 255, 0);;
