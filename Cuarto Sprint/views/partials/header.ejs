@@ -12,29 +12,50 @@
             <div class="nav-left">
                 <% if (locals.isLogged) { %>
                 <div class="header-nav-container">
-                    <a href="/views/login"><i class="far fa-user"></i>Ingresa</a>
+                    <a class="botones-nav" href="/views/login"><i class="far fa-user"></i>Ingresa</a>
                 </div>
                 <div class="header-nav-container">
-                    <a href="/views/register"><i class="far fa-list-alt"></i>Crea tu cuenta</a>
+                    <a class="botones-nav" href="/views/register"><i class="far fa-list-alt"></i>Crea tu cuenta</a>
                 </div>
             </div>
             <div class="nav-right">
                 <% } else { %>
-                <div class="header-nav-container">
-                    <a>Hola <%= userLogged.nombre %>!</a>
-                    <img src="<%= userLogged.avatar %> ">
+                <div class="dropdown header-nav-container">
+                    <img src="<%= userLogged.avatar %> "><a>Hola <%= userLogged.nombre %>!</a>
+                    <i onclick = "myFunction()" class="fas fa-chevron-circle-down dropbtn"></i>
+                    <div id ="myDropdown" class="dropdown-content">
+                        <a href="/views/administrador"></i>Administrador</a>
+                        <a href="/views/profile">My Profile</a>
+                        <a href="/views/logout">Logout</a>
+                    </div>
                 </div>
                 <div class="header-nav-container">
                     <a class="botones-nav" href="/views/carritoCompras"><i class="fas fa-shopping-cart"></i>Carrito</a>
                 </div>
-                <div class="header-nav-container">
-                    <a class="botones-nav" href="/views/administrador"><i class="fas fa-box"></i>Administrador</a>
-                </div>
-                <div class="header-nav-container">
-                <a class="botones-nav" href="/views/logout">Logout</a>
-                </div>
+                
             </div>
             <% } %>
         </nav>
     </div>           
 </header>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>

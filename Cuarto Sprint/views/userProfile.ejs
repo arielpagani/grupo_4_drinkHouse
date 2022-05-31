@@ -5,17 +5,15 @@
 <body>
     <!-- header -->
     <%- include("./partials/header") %>
-    <div>
-		<div>
-			<div>
-				<h2>Hola <%= user.nombre %> <%= user.apellido %>!</h2>
-				<img src="<%= user.avatar %> ">
-				<br>
-				<br>
-				<div><h2>Usuario: <%= user.email %></h2></div>
-				<div><h2>Fecha de Nacimiento: <%= user.fechaDeNacimiento %></h2></div>
-				
-			</div>
+    <div class="contenedor-perfil">
+		<div class="contenedor-avatar">
+		<img src="<%= user.avatar %> ">
+		</div>
+		<div class="contenedor-descripcion-perfil">
+			<h2>Hola <%= user.nombre %> <%= user.apellido %>!</h2>
+			<h3>Usuario: <%= user.email %></h3>
+			<h3>Fecha de Nacimiento: <%= user.fechaDeNacimiento %></h3>
+			<button class="edicion-perfil-button">Editar Perfil</button>
 		</div>
 	</div>
     

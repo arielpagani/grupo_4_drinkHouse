@@ -10,6 +10,7 @@ const path = require("path");
 const registerMiddleware = require("../middlewares/registerMiddleware"); //Middleware para mostrar errores en el Registro .
 const guestMiddleware = require("../middlewares/guestMiddleware"); //Middleware que me direcciona al profile si ya estoy logueado y quiero entrar al login o a register.
 const authMiddleware = require("../middlewares/authMiddleware"); //Middleware que no me deja ingresar al profile si no estoy registrado.
+const authAdminMiddleware = require("../middlewares/authAdminMiddleware"); //Middleware para autorizar ingreso de admin.
 
 //como indicamos para subir la imagen de producto, nombre y donde guardarlo
 const storage = multer.diskStorage({
@@ -44,7 +45,7 @@ router.get("/views/register", guestMiddleware, userController.register);
 router.post("/views/register", uploadAvatar.single("avatar"),registerMiddleware,userController.processRegister);
 
 // Ruta a Login
-router.get("/views/login", guestMiddleware, userController.login);
+router.get("/views/login", guestMiddleware,userController.login);
 router.post("/views/login", userController.loginProcess);
 
 // Ruta a Profile
@@ -60,14 +61,14 @@ router.get("/views/product/:categoria", mainController.categoria);
 router.get("/views/productDetail/:codigo", mainController.productDetail);
 
 // Ruta para ingresar al CRUD como administrador
-router.get("/views/administrador",mainController.administrador);
+router.get("/views/administrador",authMiddleware,authAdminMiddleware,mainController.administrador);
 
 // Ruta Creacion de Productos
 router.get("/views/createProducts", mainController.createProducts);
 router.post("/views/createProducts", upload.single("imagen"), mainController.save);
 
 // Ruta Editar Productos
-router.get("/administrador/:codigo/editproducts", mainController.editProducts);
+router.get("/administrador/:codigo/editproducts",authAdminMiddleware, mainController.editProducts);
 router.put("/administrador/:codigo/editproducts", upload.single("imagen"), mainController.putProducts);
 
 // Ruta Eliminar Productos

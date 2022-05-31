@@ -61,11 +61,12 @@
                     <input type="date" name="fechaDeNacimiento" min="1900-01-01" required>
 
                     <input type="file" name="avatar" required>
-                    <% if (locals.errors && errors.avatar) { %>
+                    <!-- ESTO DEJO DE FUNCIONAR, REVISAR ACA Y EL MIDDLEWARE REGISTERMIDDLEWARE. -->
+                    <!-- <% if (locals.errors && errors.avatar) { %> -->
                         <div class="text-danger">
-                            <%= errors.avatar.msg %>
+                            <!-- <%= errors.avatar.msg %> -->
                         </div>
-                    <% } %>
+                    <!-- <% } %> -->
                 
                     <div class="contenedor-boton">
                         <button type="reset">Reiniciar</button>
