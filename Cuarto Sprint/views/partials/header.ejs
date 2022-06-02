@@ -24,7 +24,9 @@
                     <img src="<%= userLogged.avatar %> "><a>Hola <%= userLogged.nombre %>!</a>
                     <i onclick = "myFunction()" class="fas fa-chevron-circle-down dropbtn"></i>
                     <div id ="myDropdown" class="dropdown-content">
+                        <% if (locals.isAdmin) { %>
                         <a href="/views/administrador"></i>Administrador</a>
+                        <% } %>
                         <a href="/views/profile">My Profile</a>
                         <a href="/views/logout">Logout</a>
                     </div>

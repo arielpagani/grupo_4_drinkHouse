@@ -66,7 +66,6 @@ const administrador = (req, res) => {
 }
 
 const createProducts = (req, res) => {
-    let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
     res.render ("createProducts");
 }
 
