@@ -1,48 +1,40 @@
 //Requiero el modulo path y declaro una variable para traer los articulos.
 //instalo el metodo override con "npm install method-override", lo requiero y utilizo con app.use.
 //Requiero el modulo fs para traer el paquete file system.
+//let db = require('../database/models')
 
 const fs = require("fs");
 const path = require("path");
+const {validationResult}= require("express-validator")
+const bcryptjs =require("bcryptjs")
+const User = require("../models/User");
 
 const home = (req, res) => {
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
 
-    //Productos random de busquedas Destacadas
-    //Acá declaro cuantos productos son en total del catalogo
-    const cantidadDeProductosFiltrados= articulos.length
-    // constante declarada donde se guardan los productos
-    const productosAleatorios=[]
-    // cuantos productos quiero mostrar
-    const cantidadDeProductos=4
-    // convierto en numero entero la cantidad de productos
-    const cantidadDeProductosAMostrar= parseInt(cantidadDeProductosFiltrados)
+    function getRandomInt(min, max){
+        return Math.floor(Math.random()*(max-min));
+    }
 
-    // funcion que genera numeros de forma aleatoria de la cantidad de productos y devuelve 4
-    function llenarAleatorios(a){
-        var v=Math.floor(Math.random()*cantidadDeProductosAMostrar);
-        if (!a.some(function(e){return e == v})){
-            a.push(v)
+    const min = 0;
+    const max = articulos.length;
+    let numeros = [];
+
+    for( let i=0; i<4; i++){
+        let num = getRandomInt(min,max);
+        while(numeros.includes(num)){
+            num = getRandomInt(min,max);
         }
-    }
-    while(productosAleatorios.length < cantidadDeProductos && cantidadDeProductos <= cantidadDeProductosAMostrar){
-        llenarAleatorios(productosAleatorios)
+        numeros.push(num);
     }
 
-    // Esto hay que mejorarlo(funciona pero es horrible) 
-    // aca le digo que de los 4 numeros aleatorios entre el 0 y la cantidad total de productos los busque entre todos los productos y los agregue a productosSimilaresAleatorios 
-    const productosSimilaresAleatorios = []
-    const push_1= productosSimilaresAleatorios.push(articulos[productosAleatorios[0]])
-    const push_2= productosSimilaresAleatorios.push(articulos[productosAleatorios[1]])
-    const push_3= productosSimilaresAleatorios.push(articulos[productosAleatorios[2]])
-    const push_4= productosSimilaresAleatorios.push(articulos[productosAleatorios[3]])
+    let productosDestacados = [];
 
-    // le pido que me renderice home con productosSimilaresAleatorios
-    res.render ("home", {arreglo:productosSimilaresAleatorios});
-};
+    for( let i=0; i<4; i++){
+        productosDestacados.push(articulos[numeros[i]]);
+    }
 
-const login = (req, res) => {
-    res.render ("login")
+    res.render ("home", {arreglo:productosDestacados});
 };
 
 const categoria = (req,res) => {
@@ -50,13 +42,9 @@ const categoria = (req,res) => {
     const categoria = req.params.categoria;
     if (categoria != 'catalogo') {
         const filtrado = articulos.filter(productos => productos.categoria === categoria);
-        res.render("categoria", {arreglo:filtrado, url:req.params.categoria});
+        return res.render("categoria", {arreglo:filtrado, url:req.params.categoria});
     }
-    res.render("categoria", {arreglo:articulos, url:req.params.categoria});
-}
-
-const register = (req, res) => {
-    res.render ("register");
+    return res.render("categoria", {arreglo:articulos, url:req.params.categoria});
 }
 
 const carritoCompras = (req, res) => {
@@ -71,7 +59,6 @@ const administrador = (req, res) => {
 }
 
 const createProducts = (req, res) => {
-    let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
     res.render ("createProducts");
 }
 
@@ -100,31 +87,30 @@ const productDetail = (req, res) => {
     const id = req.params.codigo;
     const converted_id = parseInt(id);    
     const productoDetallado = articulos.find(product => product.codigo == converted_id);
-    const productosSimilares = articulos.filter(product => ((product.categoria == productoDetallado.categoria) && (product.codigo != converted_id)));
-
-    //Productos random de busquedas similares (la explicacion esta en el controlador home)
-    const cantidadDeProductosFiltrados= productosSimilares.length
-    const productosAleatorios=[]
-    const cantidadDeProductos=3
-    const cantidadDeProductosAMostrar= parseInt(cantidadDeProductosFiltrados)
-
-    function llenarAleatorios(a){
-        var v=Math.floor(Math.random()*cantidadDeProductosAMostrar);
-        if (!a.some(function(e){return e == v})){
-            a.push(v)
-        }
-    }
-    while(productosAleatorios.length < cantidadDeProductos && cantidadDeProductos <= cantidadDeProductosAMostrar){
-        llenarAleatorios(productosAleatorios)
-    }
-
-    // Esto hay que mejorarlo(funciona pero es horrible)
-    const productosSimilaresAleatorios = []
-    const push_1= productosSimilaresAleatorios.push(productosSimilares[productosAleatorios[0]])
-    const push_2= productosSimilaresAleatorios.push(productosSimilares[productosAleatorios[1]])
-    const push_3= productosSimilaresAleatorios.push(productosSimilares[productosAleatorios[2]])
     
-    res.render("productDetail", {arreglo:productoDetallado, similares:productosSimilaresAleatorios});
+    function getRandomInt(min, max){
+        return Math.floor(Math.random()*(max-min));
+    }
+
+    const min = 0;
+    const max = articulos.length;
+    let numeros = [];
+
+    for( let i=0; i<4; i++){
+        let num = getRandomInt(min,max);
+        while(numeros.includes(num)){
+            num = getRandomInt(min,max);
+        }
+        numeros.push(num);
+    }
+
+    let productosDestacados = [];
+
+    for( let i=0; i<4; i++){
+        productosDestacados.push(articulos[numeros[i]]);
+    }
+    
+    res.render("productDetail", {arreglo:productoDetallado, similares:productosDestacados});
 }
 
 const editProducts = (req, res) => {
@@ -157,9 +143,9 @@ const putProducts = (req, res) => {
             }
             return producto;
         })
-        console.log(productoUpdate)
+        //console.log(productoUpdate)
         const productoActualizar = JSON.stringify(productoUpdate,null,2);
-        console.log(productoActualizar)
+        //console.log(productoActualizar)
         fs.writeFileSync(path.resolve(__dirname,"../database/Productos/articulos.json"),productoActualizar);
 
     res.redirect ("/views/administrador")
@@ -173,14 +159,12 @@ const eliminarProduct = (req, res) => {
     let productsSave = JSON.stringify(productsFinal,null,2);
     fs.writeFileSync(path.resolve(__dirname,"../database/Productos/articulos.json"),productsSave);
     res.redirect ("/views/administrador");
-};
+}
 
 const mainController = {
     home,
-    login,
     carritoCompras,
     productDetail,
-    register, 
     createProducts,
     save,
     administrador,

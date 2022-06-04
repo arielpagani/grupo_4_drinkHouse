@@ -9,6 +9,10 @@ body {
 
 }
 
+a{
+    text-decoration: none;
+}
+
 #botonDeBusqueda {
     height: 28px;
     width: 29;
@@ -43,6 +47,15 @@ left: 5%;
     transform: scale(1.2, 1.2);
     box-shadow: 0 0 10px rgba(112, 85, 192, 0.50);
     transition-duration: 250ms;
+    transform: rotate(45deg)
+}
+
+.producto-licor i:hover {
+    transform: rotate(0deg)
+}
+
+.flex-item-final i:hover {
+    transform: rotate(0deg)
 }
 
 header div form {
@@ -160,7 +173,6 @@ input{
 
 /*Inicio de Mobile*/
 
-/*
 @media  (max-width: 460px) {
 
     .botones {
@@ -178,12 +190,11 @@ input{
         transition: all .3 ease;
     }
         
-    footer .logo img, .marcas, .flex-encabezado #busqueda button{          /* contenedor de logo-barra-nav (lupa) *
+    footer .logo img, .marcas, .flex-encabezado #busqueda button{          /* contenedor de logo-barra-nav (lupa) */
         display: none;
     }
 } 
-*/
-
+    
 /*Fin del mobile*/
 
 /*Inicio de Desktop*/
@@ -241,13 +252,11 @@ input{
     .header-container{
         flex-direction: row;
     }
-    
     .header-container .header-logo-busqueda{
         width: 49%;
         flex-direction: row;
         justify-content: space-between;
     }
-    
 
     .header-container .header-busqueda{
         width: 60%;
@@ -267,7 +276,7 @@ input{
         padding: 5px;
     }
     */
-    
+
     .contenedor-nav-opciones .nav-catalogo{
         flex-direction: row;
     }
@@ -276,4 +285,5 @@ input{
     .nav-catalogo .nav-right-catalogo{
         width: 45%;
     }
+
 }

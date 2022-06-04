@@ -5,7 +5,7 @@ header{                                     /*header*/
 
 .header-container {                          /* contenedor general*/
     display: flex;
-    background-color: black;
+    /*background-color: black;*/
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -28,6 +28,7 @@ header{                                     /*header*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .header-busqueda label{                /* contenedor de logo-barra-nav-barra-busqueda */
@@ -39,7 +40,9 @@ header{                                     /*header*/
     /*font-weight: bold;
     display: flex;
     justify-content: center;*/
-    border: 3px solid rgb(137, 104, 237);
+    /*border: 3px solid rgb(137, 104, 237);*/
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
     border-radius: 20px;
 }
 
@@ -66,10 +69,15 @@ header{                                     /*header*/
     /*margin-top: 2px;*/
 }
 
+.header-nav img{
+    width: 45px;
+    border-radius: 30px;
+    margin: -7px;
+}
+
 .nav-left{
     display: flex;
-    margin-top: 12px;
-    margin-bottom: 4px;
+    align-items: center;
 }
 
 .nav-right{
@@ -78,24 +86,120 @@ header{                                     /*header*/
 }
 
 .header-nav a {                             /*contenedor de botones de navegacion*/
-    border: 3px solid black;
     border-radius: 30px;
     color: white;
     padding: 4px;
     transition: all 500ms;
     font-weight: bold;
     text-decoration: none;
-    margin: 1px;
-    padding-right: 10px;
+    /*margin: 4px;*/
+    padding: 10px;
 }
 
-.header-nav a:hover {                         /* contenedor de logo-barra-nav-estilos-botones */
+/*
+.botones-nav:hover {                         /* contenedor de logo-barra-nav-estilos-botones /
     background: rgb(170, 255, 0);
     border-radius: 50px;
     color: black;
 }
+*/
 
 .header-nav-container{
     display: flex;
     align-items: center;
+    background: linear-gradient(
+        45deg,
+        #711c91,
+        #920088,
+        #09a0a8,
+        #119e9c,
+        #091833,
+        #711c91,
+        #920088
+    );
+    background-size: 600%, 100%;
+    border-radius: 5px;
+    animation: animatebg 10s linear infinite;
+    margin-left: 5px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
+
+.header-nav-container:hover{
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+@keyframes animatebg {
+    0% {
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 100% 0%;
+    }
+}
+
+/* Menu desplegable*/
+
+.dropbtn{
+    background-color: black;
+    color: white;
+    width: 40px;
+    font-size: 25px;
+  }
+
+/* Dropdown Button */
+.dropbtn i{
+    background-color: white;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    color: rgb(170, 255, 0);
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown a{
+    display: inline-block;
+    align-items: center;
+    padding: 0 0 12px 15px;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white;
+    background-color: black;
+    padding: 5px 0px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    border: 3px solid white;
+    border-radius: 10px;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: rgb(170, 255, 0);
+    color: black
+}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
