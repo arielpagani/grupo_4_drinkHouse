@@ -31,31 +31,38 @@ header{                                     /*header*/
     margin-bottom: 25px;
 }
 
-.header-busqueda label{                /* contenedor de logo-barra-nav-barra-busqueda */
-    padding: 3px 30px;
-    /*text-align: center;
-    font-size: 15px;
-    border-radius: 15px;*/
-    background-color: white;
-    /*font-weight: bold;
-    display: flex;
-    justify-content: center;*/
-    /*border: 3px solid rgb(137, 104, 237);*/
+/*search ---------------------*/
+
+.container-1{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    
+  }
+
+  .container-1 input#search{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    background: #ffffff;
+    border: none;
+    float: left;
+    color:  black;
     border-right: 3px solid black;
     border-bottom: 3px solid black;
     border-radius: 20px;
-}
+  }
 
-.header-busqueda button{              /*contenedor boton lupita*/
-    border-style: none;
-    background-color: white;
-    /*color: black;
-    padding: 0;*/
-    width: 80%;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: bold;
-    font-size: 17px;
-}
+ .container-1 .icon{
+    position: absolute;
+    margin-left: 17px;
+    margin-top: 14px;
+    color: black;
+  }
+  /*------------------------Hasta acá el search---------*/
 
 .header-nav-container i{
     padding-right: 7px;
@@ -142,7 +149,7 @@ header{                                     /*header*/
 /* Menu desplegable*/
 
 .dropbtn{
-    background-color: black;
+    /* background-color: black; */
     color: white;
     width: 40px;
     font-size: 25px;
@@ -185,6 +192,7 @@ header{                                     /*header*/
   
   /* Links inside the dropdown */
   .dropdown-content a {
+      text-align: center;
     color: white;
     background-color: black;
     padding: 5px 0px;

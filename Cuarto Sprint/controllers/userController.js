@@ -33,6 +33,7 @@ const processRegister = (req, res) => {
         ...req.body,
         password: bcryptjs.hashSync(req.body.password, 10),
         avatar: "/Images/Avatares/" + req.file.filename
+
     }
 
     let userCreated = User.create(userToCreate);

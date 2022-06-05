@@ -1,7 +1,23 @@
-.contenedor-perfil{
+
+
+.contenedor-perfil {
     display: flex;
     padding: 20px 10px;
-    justify-content: space-around;
+    justify-content: flex-start;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.contenedor-avatar{
+    display:flex;
+}
+
+.contenedor-avatar img{
+    width: 120px;
+    border-radius: 100px;
+    justify-content: left;
 }
 
 .edicion-perfil-button{

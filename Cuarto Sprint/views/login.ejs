@@ -4,6 +4,7 @@
     <script>
         document.title = 'Iniciar Sesion | DrinkHouse'
     </script>
+    
     <!-- header -->
     <%- include("./partials/header") %>
     <div class="contenedor-register">
@@ -12,7 +13,8 @@
         <div>
             <form action="/views/login" method="POST">
                 <label><b>Ingresá tu usuario</b></label>
-                <input type="text" name="email" required>
+                <!-- El campo value con el ternario es necesario para que recuerde el user en caso de errar la contraseña -->
+                <input type="text" name="email" value="<%= locals.oldData ? oldData.email : null %>" required> 
                 <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
                 <%= errors.email.msg %>
