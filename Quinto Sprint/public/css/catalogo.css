@@ -1,0 +1,191 @@
+.contenedor-nav-opciones{
+    background-color: black;
+}
+
+.contenedor-articulos{                  /*catalogo Articulos*/
+    display: flex;
+    flex-wrap: wrap;
+    /*padding: 10px 0;*/
+    margin: 5px;
+    background-color: white;
+    justify-content: space-around;
+}
+
+.contenedor-articulos article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 150px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /*border: 3px outset rgb(170, 255, 0.7);*/
+    /*border-left: 4px solid rgb(170, 255, 0.7);
+    border-top: 4px solid rgb(170, 255, 0.7);
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;*/
+    background-color: white;
+    border-radius: 3px;
+}
+
+.contenedor-articulos article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-radius: 20px;
+    /*border: 3px outset rgb(170, 255, 0.7);*/
+    /*border-right: 5px outset rgb(170, 255, 0.7);
+    border-bottom: 5px outset rgb(170, 255, 0.7);*/
+    /*border-right: 8px solid black;
+    border-bottom: 8px solid black;
+    border-left: 8px solid rgb(170, 255, 0.7);
+    border-top: 8px solid rgb(170, 255, 0.7);*/
+    transform: scale(1.1,1.1);
+}
+
+.contenedor-articulos div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 25%;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.contenedor-articulos .caja-articulo{
+    border-top: 2px solid gray;
+}
+
+.contenedor-articulos .caja-articulo p{
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    margin: 15px 0 0;
+    font-weight: bold;
+}
+
+.contenedor-articulos .caja-articulo .precio{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contenedor-articulos a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-catalogo{                          /*Nav del catalogo*/   
+    display: flex;
+    /*padding: 15px 30%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    background-color: black;
+    margin: 0 0 15px;
+    flex-wrap: wrap;*/
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav_catalogo a{                           
+    color: white;
+    font-weight: bold;
+    transition: all 500ms ease;
+    text-decoration: none;
+}
+
+.nav_catalogo a .fa-wine-bottle{                           
+    transform: rotate(-45deg);
+}
+
+.nav_catalogo a:hover{                           
+    color: black;
+    background-color: rgb(170, 255, 0);;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+/*
+.titulo-h3{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    padding: 10px 0 0 0;
+    margin: 10px 0 0 0;
+}
+*/
+.contenedor-nav-opciones h3,
+.contenedor-nav-opciones a{
+    color: white;
+    text-decoration: none;
+}
+
+.contenedor-nav-opciones h3{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-catalogo i{
+    margin: 5px;
+}
+
+.nav-left-catalogo,
+.nav-right-catalogo{
+    display: flex;
+    justify-content: space-around;
+}
+
+                                 /* Media query para se muestren de a 2 articulos en tablets */
+@media (max-width: 768px){
+    .contenedor-articulos div{
+        flex: 45%;
+        
+    }
+}
+
+/* estilos nuevos*/
+
+.card {
+    width: 250px;
+    border-radius: 4px;
+    
+    display: grid;
+    place-items: center;
+    grid-template-areas: 'main';
+    
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+
+    margin: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.card > * {
+    grid-area: main;
+}
+
+.card > .text {
+    opacity: 0;
+    color: white;
+    font-size: 1.8em;
+    transition: opacity 400ms, transform 400ms;
+}
+
+.card:is(:hover, :focus) > .imagen {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.card:is(:hover, :focus) > .text{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.imagen{
+    width: 100%;
+    aspect-ratio: 1/1.7;
+    transition: transform 400ms, filter 400ms
+}

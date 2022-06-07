@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<head>       
+    <script src="/carrusel.js"></script>
+    <%- include("./partials/head") %>
+</head>
+<body>
+    <!-- header -->
+    <%- include("./partials/header") %>
+<main>
+    <section class="contenedor">
+        <div class="botones-slider">
+            <div class="atras botones">&#60</div>
+            <div class="adelante botones">&#62</div>
+        </div>
+        <img class="centrar" src="images/img1.PNG" alt="Imagen promo">
+    </section>  
+    <section class="productos">
+        <h2>PRODUCTOS</h2>
+        <div class="flex-container">
+            <div class="flex-item-left">
+                <div>
+                    <a href="/views/product/cerveza"><i class="fas fa-beer all-centrado"></i><p>Cervezas</p></a>
+                </div>
+                <div>
+                    <a href="/views/product/vino"><i class="fas fa-wine-glass-alt all-centrado"></i><p>Vinos</p></a>
+                </div>
+            </div>
+            <div class="flex-item-right">
+                <div>
+                    <a href="/views/product/whisky"><i class="fas fa-glass-whiskey all-centrado"></i><p>Whiskeys</p></a>
+                </div>
+                <div class="producto-licor">
+                    <a href="/views/product/licor"><i class="fas fa-wine-bottle all-centrado"></i><p>Licores</p></a>
+                </div>
+                <div class="flex-item-final">
+                    <a href="/views/product/catalogo"><i class="fas fa-list all-centrado"></i><p>Catálogo</p></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="home-titulos-productos">
+        <h2>Productos Destacados</h2>
+    </div>
+    <section class="contenedor-articulos">
+        <% for ( let i = 0; i < arreglo.length; i++ ) { %>
+            <a class="card" href="/views/productDetail/<%= arreglo[i].codigo %>">
+                <img class="imagen" src="<%= arreglo[i].img %>" alt="imagen de articulo">
+                <p class="text"> $<%= arreglo[i].precio %> </p>
+            </a>
+        <% } %>
+    </section>
+    <section class="marcas">
+        <div class="contenedor-marcas">
+            <img class="img-marcas" src="/images/marcas/branca.png" alt="logo branca">
+        </div>
+        <div class="contenedor-marcas">
+            <img class="img-marcas"  src="/images/marcas/buchanans.png" alt="logo buchanans">    
+        </div>
+        <div class="contenedor-marcas">
+            <img class="img-marcas"  src="/images/marcas/budweiser.png" alt="logo budweiser">    
+        </div>
+        <div class="contenedor-marcas">
+            <img class="img-marcas"  src="/images/marcas/concha.png" alt="logo concha y toro">    
+        </div>
+        <div class="contenedor-marcas">
+            <img class="img-marcas" src="/images/marcas/jager.png" alt="logo jagermaister">    
+        </div>
+    </section>
+<!-- logo whatsapp -->
+    <a class="fab fa-whatsapp" href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" target="_blank"></a>
+</main>
+<!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>
