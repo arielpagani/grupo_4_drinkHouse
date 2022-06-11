@@ -7,34 +7,36 @@
     
     <!-- header -->
     <%- include("./partials/header") %>
-    <div class="contenedor-register">
-        <h1>Hola!</h1>
-        <h3>Bienvenido nuevamente!</h3>
-        <div>
-            <form action="/views/login" method="POST">
-                <label><b>Ingresá tu usuario</b></label>
-                <!-- El campo value con el ternario es necesario para que recuerde el user en caso de errar la contraseña -->
-                <input type="text" name="email" value="<%= locals.oldData ? oldData.email : null %>" required> 
-                <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                <%= errors.email.msg %>
-                </div>
-                <% } %>
-                <label><b>Ingresá tu Password</b></label>
-                <input type="password" name="password" required>
-                <% if (locals.errors && errors.password) { %>
+    <div class="container-general">
+        <div class="contenedor-register">
+            <h1>Hola!</h1>
+            <h3>Bienvenido nuevamente!</h3>
+            <div>
+                <form action="/views/login" method="POST">
+                    <label><b>Ingresá tu usuario</b></label>
+                    <!-- El campo value con el ternario es necesario para que recuerde el user en caso de errar la contraseña -->
+                    <input type="text" name="email" value="<%= locals.oldData ? oldData.email : null %>" required> 
+                    <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
-                    <%= errors.password.msg %>
+                    <%= errors.email.msg %>
                     </div>
                     <% } %>
-            <div class="checkbox-recuerdame">
-                <label for="Nombre">Recuérdame</label>
-                <input type="checkbox" name="recordar_usuario">
+                    <label><b>Ingresá tu Password</b></label>
+                    <input type="password" name="password" required>
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                        <%= errors.password.msg %>
+                        </div>
+                        <% } %>
+                <div class="checkbox-recuerdame">
+                    <label for="Nombre">Recuérdame</label>
+                    <input type="checkbox" name="recordar_usuario">
+                </div>
+                    <a href="/views/login">¿Olvidaste la contraseña?</a>
+                    <a href="/views/register">¿Todavía no estás registrado?</a>
+                    <button type="submit">Ingresar</button>
+                </form>
             </div>
-                <a href="/views/login">¿Olvidaste la contraseña?</a>
-                <a href="/views/register">¿Todavía no estás registrado?</a>
-                <button type="submit">Ingresar</button>
-            </form>
         </div>
     </div>
     <!-- footer -->

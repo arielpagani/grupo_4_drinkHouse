@@ -4,38 +4,47 @@ module.exports = function(sequelize, dataTypes){
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
         titulo: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(500),
+            allowNull: false
         },
         categoria: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(500),
+            allowNull: false
         },
         marca: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(500),
+            allowNull: false
         },
         precio: {
-            type: dataTypes.INTEGER
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false
         },
         descuento: {
-            type: dataTypes.INTEGER
+            type: dataTypes.DECIMAL(4, 1).UNSIGNED,
+            allowNull: false
         },
         descripcion: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(500),
+            allowNull: false
         },
         img: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(500),
+            allowNull: false
         },
         stock: {
-            type: dataTypes.INTEGER
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            allowNull: false
         },
     }
 
     let config = {
-        tableName: 'productos',
+        /*tableName: 'producto',*/
         timestamps: false
     }
 

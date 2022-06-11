@@ -2,6 +2,9 @@
 //instalo el metodo override con "npm install method-override", lo requiero y utilizo con app.use.
 //Requiero el modulo fs para traer el paquete file system.
 //let db = require('../database/models')
+const db = require('../database/models/Producto');
+const sequelize = db.sequelize;
+const Productos = db.Producto;
 
 const fs = require("fs");
 const path = require("path");
@@ -63,6 +66,7 @@ const createProducts = (req, res) => {
 }
 
 const save = (req, res) =>{
+    /*
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
     let ultimoArticulo = articulos.pop();
     articulos.push(ultimoArticulo);
@@ -80,6 +84,20 @@ const save = (req, res) =>{
     let nuevoProductoGuardar = JSON.stringify(articulos, null, 2);
     fs.writeFileSync(path.resolve(__dirname, "../database/Productos/articulos.json"), nuevoProductoGuardar);
     res.redirect("administrador")
+    */
+    Productos.create({
+        title: req.body.title,
+        category: req.body.category,
+        brand: req.body.brand,
+        price: req.body.price,
+        discount: req.body.discount,
+        desciption: req.body.desciption,
+        img: req.body.img,
+        stock: req.body.stock
+    }).then(res.redirect('/administrador'))
+        .catch((error) => {
+            res.send(error)
+        })
 }
 
 const productDetail = (req, res) => {
@@ -92,8 +110,10 @@ const productDetail = (req, res) => {
         return Math.floor(Math.random()*(max-min));
     }
 
+    const categoria = productoDetallado.categoria;
+    const filtrado = articulos.filter(producto => ((producto.categoria === categoria) && (producto.id != converted_id)));
     const min = 0;
-    const max = articulos.length;
+    const max = filtrado.length;
     let numeros = [];
 
     for( let i=0; i<4; i++){
@@ -107,8 +127,9 @@ const productDetail = (req, res) => {
     let productosDestacados = [];
 
     for( let i=0; i<4; i++){
-        productosDestacados.push(articulos[numeros[i]]);
+        productosDestacados.push(filtrado[numeros[i]]);
     }
+
     
     res.render("productDetail", {arreglo:productoDetallado, similares:productosDestacados});
 }

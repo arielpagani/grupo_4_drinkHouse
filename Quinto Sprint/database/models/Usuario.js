@@ -8,10 +8,10 @@ module.exports = function(sequelize, dataTypes){
             primaryKey: true,
             autoIncrement: true
         },
-        nombre: {
+        firstName: {
             type: dataTypes.STRING
         },
-        apellido: {
+        lastName: {
             type: dataTypes.STRING
         },
         email: {
@@ -20,12 +20,12 @@ module.exports = function(sequelize, dataTypes){
         password: {
             type: dataTypes.STRING
         },
-        fechaDeNacimiento: {
+        birth: {
             type: dataTypes.DATE
         },
         avatar: {
             type: dataTypes.STRING
-        }
+        },
     }
 
     let config = {

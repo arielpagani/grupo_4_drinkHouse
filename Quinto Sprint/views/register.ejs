@@ -9,72 +9,74 @@
      <!-- header -->
      <%- include("./partials/header") %>
     <main>
-        <div class="contenedor-register">
-            <h1>Regístrate</h1>
-            <h3>Completá con tus datos!</h3>
-            <div>
-                <form action="/views/register" method="post" enctype="multipart/form-data">
-                    <label><b>Nombre:</b></label>
-                    <input type="text" 
-                    name="name" 
-                    class= "<%= locals.errors && errors.name ? 'is-invalid' : null %>"
-                    value= "<%= locals.oldData ? oldData.name : null %>">
-                    <% if (locals.errors && errors.name) { %>
-                        <div class="text-danger">
-                            <%= errors.name.msg %>
-                        </div>
-                    <% } %>
-                
-                    <label><b>Apellido:</b></label>
-                    <input type="text" 
-                    name="apellido" 
-                    class= "<%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
-                    value= "<%= locals.oldData ? oldData.apellido : null %>">
-                    <% if (locals.errors && errors.apellido) { %>
-                        <div class="text-danger">
-                            <%= errors.apellido.msg %>
-                        </div>
-                    <% } %>
-
-                    <label><b>Email:</b></label>
-                    <input type="text" 
-                    name="email"
-                    class= "<%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                    value= "<%= locals.oldData ? oldData.email : null %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="text-danger">
-                            <%= errors.email.msg %>
-                        </div>
-                    <% } %>
-
-                    <label><b>Password:</b></label>
-                    <input type="password" 
-                    name="password"
-                    class= "<%= locals.errors && errors.password ? 'is-invalid' : null %>">
-                    <% if (locals.errors && errors.password) { %>
-                        <div class="text-danger">
-                            <%= errors.password.msg %>
-                        </div>
-                    <% } %>
-
-                    <label><b>Fecha de Nacimiento:</b></label>
-                    <input 
-                        type="date"
-                        name="fechaDeNacimiento" 
-                        min="1900-01-01" required>
+        <div class="container-general">
+            <div class="contenedor-register">
+                <h1>Regístrate</h1>
+                <h3>Completá con tus datos!</h3>
+                <div>
+                    <form action="/views/register" method="post" enctype="multipart/form-data">
+                        <label><b>Nombre:</b></label>
+                        <input type="text" 
+                        name="name" 
+                        class= "<%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                        value= "<%= locals.oldData ? oldData.name : null %>">
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="text-danger">
+                                <%= errors.name.msg %>
+                            </div>
+                        <% } %>
                     
-                    <input type="file" name="avatar" required>
-                    <% if (locals.errors && errors.avatar) { %>
-                        <div class="text-danger">
-                            <%= errors.avatar.msg %>
-                        </div>
-                    <% } %>
-                
-                    <div class="contenedor-boton">
-                        <button type="reset">Reiniciar</button>
-                        <button type="submit">Enviar</button>
-                    </divclass>
-                </form>
+                        <label><b>Apellido:</b></label>
+                        <input type="text" 
+                        name="apellido" 
+                        class= "<%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
+                        value= "<%= locals.oldData ? oldData.apellido : null %>">
+                        <% if (locals.errors && errors.apellido) { %>
+                            <div class="text-danger">
+                                <%= errors.apellido.msg %>
+                            </div>
+                        <% } %>
+
+                        <label><b>Email:</b></label>
+                        <input type="text" 
+                        name="email"
+                        class= "<%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                        value= "<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+
+                        <label><b>Password:</b></label>
+                        <input type="password" 
+                        name="password"
+                        class= "<%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+
+                        <label><b>Fecha de Nacimiento:</b></label>
+                        <input 
+                            type="date"
+                            name="fechaDeNacimiento" 
+                            min="1900-01-01" required>
+                        
+                        <input type="file" name="avatar" required>
+                        <% if (locals.errors && errors.avatar) { %>
+                            <div class="text-danger">
+                                <%= errors.avatar.msg %>
+                            </div>
+                        <% } %>
+                    
+                        <div class="contenedor-boton">
+                            <button type="reset">Reiniciar</button>
+                            <button type="submit">Enviar</button>
+                        </divclass>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

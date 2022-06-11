@@ -1,5 +1,3 @@
-
-
 .contenedor-perfil {
     display: flex;
     padding: 20px 10px;
@@ -8,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     color: white;
+    height: 800px;
 }
 
 .contenedor-avatar{

@@ -4,7 +4,6 @@ function userLoggedMiddleware(req, res, next){
     res.locals.isLogged = true;
 	res.locals.isAdmin = false;
 	let userLogged = req.session.userLogged;
-	console.log(userLogged);
     if (req.session.userLogged) {
 		if (userLogged.email === 'alexisbello0310@hotmail.com' || userLogged.email === 'emerarg@live.com' ||
     		userLogged.email === 'arielpagani@outlook.com' || userLogged.email === 'oteizanacho@gmail.com'){
