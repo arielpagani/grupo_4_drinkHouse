@@ -1,13 +1,24 @@
 //Requiero el modulo path y declaro una variable para traer los articulos.
 //instalo el metodo override con "npm install method-override", lo requiero y utilizo con app.use.
 //Requiero el modulo fs para traer el paquete file system.
+<<<<<<< HEAD
 
 const fs = require("fs");
 const path = require("path");
+=======
+//let db = require('../database/models')
+
+const fs = require("fs");
+const path = require("path");
+const {validationResult}= require("express-validator")
+const bcryptjs =require("bcryptjs")
+const User = require("../models/User");
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 
 const home = (req, res) => {
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
 
+<<<<<<< HEAD
     //Productos random de busquedas Destacadas
     //Acá declaro cuantos productos son en total del catalogo
     const cantidadDeProductosFiltrados= articulos.length
@@ -43,6 +54,31 @@ const home = (req, res) => {
 
 const login = (req, res) => {
     res.render ("login")
+=======
+    function getRandomInt(min, max){
+        return Math.floor(Math.random()*(max-min));
+    }
+
+    const min = 0;
+    const max = articulos.length;
+    let numeros = [];
+
+    for( let i=0; i<4; i++){
+        let num = getRandomInt(min,max);
+        while(numeros.includes(num)){
+            num = getRandomInt(min,max);
+        }
+        numeros.push(num);
+    }
+
+    let productosDestacados = [];
+
+    for( let i=0; i<4; i++){
+        productosDestacados.push(articulos[numeros[i]]);
+    }
+
+    res.render ("home", {arreglo:productosDestacados});
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 };
 
 const categoria = (req,res) => {
@@ -50,6 +86,7 @@ const categoria = (req,res) => {
     const categoria = req.params.categoria;
     if (categoria != 'catalogo') {
         const filtrado = articulos.filter(productos => productos.categoria === categoria);
+<<<<<<< HEAD
         res.render("categoria", {arreglo:filtrado});
     }
     res.render("categoria", {arreglo:articulos});
@@ -57,6 +94,11 @@ const categoria = (req,res) => {
 
 const register = (req, res) => {
     res.render ("register");
+=======
+        return res.render("categoria", {arreglo:filtrado, url:req.params.categoria});
+    }
+    return res.render("categoria", {arreglo:articulos, url:req.params.categoria});
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 }
 
 const carritoCompras = (req, res) => {
@@ -71,7 +113,10 @@ const administrador = (req, res) => {
 }
 
 const createProducts = (req, res) => {
+<<<<<<< HEAD
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
+=======
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     res.render ("createProducts");
 }
 
@@ -100,6 +145,7 @@ const productDetail = (req, res) => {
     const id = req.params.codigo;
     const converted_id = parseInt(id);    
     const productoDetallado = articulos.find(product => product.codigo == converted_id);
+<<<<<<< HEAD
     const productosSimilares = articulos.filter(product => ((product.categoria == productoDetallado.categoria) && (product.codigo != converted_id)));
 
     //Productos random de busquedas similares (la explicacion esta en el controlador home)
@@ -125,6 +171,32 @@ const productDetail = (req, res) => {
     const push_3= productosSimilaresAleatorios.push(productosSimilares[productosAleatorios[2]])
     
     res.render("productDetail", {arreglo:productoDetallado, similares:productosSimilaresAleatorios});
+=======
+    
+    function getRandomInt(min, max){
+        return Math.floor(Math.random()*(max-min));
+    }
+
+    const min = 0;
+    const max = articulos.length;
+    let numeros = [];
+
+    for( let i=0; i<4; i++){
+        let num = getRandomInt(min,max);
+        while(numeros.includes(num)){
+            num = getRandomInt(min,max);
+        }
+        numeros.push(num);
+    }
+
+    let productosDestacados = [];
+
+    for( let i=0; i<4; i++){
+        productosDestacados.push(articulos[numeros[i]]);
+    }
+    
+    res.render("productDetail", {arreglo:productoDetallado, similares:productosDestacados});
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 }
 
 const editProducts = (req, res) => {
@@ -157,9 +229,15 @@ const putProducts = (req, res) => {
             }
             return producto;
         })
+<<<<<<< HEAD
         console.log(productoUpdate)
         const productoActualizar = JSON.stringify(productoUpdate,null,2);
         console.log(productoActualizar)
+=======
+        //console.log(productoUpdate)
+        const productoActualizar = JSON.stringify(productoUpdate,null,2);
+        //console.log(productoActualizar)
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
         fs.writeFileSync(path.resolve(__dirname,"../database/Productos/articulos.json"),productoActualizar);
 
     res.redirect ("/views/administrador")
@@ -173,6 +251,7 @@ const eliminarProduct = (req, res) => {
     let productsSave = JSON.stringify(productsFinal,null,2);
     fs.writeFileSync(path.resolve(__dirname,"../database/Productos/articulos.json"),productsSave);
     res.redirect ("/views/administrador");
+<<<<<<< HEAD
 };
 
 const mainController = {
@@ -181,6 +260,14 @@ const mainController = {
     carritoCompras,
     productDetail,
     register, 
+=======
+}
+
+const mainController = {
+    home,
+    carritoCompras,
+    productDetail,
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     createProducts,
     save,
     administrador,

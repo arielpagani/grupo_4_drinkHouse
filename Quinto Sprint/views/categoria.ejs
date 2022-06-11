@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <% if (url == 'catalogo') { %>
+        <script>document.title = 'Catalogo | DrinkHouse'</script>
+    <% } else { %>
+        <% const titulo = arreglo[0].categoria.charAt(0).toUpperCase() + arreglo[0].categoria.slice(1) + ' | Drinkhouse'; %> 
+        <script>
+            document.title =  '<%= titulo %>';
+        </script> 
+    <% } %>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <section class="contenedor-articulos">
+            <% for ( let i = 0; i < arreglo.length; i++ ) { %>
+                <a class="card" href="/views/productDetail/<%= arreglo[i].codigo %>">
+                    <img class="imagen" src="<%= arreglo[i].img %>" alt="imagen de articulo">
+                    <p class="text"> $<%= arreglo[i].precio %> </p>
+                </a>
+            <% } %>
+        </section>
+    </main>
+<!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>
+
+<!--categoria resume las vistas de product-->

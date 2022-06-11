@@ -1,0 +1,29 @@
+.contenedor-perfil {
+    display: flex;
+    padding: 20px 10px;
+    justify-content: flex-start;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    height: 800px;
+}
+
+.contenedor-avatar{
+    display:flex;
+}
+
+.contenedor-avatar img{
+    width: 120px;
+    border-radius: 100px;
+    justify-content: left;
+}
+
+.edicion-perfil-button{
+background-color: black;
+color: white;
+padding: 10px;
+font-weight: bold;
+border-radius: 10px;
+justify-content: center;
+}

@@ -1,0 +1,134 @@
+body {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    background-color: white;
+    margin: 0px;
+    position: relative;
+    /* padding-bottom: 10em;                     Esta es la propiedad que nos daba problema con el footer */
+    min-height: 100vh;
+
+}
+
+
+/*Inicio de Mobile*/
+
+@media  (max-width: 460px) {
+
+    .botones {
+        font-size: 30px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: rgb(170, 255, 0.7);
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        box-shadow: 0 0 10px rgba(134, 182, 38, 0.993);
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3 ease;
+    }
+        
+    footer .logo img, .marcas, .flex-encabezado #busqueda button{          /* contenedor de logo-barra-nav (lupa) */
+        display: none;
+    }
+} 
+    
+/*Fin del mobile*/
+
+/*Inicio de Desktop*/
+@media (max-width: 768px) and (min-width: 475px) {
+    .flex-encabezado {          /* contenedor de logo-barra-nav-contenedor-gral */
+        flex-direction: column;
+    }
+
+    .flex-encabezado #logo {           /*contenedor de logo-barra-nav-logo */
+        margin: auto;
+    }
+
+    .botones {
+        font-size: 30px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: rgb(170, 255, 0.7);
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        box-shadow: 0 0 10px rgba(134, 182, 38, 0.993);
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3 ease;
+    }
+
+     .fa-whatsapp {
+        background: rgb(170, 255, 0);
+        color: white;
+        position: fixed;
+        right: 20px;
+        bottom: 80px;
+    }
+    .header-container .header-logo-busqueda{
+        width: 45%;
+    }
+
+    .header-container .header-nav{
+        width: 45%;
+    }
+
+    .contenedor-nav-opciones .nav-catalogo{
+        flex-direction: row;
+    }
+
+    .nav-catalogo .nav-left-catalogo,
+    .nav-catalogo .nav-right-catalogo{
+        width: 45%;
+    }
+}
+
+@media (min-width: 768px){
+
+    /*
+    .header-container{
+        flex-direction: row;
+    }
+    */
+    .header-container .header-logo-busqueda{
+        width: 49%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*
+    .header-container .header-busqueda{
+        width: 60%;
+    }
+    */
+
+    /*
+    .header-container .header-logo{
+        width: 30%;
+    }
+    */
+
+    .header-container .header-nav{
+        width: 49%;
+    }
+
+    /*
+    .header-container .header-busqueda label{
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+    */
+
+    .contenedor-nav-opciones .nav-catalogo{
+        flex-direction: row;
+    }
+
+    .nav-catalogo .nav-left-catalogo,
+    .nav-catalogo .nav-right-catalogo{
+        width: 45%;
+    }
+
+}

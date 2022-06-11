@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+
+<body>
+    <script>
+        document.title = 'Crear Producto | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <div class="contenedor-register">
+            <form action="/views/createProducts" method="POST" enctype="multipart/form-data">
+                
+                <label for="categoria"><h2>Categoria</h2></label>
+                <select name="categoria" id="categoria">
+                    <option>Vinos</option>
+                    <option>Whiskies</option>
+                    <option>Cervezas</option>
+                    <option>Licores</option>
+                </select> <br>
+
+                <label for="marca"></label>
+                <input type="text" name="marca" placeholder="Marca" id="marca"> <br>
+
+                <input type="number" name="precio" placeholder="Precio"  id="precio"> <br>
+
+                <input type="number" name="descuento" placeholder="Descuento" id="descuento"> <br>
+
+                <textarea name="descripcion" placeholder="Descripcion del producto" id="descripcion" cols="30" rows="5"></textarea> <br>
+
+                <!--<input type="file" name="imagen" -->
+                
+                <div class="contenedor-boton">
+                <input type="number" name="stock" placeholder="Stock" id="stock">
+
+                </div><br>
+
+                <a class="volver-administrador" href="/views/administrador">Volver</a>
+                
+                <div class="contenedor-boton">
+                    <button type ="submit">Guardar</button>
+                    <button type ="reset">Borrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+<!-- footer -->
+<%- include("./partials/footer") %>
+
+</html>

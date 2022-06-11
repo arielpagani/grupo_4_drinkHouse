@@ -3,13 +3,22 @@
 <!-- head -->
 <%- include("./partials/head") %>
 <body>
+<<<<<<< HEAD
      <!-- header -->
      <%- include("./partials/headerSimple") %>
+=======
+    <script>
+        document.title = 'Registrate | DrinkHouse'
+    </script>
+     <!-- header -->
+     <%- include("./partials/header") %>
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     <main>
         <div class="contenedor-register">
             <h1>Regístrate</h1>
             <h3>Completá con tus datos!</h3>
             <div>
+<<<<<<< HEAD
                 <form action="/login" method="post">
                     <label for="Nombre"></label>
                     <input type="text" name="nombre" placeholder="Ingresá tu nombre" id="nombre" required>
@@ -28,6 +37,64 @@
 
                     <label for="start">Fecha de Nacimiento:</label>
                     <input type="date" id="start" name="fecha de nacimiento" value="1990-07-22" min="1900-01-01" max="2022-03-28" required> 
+=======
+                <form action="/views/register" method="post" enctype="multipart/form-data">
+                    <label><b>Nombre:</b></label>
+                    <input type="text" 
+                    name="name" 
+                    class= "<%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                    value= "<%= locals.oldData ? oldData.name : null %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                            <%= errors.name.msg %>
+                        </div>
+                    <% } %>
+                
+                    <label><b>Apellido:</b></label>
+                    <input type="text" 
+                    name="apellido" 
+                    class= "<%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
+                    value= "<%= locals.oldData ? oldData.apellido : null %>">
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div class="text-danger">
+                            <%= errors.apellido.msg %>
+                        </div>
+                    <% } %>
+
+                    <label><b>Email:</b></label>
+                    <input type="text" 
+                    name="email"
+                    class= "<%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                    value= "<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+
+                    <label><b>Password:</b></label>
+                    <input type="password" 
+                    name="password"
+                    class= "<%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+
+                    <label><b>Fecha de Nacimiento:</b></label>
+                    <input 
+                        type="date"
+                        name="fechaDeNacimiento" 
+                        min="1900-01-01" required>
+                    
+                    <input type="file" name="avatar" required>
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div class="text-danger">
+                            <%= errors.avatar.msg %>
+                        </div>
+                    <% } %>
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
                 
                     <div class="contenedor-boton">
                         <button type="reset">Reiniciar</button>

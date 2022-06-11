@@ -1,11 +1,27 @@
 .contenedor-register input {              /*estilos-login-recuadros-input*/
+<<<<<<< HEAD
     margin: 0 0 15px 0;
+=======
+    margin: 0 0 5px 0;
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     border-radius: 5px;
     border: 0px;
     padding: 10px;
     border-radius: 5px;
 }
 
+<<<<<<< HEAD
+=======
+.contenedor-register .is-invalid{
+    border: 2px solid red;
+}
+
+.text-danger{
+    color: red;
+    font-weight: bold;
+}
+
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 .contenedor-register h1 {              /*estilos-login-texto-hola*/
     font-size: 40px;
     margin: 0px;

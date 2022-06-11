@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Rajdhani';
+    background-color: rgb(137,104,237);
+}
+
+header div.logo img{
+    width: 20%;
+    display: inline;
+
+}
+
+.banner{
+    width:80%;
+}
+
+.banner-categorias{
+    width:100%;
+}
+
+
+footer div.logo img{
+    width: 20%;
+}
+
+
+header{
+    background-color: rgb(137,104,237);
+}
+
+header nav{
+    font-size: 20px;
+    text-align: right;
+}
+
+header nav a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline;
+    border: 1px solid black;
+}
+
+header div.busqueda{
+    width: 15%;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    margin:auto;
+    border: 1px solid black;
+}
+
+section.banner img{
+    width: 70%;
+    background-color: rgb(137,104,237);
+    margin:auto;
+}
+
+section.banner-categorias img{
+    width: 100%;
+}
+
+footer div ul li{
+    background-color: white;
+    font-size: 17px;
+    padding: 2px;
+}
+
+footer div ul li a{
+    text-decoration: none;
+}
+
+footer div ul.contacto{
+    text-align: left;
+}
+
+footer div ul.preguntas-frecuentes{
+    text-align: center;
+}
+
+footer div ul.redes{
+    text-align: right;
+}

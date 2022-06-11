@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 /* .product-container{
     width: 100%;
 } */
+=======
+.product-container{
+    background-color: white;
+    margin: 0 5px;
+    padding: 10px 0;
+} 
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 
 .product-middle-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
+<<<<<<< HEAD
+=======
+    flex-wrap: wrap;
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 }
 
 /* .product-imagenes{
@@ -129,3 +141,11 @@ flex-direction: column;
     color: white;
     width: 80%;
 }
+<<<<<<< HEAD
+=======
+
+.ruta h4{
+    margin: 0px;
+    padding-top: 15px;
+}
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f

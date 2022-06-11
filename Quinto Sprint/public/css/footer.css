@@ -1,0 +1,22 @@
+.footer-container{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+}
+
+.info-container{
+    font-size: 12px;
+}
+
+.info-container h2{
+    color: white;
+    margin: 0;
+    background-color: black;
+}
+
+.info-container a,
+.info-container i{
+    text-decoration: none;
+    color: white;
+}

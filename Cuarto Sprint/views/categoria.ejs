@@ -3,6 +3,7 @@
 <!-- head -->
 <%- include("./partials/head") %>
 <body>
+<<<<<<< HEAD
     <!-- header -->
     <%- include("./partials/header") %>
     <main>
@@ -13,6 +14,31 @@
             <a href="/views/product/whisky">Whiskeys</a>
             <a href="/views/product/licor">Licores</a>
             <a href="/views/product/vino">Vinos</a>
+=======
+    <% if (url == 'catalogo') { %>
+        <script>document.title = 'Catalogo | DrinkHouse'</script>
+    <% } else { %>
+        <% const titulo = arreglo[0].categoria.charAt(0).toUpperCase() + arreglo[0].categoria.slice(1) + ' | Drinkhouse'; %> 
+        <script>
+            document.title =  '<%= titulo %>';
+        </script> 
+    <% } %>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <div class="contenedor-nav-opciones">
+            <h3><a href="/views/product/catalogo">Categorías</a></h3>
+            <div class="nav-catalogo">
+                <div class="nav-left-catalogo">
+                    <a href="/views/product/cerveza"><i class="fas fa-beer"></i>Cervezas</a>
+                    <a href="/views/product/whisky"><i class="fas fa-glass-whiskey"></i>Whiskeys</a>
+                </div>
+                <div class="nav-right-catalogo">
+                    <a href="/views/product/licor"><i class="fas fa-glass-martini-alt"></i>Licores</a>
+                    <a href="/views/product/vino"><i class="fas fa-wine-glass-alt"></i>Vinos</a>
+                </div>
+            </div>
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
         </div>
         <section class="contenedor-articulos">
             <% for ( let i = 0; i < arreglo.length; i++ ) { %>

@@ -1,11 +1,19 @@
 .marcas{                                            /*home-marcas-banner*/
+<<<<<<< HEAD
     background-color: rgb(137, 104, 237);
+=======
+    /*background-color: rgb(137, 104, 237);*/
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     border-bottom: none;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: space-around;
+<<<<<<< HEAD
     margin: 80px 0;
+=======
+    margin: 50px 0;
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 }
 
 .contenedor-marcas{                                       /*home-marcas*/
@@ -45,6 +53,10 @@ width: 100px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+    padding: 20px 0;
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 }
 
 .fab {                                         /*home-boton-wsp*/
@@ -101,6 +113,13 @@ width: 100px;
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+=======
+.producto-licor i{                  /*home-nav-productos-categorias*/
+    transform: rotate(-45deg);
+}
+
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
 .productos div a p {            /*home-estilo-textos-nav*/
     color: black;
     font-size: 22px;
@@ -112,8 +131,59 @@ width: 100px;
 main h2{                   /*home-palabra-productos*/ 
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
 }
 
 .productos {
     margin: 70px 0 0;
 }
+=======
+    margin: 0;
+    padding-top: 25px;
+}
+
+.productos {
+    margin: 5px;
+    background-color: white;
+}
+
+body{
+    /*background-color: rgb(137, 104, 237);*/
+    background: linear-gradient(
+        45deg,
+        #711c91,
+        #ea00d9,
+        #0abdc6,
+        #13bbb8,
+        #091833,
+        #711c91,
+        #ea00d9
+    );
+    background-size: 600%, 100%;
+    border-radius: 5px;
+    animation: animatebghome 10s linear infinite;
+}
+
+@keyframes animatebghome {
+    0% {
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 100% 0%;
+    }
+}
+
+
+
+.home-titulos-productos{
+    display: flex;
+    justify-content: center;
+}
+
+.home-titulos-productos h2{
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 10px;
+}
+
+>>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
