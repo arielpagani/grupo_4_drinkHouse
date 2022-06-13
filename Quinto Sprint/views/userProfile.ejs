@@ -5,18 +5,24 @@
 <body>
     <!-- header -->
     <%- include("./partials/header") %>
-    <div class="contenedor-perfil">
+    <div class="profile-container">
 		<div class="contenedor-avatar">
-		<img src="<%= user.avatar %> ">
+			<img src="<%= user.avatar %> ">
 		</div>
-		<div class="contenedor-descripcion-perfil">
-			<h2>Hola <%= user.nombre %> <%= user.apellido %>!</h2>
-			<h3>Usuario: <%= user.email %></h3>
-			<h3>Fecha de Nacimiento: <%= user.fechaDeNacimiento %></h3>
-			<button class="edicion-perfil-button">Editar Perfil</button>
+		<div class="edit-user-form">
+			<form>
+				<label for="name">Nombre</label>
+				<p><input type="text" name="name" value="<%= user.nombre %>"></p>
+				<label for="last-name">Apellido</label>
+				<p><input type="text" name="last-name" value="<%= user.apellido %>"></p>
+				<label for="email">Email</label>
+				<p><input type="text" name="email" value="<%= user.email %>"></p>
+				<div class="save-button">
+					<button>Guardar cambios</button>
+				</div>
+			</form>
 		</div>
 	</div>
-    
     <!-- footer -->
     <%- include("./partials/footer") %>
 </body>

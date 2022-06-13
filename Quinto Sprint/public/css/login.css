@@ -52,17 +52,28 @@
 }
 
 .contenedor-register button:hover{              /*estilos-login*/
-    background: rgb(170, 255, 0);
-    color: rgb(0, 0, 0);
+    height: 50px;
+    font-size: 23px;
+    width: 270px;
+}
+
+.ingresar-button{
+    height: 50px;
 }
 
 .contenedor-register button{              /*estilos-login*/
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 7px;
     font-weight: bold;
-    margin: 10px;
+    margin: 5px;
     color: white;
-    background-color: black;
+    background-color: rgb(126, 63, 126);
+    transition: all 500ms;
+    height: 40px;
+    border: none;
+    font-family: 'rajdhani';
+    width: 250px;
 }
 
 .volver-administrador{
@@ -84,6 +95,10 @@
 
 .contenedor-boton{
     display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor-boton label {
