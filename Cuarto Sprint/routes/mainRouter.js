@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mainController = require("../controllers/mainController");
+<<<<<<< HEAD
 const userController = require("../controllers/userController");
 const multer = require("multer");
 const path = require("path");
@@ -13,6 +14,12 @@ const authMiddleware = require("../middlewares/authMiddleware"); //Middleware qu
 const authAdminMiddleware = require("../middlewares/authAdminMiddleware"); //Middleware para autorizar ingreso de admin.
 
 //como indicamos para subir la imagen de producto, nombre y donde guardarlo
+=======
+const multer = require("multer");
+const path = require("path");
+
+//como indicamos para subir el archivo, nombre y donde guardarlo
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.resolve(__dirname, "../public/images/ArticulosCreados"))
@@ -22,6 +29,7 @@ const storage = multer.diskStorage({
   }
 })
 
+<<<<<<< HEAD
 //como indicamos para subir el Avatar, nombre y donde guardarlo
 const storageAvatar = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -77,4 +85,31 @@ router.get("/administrador/eliminarProduct/:codigo", mainController.eliminarProd
 // Ruta para ver el carrito de Compras
 router.get("/views/carritoCompras", mainController.carritoCompras);
 
+=======
+const upload = multer({ storage})
+
+router.get("/", mainController.home);
+
+router.get("/views/login", mainController.login);
+
+router.get("/views/product/:categoria", mainController.categoria);
+
+router.get("/views/productDetail/:codigo", mainController.productDetail);
+
+router.get("/views/register", mainController.register);
+
+router.get("/views/administrador",mainController.administrador);
+
+router.get("/views/createProducts", mainController.createProducts);
+router.post("/views/createProducts", upload.single("imagen"), mainController.save);
+
+router.get("/administrador/:codigo/editproducts", mainController.editProducts);
+router.put("/administrador/:codigo/editproducts", upload.single("imagen"), mainController.putProducts);
+
+router.get("/views/carritoCompras", mainController.carritoCompras);
+
+router.get("/administrador/eliminarProduct/:codigo", mainController.eliminarProduct);
+
+
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 module.exports = router;

@@ -3,6 +3,7 @@
 <!-- head -->
 <%- include("./partials/head") %>
 <body>
+<<<<<<< HEAD
     <% if (url == 'catalogo') { %>
         <script>document.title = 'Catalogo | DrinkHouse'</script>
     <% } else { %>
@@ -11,16 +12,26 @@
             document.title =  '<%= titulo %>';
         </script> 
     <% } %>
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     <!-- header -->
     <%- include("./partials/header") %>
     <main>
         <h3 class="titulo-h3">Categorías</h3> <!-- Esto quizas debería ser un nav -->
         <div class="nav_catalogo">
+<<<<<<< HEAD
             <a href="/views/product/catalogo">Catálogo <i class="fas fa-list all-centrado"></i></a>
             <a href="/views/product/cerveza">Cervezas <i class="fas fa-beer all-centrado"></i></a>
             <a href="/views/product/whisky">Whiskeys <i class="fas fa-glass-whiskey all-centrado"></i></a>
             <a href="/views/product/licor">Licores <i class="fas fa-wine-bottle all-centrado"></i></a>
             <a href="/views/product/vino">Vinos<i class="fas fa-wine-glass-alt all-centrado"></i></a>
+=======
+            <a href="/views/product/catalogo">Catálogo</a>
+            <a href="/views/product/cerveza">Cervezas</a>
+            <a href="/views/product/whisky">Whiskeys</a>
+            <a href="/views/product/licor">Licores</a>
+            <a href="/views/product/vino">Vinos</a>
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
         </div>
         <section class="contenedor-articulos">
             <% for ( let i = 0; i < arreglo.length; i++ ) { %>

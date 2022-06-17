@@ -19,10 +19,20 @@ Paginas referentes:
 5) https://www.yopongoelhielo.com/es/ Por la forma de agregar el producto al carrito de compras.
 
 Integrantes:
+<<<<<<< HEAD
 Emerson Leonardo Chapeta.
 Ariel Pagani
 Actualmente trabajando con traslados de pasajeros, 42 años. Siempre me gusto la informatica y me he vinculado con lo relacionado a IT, actualmente busco un cambio economico en mi vida. 
 Ignacio Oteiza
 24 años, estudiante, aficionado a los videojuegos. Me gusta aprender sobre tecnologias innovadoras y todo aquello que me genera intriga y me presenta un desafio.
 Alexis Ariel Bello
+=======
+* Emerson Leonardo Chapeta
+Actualmente trabajo en el area de diseño de cartelería. Recibido de Licenciatura en Música. Me gusta trabajar en todo lo referente al area multimedia.
+* Ariel Pagani
+Actualmente trabajando con traslados de pasajeros, 42 años. Siempre me gusto la informatica y me he vinculado con lo relacionado a IT, actualmente busco un cambio economico en mi vida. 
+* Ignacio Oteiza
+24 años, estudiante, aficionado a los videojuegos. Me gusta aprender sobre tecnologias innovadoras y todo aquello que me genera intriga y me presenta un desafio.
+* Alexis Ariel Bello
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 Arquitecto, 36 años, padre de dos hijos, hincha de Boca. Como profesional me apasiona la dinámica de resolver problemas concretos en obra y poder descubrir, junto al cliente, el diseño para sus proyectos. Me siento cómodo trabajando en equipos interdiciplinarios, donde considero que se aprende mucho desde el aporte de cada integrante.

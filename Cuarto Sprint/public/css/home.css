@@ -5,7 +5,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+<<<<<<< HEAD
     margin: 50px 0;
+=======
+    margin: 80px 0;
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 }
 
 .contenedor-marcas{                                       /*home-marcas*/
@@ -45,7 +49,10 @@ width: 100px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+<<<<<<< HEAD
     padding: 20px 0;
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 }
 
 .fab {                                         /*home-boton-wsp*/
@@ -102,10 +109,13 @@ width: 100px;
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 .producto-licor i{                  /*home-nav-productos-categorias*/
     transform: rotate(-45deg);
 }
 
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 .productos div a p {            /*home-estilo-textos-nav*/
     color: black;
     font-size: 22px;
@@ -117,6 +127,7 @@ width: 100px;
 main h2{                   /*home-palabra-productos*/ 
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     margin: 0;
     padding-top: 25px;
 }
@@ -141,3 +152,10 @@ body{
     margin: 10px;
 }
 
+=======
+}
+
+.productos {
+    margin: 70px 0 0;
+}
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405

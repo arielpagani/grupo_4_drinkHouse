@@ -2,7 +2,10 @@
   {
     "categoria": "vino",
     "marca": "Norton",
+<<<<<<< HEAD
     "titulo": "Vino Norton 750ml",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 1,
     "precio": 700,
     "descuento": 5,
@@ -13,7 +16,10 @@
   {
     "categoria": "vino",
     "marca": "Rutini",
+<<<<<<< HEAD
     "titulo": "Vino Rutini 750ml",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 2,
     "precio": 1100,
     "descuento": 5,
@@ -24,7 +30,10 @@
   {
     "categoria": "vino",
     "marca": "Ruca Malen",
+<<<<<<< HEAD
     "titulo": "Vino Ruca Malen 750ml",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 3,
     "precio": 480,
     "descuento": 5,
@@ -35,7 +44,10 @@
   {
     "categoria": "vino",
     "marca": "Benjamin",
+<<<<<<< HEAD
     "titulo": "Vino Benjamin 750ml",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 4,
     "precio": 500,
     "descuento": 5,
@@ -46,7 +58,10 @@
   {
     "categoria": "cerveza",
     "marca": "Stella Artoise",
+<<<<<<< HEAD
     "titulo": "Cerveza Stella Artoise rubia lata 450ml",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 5,
     "precio": 115,
     "descuento": 5,
@@ -57,7 +72,10 @@
   {
     "categoria": "cerveza",
     "marca": "Temple",
+<<<<<<< HEAD
     "titulo": "Cerveza Temple lata ipa 450ml",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 6,
     "precio": 125,
     "descuento": 5,
@@ -68,7 +86,10 @@
   {
     "categoria": "cerveza",
     "marca": "Brahma",
+<<<<<<< HEAD
     "titulo": "Cerveza Brahma rubia 450ml",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 7,
     "precio": 95,
     "descuento": 5,
@@ -79,7 +100,10 @@
   {
     "categoria": "cerveza",
     "marca": "Andes Origen",
+<<<<<<< HEAD
     "titulo": "Cerveza Andes Origen roja lata 450ml",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 8,
     "precio": 145,
     "descuento": 5,
@@ -90,7 +114,10 @@
   {
     "categoria": "whisky",
     "marca": "Johnnie Walker",
+<<<<<<< HEAD
     "titulo": "Whisky Johnnie Walker 1L",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 9,
     "precio": 10500,
     "descuento": 5,
@@ -101,7 +128,10 @@
   {
     "categoria": "whisky",
     "marca": "Bulleit Bourbon",
+<<<<<<< HEAD
     "titulo": "Whisky Bulleit Bourbon 1L",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 10,
     "precio": 6800,
     "descuento": 5,
@@ -112,7 +142,10 @@
   {
     "categoria": "whisky",
     "marca": "Old Parr",
+<<<<<<< HEAD
     "titulo": "Whisky Old Parr 1L",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 11,
     "precio": 4200,
     "descuento": 5,
@@ -123,7 +156,10 @@
   {
     "categoria": "whisky",
     "marca": "Vat 69",
+<<<<<<< HEAD
     "titulo": "Whisky Vat 69 1L",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 12,
     "precio": 680,
     "descuento": 5,
@@ -134,7 +170,10 @@
   {
     "categoria": "licor",
     "marca": "Sheridan",
+<<<<<<< HEAD
     "titulo": "Licor Sheridan 1L",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 13,
     "precio": 3800,
     "descuento": 5,
@@ -145,7 +184,10 @@
   {
     "categoria": "licor",
     "marca": "Baileys",
+<<<<<<< HEAD
     "titulo": "Licor Baileys 1L",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 14,
     "precio": 2900,
     "descuento": 5,
@@ -156,7 +198,10 @@
   {
     "categoria": "licor",
     "marca": "Legui",
+<<<<<<< HEAD
     "titulo": "Licor Legui 1L",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 15,
     "precio": 550,
     "descuento": 5,
@@ -167,7 +212,10 @@
   {
     "categoria": "licor",
     "marca": "Baileys",
+<<<<<<< HEAD
     "titulo": "Licor Baileys 1L",
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     "codigo": 16,
     "precio": 3700,
     "descuento": 5,

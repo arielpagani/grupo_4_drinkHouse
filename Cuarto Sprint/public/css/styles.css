@@ -47,6 +47,7 @@ left: 5%;
     transform: scale(1.2, 1.2);
     box-shadow: 0 0 10px rgba(112, 85, 192, 0.50);
     transition-duration: 250ms;
+<<<<<<< HEAD
     transform: rotate(45deg)
 }
 
@@ -56,6 +57,8 @@ left: 5%;
 
 .flex-item-final i:hover {
     transform: rotate(0deg)
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 }
 
 header div form {
@@ -198,7 +201,11 @@ input{
 /*Fin del mobile*/
 
 /*Inicio de Desktop*/
+<<<<<<< HEAD
 @media (max-width: 768px) and (min-width: 475px) {
+=======
+@media (max-width: 768px) {
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     .flex-encabezado {          /* contenedor de logo-barra-nav-contenedor-gral */
         flex-direction: column;
     }
@@ -228,6 +235,7 @@ input{
         position: fixed;
         right: 20px;
         bottom: 80px;
+<<<<<<< HEAD
     }
     .header-container .header-logo-busqueda{
         width: 45%;
@@ -268,4 +276,7 @@ input{
         padding: 5px;
     }
 
+=======
+        } 
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 }

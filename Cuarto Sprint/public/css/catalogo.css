@@ -1,9 +1,14 @@
 .contenedor-articulos{                  /*catalogo Articulos*/
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
     padding: 10px 0;
     margin: 5px;
     background-color: white;
+=======
+    padding: 0 16%;
+    margin: 15px 0 15px 0;
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 }
 
 .contenedor-articulos article{
@@ -73,10 +78,13 @@
     transition: all 500ms ease;
 }
 
+<<<<<<< HEAD
 .nav_catalogo a .fa-wine-bottle{                           
     transform: rotate(-45deg);
 }
 
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 .nav_catalogo a:hover{                           
     color: black;
     background-color: rgb(170, 255, 0);;
