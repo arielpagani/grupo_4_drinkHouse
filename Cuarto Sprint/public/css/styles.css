@@ -47,6 +47,18 @@ left: 5%;
     transform: scale(1.2, 1.2);
     box-shadow: 0 0 10px rgba(112, 85, 192, 0.50);
     transition-duration: 250ms;
+<<<<<<< HEAD
+    transform: rotate(45deg)
+}
+
+.producto-licor i:hover {
+    transform: rotate(0deg)
+}
+
+.flex-item-final i:hover {
+    transform: rotate(0deg)
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 }
 
 header div form {
@@ -189,7 +201,11 @@ input{
 /*Fin del mobile*/
 
 /*Inicio de Desktop*/
+<<<<<<< HEAD
+@media (max-width: 768px) and (min-width: 475px) {
+=======
 @media (max-width: 768px) {
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     .flex-encabezado {          /* contenedor de logo-barra-nav-contenedor-gral */
         flex-direction: column;
     }
@@ -219,5 +235,48 @@ input{
         position: fixed;
         right: 20px;
         bottom: 80px;
+<<<<<<< HEAD
+    }
+    .header-container .header-logo-busqueda{
+        width: 45%;
+    }
+
+    .header-container .header-nav{
+        width: 45%;
+    }
+
+}
+
+@media (min-width: 768px){
+
+    .header-container{
+        flex-direction: row;
+    }
+    .header-container .header-logo-busqueda{
+        width: 49%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-container .header-busqueda{
+        width: 60%;
+    }
+
+    .header-container .header-logo{
+        width: 30%;
+    }
+
+    .header-container .header-nav{
+        width: 49%;
+    }
+
+    .header-container .header-busqueda label{
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+
+=======
         } 
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 }

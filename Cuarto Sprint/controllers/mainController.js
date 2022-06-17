@@ -4,6 +4,12 @@
 
 const fs = require("fs");
 const path = require("path");
+<<<<<<< HEAD
+const {validationResult}= require("express-validator")
+const bcryptjs =require("bcryptjs")
+const User = require("../models/User");
+=======
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 
 const home = (req, res) => {
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
@@ -15,7 +21,11 @@ const home = (req, res) => {
     const productosAleatorios=[]
     // cuantos productos quiero mostrar
     const cantidadDeProductos=4
+<<<<<<< HEAD
+    // convierto en numero entero la cantidad de productos (quizas no hace falta, pero probé tantas cosas que ya no me acuerdo)
+=======
     // convierto en numero entero la cantidad de productos
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     const cantidadDeProductosAMostrar= parseInt(cantidadDeProductosFiltrados)
 
     // funcion que genera numeros de forma aleatoria de la cantidad de productos y devuelve 4
@@ -41,15 +51,23 @@ const home = (req, res) => {
     res.render ("home", {arreglo:productosSimilaresAleatorios});
 };
 
+<<<<<<< HEAD
+=======
 const login = (req, res) => {
     res.render ("login")
 };
 
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 const categoria = (req,res) => {
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
     const categoria = req.params.categoria;
     if (categoria != 'catalogo') {
         const filtrado = articulos.filter(productos => productos.categoria === categoria);
+<<<<<<< HEAD
+        return res.render("categoria", {arreglo:filtrado, url:req.params.categoria});
+    }
+    return res.render("categoria", {arreglo:articulos, url:req.params.categoria});
+=======
         res.render("categoria", {arreglo:filtrado});
     }
     res.render("categoria", {arreglo:articulos});
@@ -57,6 +75,7 @@ const categoria = (req,res) => {
 
 const register = (req, res) => {
     res.render ("register");
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
 }
 
 const carritoCompras = (req, res) => {
@@ -71,7 +90,10 @@ const administrador = (req, res) => {
 }
 
 const createProducts = (req, res) => {
+<<<<<<< HEAD
+=======
     let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     res.render ("createProducts");
 }
 
@@ -173,6 +195,14 @@ const eliminarProduct = (req, res) => {
     let productsSave = JSON.stringify(productsFinal,null,2);
     fs.writeFileSync(path.resolve(__dirname,"../database/Productos/articulos.json"),productsSave);
     res.redirect ("/views/administrador");
+<<<<<<< HEAD
+}
+
+const mainController = {
+    home,
+    carritoCompras,
+    productDetail,
+=======
 };
 
 const mainController = {
@@ -181,6 +211,7 @@ const mainController = {
     carritoCompras,
     productDetail,
     register, 
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     createProducts,
     save,
     administrador,

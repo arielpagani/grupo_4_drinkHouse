@@ -1,12 +1,40 @@
 <!-- head -->
 <%- include("./partials/head") %>
 <body>
+<<<<<<< HEAD
+    <script>
+        document.title = 'Iniciar Sesion | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+=======
     <!-- header -->
     <%- include("./partials/headerSimple") %>
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     <div class="contenedor-register">
         <h1>Hola!</h1>
         <h3>Bienvenido nuevamente!</h3>
         <div>
+<<<<<<< HEAD
+            <form action="/views/login" method="POST">
+                <label><b>Ingresá tu usuario</b></label>
+                <input type="text" name="email" required>
+                <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                <%= errors.email.msg %>
+                </div>
+                <% } %>
+                <label><b>Ingresá tu Password</b></label>
+                <input type="password" name="password" required>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                    <%= errors.password.msg %>
+                    </div>
+                    <% } %>
+            <div class="checkbox-recuerdame">
+                <label for="Nombre">Recuérdame</label>
+                <input type="checkbox" name="recordar_usuario">
+=======
             <form action="/login" method="post">
                 <label for="email"></label>
                 <input type="email" name="email" placeholder="Ingresá tu usuario" id="email" required>
@@ -15,6 +43,7 @@
             <div class="checkbox-recuerdame">
                 <label for="Nombre">Recuérdame</label>
                 <input type="checkbox" name="nombre" id="nombre" required>
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
             </div>
                 <a href="/views/login">¿Olvidaste la contraseña?</a>
                 <a href="/views/register">¿Todavía no estás registrado?</a>
