@@ -1,7 +1,6 @@
 .centrar {                               /*home-carrusel*/
     margin: auto;
-    min-width: 0em;
-    width: 70%;
+    width: 100%;
 }
 
 /*--------- botones de atras y adelante promos inicio ----------*/
@@ -150,7 +149,7 @@ h2{
     background-color: white;
     flex-wrap: wrap;
     padding: 30px;
-    height: 400px;
+    /*height: 400px;*/
 }
 
 /*contenedor de producto*/
@@ -161,6 +160,7 @@ h2{
     flex-direction: column;
     align-items: center;
     transition: all 400ms;
+    padding: 10px;
 }
 
 /*imagen*/

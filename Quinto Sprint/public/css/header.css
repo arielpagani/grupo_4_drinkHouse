@@ -43,6 +43,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 /* logo drinkhouse*/
 .header-logo img{
@@ -51,6 +52,10 @@
 /*----- search start -----*/
 .header-busqueda input{
   width: 400px;
+}
+
+.header-busqueda{
+  margin: 5px;
 }
 
 .header-busqueda #search{
@@ -75,21 +80,19 @@
 .header-nav-container-general{
   display: flex;
   justify-content: space-evenly;
-}
-
-/*opciones-catalogo*/
-.header-nav-container-general{
   height: 40px;
+  flex-wrap: wrap;
 }
 
 /*contendor de los botones*/
 .header-nav-container{
   width: 150px; 
-align-items: center;
-display: flex;
-height: 30px; 
-justify-content: center; 
+  align-items: center;
+  display: flex;
+  height: 30px; 
+  justify-content: center; 
   transition: all 400ms;
+  margin: 3px;
 }
 
 /*texto de los botones*/
