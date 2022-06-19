@@ -16,26 +16,26 @@
         </div>
         <img class="centrar" src="images/img1.PNG" alt="Imagen promo">
     </section>
-    <h2>Nuestras categorias</h2>
+    <h2>Nuestras categorías</h2>
     <div class="home-catalogo">
-        <a class="card" href="/">
-            <img class="imagen" src="/images/cerveza.jpg" alt="imagen de articulo">
+        <a class="cardHome" href="/views/product/cerveza">
+            <img class="imagenHome" src="/images/cerveza.jpg" alt="imagen de articulo">
             <p class="text"> Cerveza </p>
         </a>
-        <a class="card" href="/">
-            <img class="imagen" src="/images/whisky.jpeg" alt="imagen de articulo">
+        <a class="cardHome" href="/views/product/whisky">
+            <img class="imagenHome" src="/images/whisky.jpg" alt="imagen de articulo">
             <p class="text"> Whisky </p>
         </a>
-        <a class="card" href="/">
-            <img class="imagen" src="/images/licor.jpg" alt="imagen de articulo">
+        <a class="cardHome" href="/views/product/licor">
+            <img class="imagenHome" src="/images/licor.jpg" alt="imagen de articulo">
             <p class="text"> Licor </p>
         </a>
-        <a class="card" href="/">
-            <img class="imagen" src="/images/vino.jpeg" alt="imagen de articulo">
+        <a class="cardHome" href="/views/product/vino">
+            <img class="imagenHome" src="/images/vino.jpg" alt="imagen de articulo">
             <p class="text"> Vino </p>
         </a>
     </div>
-    <h2>Mas populares</h2>
+    <h2>Más populares</h2>
     <div class="home-productos-populares-container">
         <% for ( let i = 0; i < arreglo.length; i++ ) { %>
             <div class="home-productos-populares">
@@ -59,6 +59,7 @@
     <a class="fab fa-whatsapp" href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" target="_blank"></a>
 </main>
 <!-- footer -->
+
 <%- include("./partials/footer") %>
 </body>
 </html>

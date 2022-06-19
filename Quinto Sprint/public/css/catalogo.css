@@ -123,7 +123,7 @@
 /* estilos nuevos*/
 
 .card {
-    width: 250px;
+    width: 20%;
     border-radius: 4px;
     
     display: grid;
@@ -136,6 +136,8 @@
 
     margin: 10px;
     border: 1px solid rgba(0,0,0,.1);
+
+    border-radius: 20px;
 }
 
 .card > * {
