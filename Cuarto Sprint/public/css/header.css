@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header{                                     /*header*/
     display: flex;
     justify-content: center;
@@ -40,10 +41,28 @@ header{                                     /*header*/
     font-weight: bold;
     display: flex;
     justify-content: center;
+=======
+.flex-encabezado {                          /* contenedor de logo-barra-nav */
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.flex-encabezado>div {                          /* contenedor de logo-barra-nav-contenedor-general */
+    margin: auto 0;
+    text-align: center;
+}
+
+.flex-encabezado #busqueda input {          /* contenedor de logo-barra-nav-barra-busqueda */
+    padding: 3px 33px;
+    text-align: center;
+    font-size: 15px;
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
     border: 3px solid rgb(137, 104, 237);
     border-radius: 14px;
 }
 
+<<<<<<< HEAD
 .header-busqueda button{              /*contenedor boton lupita*/
     border-style: none;
     color: black;
@@ -165,3 +184,28 @@ header{                                     /*header*/
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+=======
+.flex-encabezado #logo {          /* contenedor de logo-barra-nav-imagen-logo */
+    width: 150px;
+}
+
+.flex-encabezado #navegador {          /* contenedor de logo-barra-nav-estilos-palabras */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-encabezado #navegador a { 
+    display: grid;         /* contenedor de logo-barra-nav-estilos-botones */
+    color: white;
+    padding: 2px 5px;
+    transition: all 500ms ease;             /*cambiar el all*/
+}
+
+.flex-encabezado #navegador a:hover {          /* contenedor de logo-barra-nav-estilos-botones */
+    background: rgb(170, 255, 0);
+    border-radius: 10px;
+    color: black;
+}
+
+>>>>>>> 1e2792a34eee47f17645320c92e992abbffc4405
