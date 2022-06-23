@@ -13,6 +13,7 @@ header{                                     /*header*/
     border: 5px;
     margin: 5px;
     padding-bottom: 15px;
+    background-image: url("../Images/");
 }
 
 .header-logo a{
