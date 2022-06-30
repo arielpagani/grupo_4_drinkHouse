@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <script>
+        document.title = '<%= productos.Categoria.nombre %> | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <div class="product-container">
+        <div class="ruta">
+            <h4><a href="/">DrinkHouse</a> > <a href="/views/product/catalogo">Catalogo</a> > <a href="/views/product/<%=productos.Categoria.id_categoria%>"><%=productos.Categoria.nombre%></a> > <%=productos.marca%></h4>
+        </div>
+        <div class="product-middle-container">
+            <div class="product-imagenes">
+                <img src="<%=productos.imagen_producto%>" alt="imagen-producto">
+            </div>
+            
+            <div class="product-details">
+                <div class="product-details-top">
+                    <h2><%=productos.titulo%></h2>
+                    <h3>$<%=productos.precio%></h3>
+                    <h3><%=productos.descuento%>% OFF</h3>
+                </div>
+                <div class="product-details-bottom">
+                    <button>Comprar ahora</button>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-description">
+            <h4>Descripcion</h4>
+            <%=productos.descripcion%>
+        </div>
+    </div> 
+    <div class="home-titulos-productos">
+        <h2>Productos similares</h2>
+    </div>
+    <section class="contenedor-articulos">
+        <% for ( let i = 0; i < similares.length; i++ ) { %>
+            <div>
+                <a href="/views/productDetail/<%= similares[i].id_producto %>">
+                <article>
+                    <img src="<%= similares[i].imagen_producto %>" alt="imagen de articulo">
+                    <div class="caja-articulo">
+                        <h2> <%= similares[i].marca %> </h2>
+                        <p> $<%= similares[i].precio %> </p>
+                        <p> Descuento: <%= similares[i].descuento %> % off</p>
+                    </div>
+                </article>
+                </a>
+            </div>
+        <% } %>
+    </section>
+    <!-- footer -->
+    <%- include("./partials/footer") %>
+</body>
+</html>

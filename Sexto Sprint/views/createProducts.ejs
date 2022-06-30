@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+
+<body>
+    <script>
+        document.title = 'Crear Producto | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <div class="contenedor-register">
+            <form action="/views/createProducts" method="POST" enctype="multipart/form-data">
+                <label for="categoria"><h2>Categoria</h2></label>
+                <select id="id_categoria">
+                    <% for ( let i = 0; i < categorias.length; i++ ) { %>
+                    <option id="<%= categorias[i].id_categoria %>"> <%= categorias[i].nombre %> </option>
+                    <% } %>
+                </select> <br>
+                <input type="hidden" value="<%= categorias[0].id_categoria %>" id="categoria_seleccionada" name="categoria_seleccionada">
+
+                <label for="marca"></label>
+                <input type="text" name="marca" placeholder="Marca"> <br>
+
+                <input type="number" name="precio" placeholder="Precio" > <br>
+
+                <input type="number" name="descuento" placeholder="Descuento"> <br>
+
+                <textarea name="descripcion" placeholder="Descripcion del producto" cols="30" rows="5"></textarea> <br>
+
+                <input type="file" name="imagen_producto">
+                
+                <div class="contenedor-boton">
+                <input type="number" name="stock" placeholder="Stock">
+
+                </div><br>
+
+                <a class="volver-administrador" href="/views/administrador">Volver</a>
+                
+                <div class="contenedor-boton">
+                    <button type ="submit">Guardar</button>
+                    <button type ="reset">Borrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+<script>
+const seleccion =document.getElementById("id_categoria");
+seleccion.addEventListener("change",function(e){
+let categoriaSeleccionada = document.getElementById("categoria_seleccionada");
+const indiceSeleccionado = seleccion.selectedIndex;
+categoriaSeleccionada.value = seleccion[indiceSeleccionado].id;
+})
+</script>
+
+<!-- footer -->
+<%- include("./partials/footer") %>
+
+</html>
