@@ -1,0 +1,94 @@
+<header>
+    <nav class="header-container-general">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House"></a>
+            </div>
+            <div class="header-busqueda">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="¿Que vas a pedir?" />
+            </div>
+
+              <!-- boton de menú mobile -->
+              <input type="checkbox" id="check">
+              <label for="check" class="ckeckbtn">
+                  <i class="fa fa-bars"></i>
+              </label>
+              <!-- fin del boton de menu mobile -->
+            <ul class="header-nav-container-general">
+                <% if (locals.isLogged) { %>
+                    <li class="header-nav-container">
+                        <a href="/views/login"><i class="far fa-user"></i>Ingresa</a>
+                    </li>
+                    <li class="header-nav-container">
+                        <a href="/views/register"><i class="far fa-list-alt"></i>Crea tu cuenta</a>
+                    </li>
+                    <% } else { %>
+                        <ul class="dropdown header-nav-container">
+                            <a>
+                                <%= userLogged.nombre %>
+                            </a>
+                            <i onclick="myFunction()" class="fas fa-chevron-circle-down dropbtn"></i>
+                            <div id="myDropdown" class="dropdown-content">
+                                <% if (locals.isAdmin) { %>
+                                    <div class="header-nav-container-drop">
+                                        <a href="/views/administrador"></i><i class="fas fa-tools"></i></a>
+                                    </div>
+                                    <% } %>
+                                        <div class="header-nav-container-drop">
+                                            <a href="/views/profile"><i class="far fa-user"></i></a>
+                                        </div>
+                                        <div class="header-nav-container-drop">
+                                            <a href="/views/logout"><i class="fas fa-sign-out-alt"></i></a>
+                                        </div>
+                            </div>
+                        </ul>
+                        <li class="header-nav-container">
+                            <a class="botones-nav" href="/views/carritoCompras"><i
+                                    class="fas fa-shopping-cart"></i>Carrito</a>
+                        </li>
+                        <% } %>
+                    </ul>
+        </div>
+        <ul class="header-nav-catalogo">
+            <div class="header-nav-container-general">
+                <div class="header-nav-container">
+                    <a href="/views/product/cerveza"><i class="fas fa-beer"></i>Cervezas</a>
+                </div>
+                <div class="header-nav-container">
+                    <a href="/views/product/vino"><i class="fas fa-wine-glass-alt "></i>Vinos</a>
+                </div>
+                <div class="header-nav-container">
+                    <a href="/views/product/whisky"><i class="fas fa-glass-whiskey "></i>Whiskeys</a>
+                </div>
+                <div class="header-nav-container">
+                    <a href="/views/product/licor"><i class="fas fa-wine-bottle "></i>Licores</a>
+                </div>
+                <div class="header-nav-container">
+                    <a href="/views/product/catalogo"><i class="fas fa-list "></i>Catálogo</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+</header>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>

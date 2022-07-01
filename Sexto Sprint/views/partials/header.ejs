@@ -1,0 +1,69 @@
+<header>
+      <div class="logoSearch">
+    <!-- div del logo -->
+    <div class="logo">
+        <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House" width="150px"></a>
+    </div>
+<!-- search imput --> 
+     <div class="search-box">
+        <input type="search" class="search-txt" placeholder="¿Que vas a pedir?"/>
+      <button class="search-btn"><i class="fa fa-search"></i></button>
+      </div> 
+
+
+      <!-- boton menu mobile -->
+      <div id="burger">
+      <a href="javascript:void(0);" class="icon" onclick="burger()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+</div>
+  <!-- contenedor de la navegación -->
+
+
+  <nav class="nav">
+        <div  class="firstNav" id="myfirstnav">
+    <!-- lista de menú -->
+
+        <a href="/views/product/3"><i class="fas fa-beer"></i> Cervezas</a>
+        <a href="/views/product/4"><i class="fas fa-glass-whiskey "></i> Whiskeys</a>
+        <a href="/views/product/2"><i class="fas fa-wine-bottle "></i> Licores</a>
+        <a href="/views/product/1"><i class="fas fa-wine-glass-alt "></i> Vinos</a>
+        <a href="/views/product/catalogo"><i class="fas fa-list "></i> Catálogo</a>
+       
+    </div>
+
+
+    <div class="secondNav" id="mysecondnav">
+
+   
+
+      <!-- lista de opciones de usuario -->
+   
+          <% if (locals.isLogged) { %>
+              <a href="/views/login"><i class="far fa-user"></i> Ingresa</a>
+              <a href="/views/registro"><i class="far fa-list-alt"></i> Crea tu cuenta</a>
+           <% } else { %>
+  
+  
+         <!-- sí el usuario se loguea se habilitan estos elementos -->
+              <a href="/views/profile"> <%= userLogged.nombre + '  ' %><i class="far fa-user"></i></a></li>
+              <% if (locals.isAdmin) { %>
+              <a href="/views/administrador">Administrar <i class="fas fa-tools"></i></a>
+              <% } %>
+              <a href="/views/logout">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></a>
+              <a href="/views/carritoCompras">Carrito <i class="fas fa-shopping-cart"></i></a>
+               <% } %>
+              </div>
+  
+
+  </nav>
+    <script>
+      function burger(){
+        var x = document.querySelector('.nav');
+        x.classList.toggle('show');
+
+        }
+    </script>
+
+</header>

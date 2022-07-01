@@ -12,10 +12,6 @@
     "anymatch": "^3.1.2",
     "array-flatten": "^1.1.1",
     "balanced-match": "^1.0.2",
-<<<<<<< HEAD
-=======
-    "bcryptjs": "^2.4.3",
->>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     "binary-extensions": "^2.2.0",
     "body-parser": "^1.19.2",
     "boxen": "^5.1.2",
@@ -36,10 +32,6 @@
     "content-disposition": "^0.5.4",
     "content-type": "^1.0.4",
     "cookie": "^0.4.2",
-<<<<<<< HEAD
-=======
-    "cookie-parser": "^1.4.6",
->>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     "cookie-signature": "^1.0.6",
     "crypto-random-string": "^2.0.0",
     "debug": "^2.6.9",
@@ -59,12 +51,6 @@
     "escape-html": "^1.0.3",
     "etag": "^1.8.1",
     "express": "^4.17.3",
-<<<<<<< HEAD
-=======
-    "express-cookie": "^4.17.1",
-    "express-session": "^1.17.3",
-    "express-validator": "^6.14.1",
->>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     "fill-range": "^7.0.1",
     "finalhandler": "^1.1.2",
     "forwarded": "^0.2.0",
@@ -115,10 +101,6 @@
     "minimist": "^1.2.6",
     "ms": "^2.0.0",
     "multer": "^1.4.4",
-<<<<<<< HEAD
-=======
-    "mysql2": "^2.3.3",
->>>>>>> 12ac4be43f846cc1246d1e9f62c0a725491e4d0f
     "negotiator": "^0.6.3",
     "nodemon": "^2.0.16",
     "nopt": "^1.0.10",

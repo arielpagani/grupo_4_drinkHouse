@@ -3,6 +3,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: black;
+    flex-wrap: wrap;
 }
 
 .info-container{

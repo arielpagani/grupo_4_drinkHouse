@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenido-slider div a{
+text-decoration: none;
+color: white;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.contenedor{
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+}
+
+.contenido-slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.contenido-slider > img{
+    width: 300px;
+}
+
+.contenido-slider h2{
+    background-color: black;
+    justify-content: start;
+    font-weight: 800;
+    font-size: 40px;
+    color: white;
+}
+
+.contenido-slider p{
+    font-weight: 800;
+    color: rgb(170, 255, 0);
+    font-size: 40px;
+}
+
+
+@media (max-width: 768px) and (min-width: 461px){
+    .contenido-slider > img{
+        width: 300px;
+    }
+    .contenido-slider > div{
+        width: 40%;
+    }
+    .contenido-slider h2{
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 460px){
+    .contenido-slider{
+       flex-direction: column-reverse;
+    }
+    .contenido-slider > div{
+        width: 80%;
+    }
+}
