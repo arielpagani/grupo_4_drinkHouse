@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <div class="contenedor-perfil">
+		<div class="contenedor-avatar">
+		<img src="<%= user.avatar %> ">
+		</div>
+		<div class="contenedor-descripcion-perfil">
+			<h2>Hola <%= user.nombre %> <%= user.apellido %>!</h2>
+			<h3>Usuario: <%= user.email %></h3>
+			<h3>Fecha de Nacimiento: <%= user.fecha_de_nacimiento %></h3>
+			<h3>Telefono: <%= user.telefono %></h3>
+			<h3>direccion: <%= user.direccion %></h3>
+			<button class="edicion-perfil-button">Editar Perfil</button>
+		</div>
+	</div>
+    
+    <!-- footer -->
+    <%- include("./partials/footer") %>
+</body>
+</html>

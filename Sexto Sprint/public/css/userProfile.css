@@ -1,0 +1,14 @@
+.contenedor-perfil{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: space-around;
+}
+
+.edicion-perfil-button{
+background-color: black;
+color: white;
+padding: 10px;
+font-weight: bold;
+border-radius: 10px;
+justify-content: center;
+}
