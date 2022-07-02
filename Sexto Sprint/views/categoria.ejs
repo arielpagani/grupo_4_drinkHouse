@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    
+    <!-- header -->
+    <%- include("./partials/header") %>
+
+
+<!--
+    <main>
+        <h3 class="titulo-h3">Categorías</h3> !-- Esto quizas debería ser un nav --
+        <div class="nav_catalogo">
+            <a href="/views/product/catalogo">Catálogo <i class="fas fa-list all-centrado"></i></a>
+            <a href="/views/product/3">Cervezas <i class="fas fa-beer all-centrado"></i></a>
+            <a href="/views/product/4">Whiskeys <i class="fas fa-glass-whiskey all-centrado"></i></a>
+            <a href="/views/product/2">Licores <i class="fas fa-wine-bottle all-centrado"></i></a>
+            <a href="/views/product/1">Vinos<i class="fas fa-wine-glass-alt all-centrado"></i></a>
+        </div>
+        <section class="contenedor-articulos">
+            <% for ( let i = 0; i < productos.length; i++ ) { %>
+            <div>
+                <a href="/views/productDetail/<%= productos[i].id_producto %>">
+                <article>
+                    <img src="<%= productos[i].imagen_producto %>" alt="imagen de articulo">
+                    <div class="caja-articulo">
+                        <h2> <%= productos[i].marca %> </h2>
+                        <p> $<%= productos[i].precio %> </p>
+                        <p> Descuento: <%= productos[i].descuento %> % off</p>
+                    </div>
+                </article>
+                </a>
+            </div>
+            <% } %>
+        </section>
+    </main>
+-->
+
+<main>
+    <section class="contenedor-articulos">
+        <% for ( let i = 0; i < productos.length; i++ ) { %>
+            <a class="card" href="/views/productDetail/<%= productos[i].id_producto %>">
+                <img class="imagen" src="<%= productos[i].imagen_producto %>" alt="imagen de articulo">
+                <p class="text"> $<%= productos[i].precio %> </p>
+            </a>
+        <% } %>
+    </section>
+</main>
+
+<!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>
+
+<!--categoria resume las vistas de product-->

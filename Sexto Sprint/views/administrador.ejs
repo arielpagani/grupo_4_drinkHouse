@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <script>
+        document.title = 'Administrador | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main class="background-admin">
+        <h2>Usuarios Registrados</h2>
+        <a id="crear-producto" href="/views/usuarios">Editar/Eliminar Usuarios</a>
+        <h2>Catálogo de Productos</h2>
+        <a id="crear-producto" href="/views/createProducts">Crear Producto +</a>
+        <section class="contenedor-articulos-admin">
+            <div class="itemizado">
+                <div>
+                <h3>Categoria</h3>
+                </div>
+                <div>
+                <h3>Marca</h3>
+                </div>
+                <div>
+                <h3>Código</h3>
+                </div>
+                <div>
+                <h3>Stock</h3>
+                </div>
+                <div>
+                <h3>Ver</h3>
+                </div>
+                <div>
+                <h3>Editar</h3>
+                </div>
+                <div>
+                <h3>Eliminar</h3>
+                </div>
+            </div>
+
+            <% for ( let i = 0; i < productos.length; i++ ) { %>
+            <div>
+                <article>
+                    <div class="caja-articulo-admin">
+                    <div>
+                        <p><%= productos[i].Categoria.nombre %></p>
+                    </div>
+                    <div>
+                        <p><%= productos[i].marca %> </p>
+                    </div>
+                    <div>
+                        <p><%= productos[i].id_producto %></p>
+                    </div>
+                    <div>
+                        <p><%= productos[i].stock %> </p>
+                    </div>
+                    <div>
+                        <a href="/views/productDetail/<%= productos[i].id_producto %>"><i class="far fa-eye"></i></a>
+                    </div>
+                    <div>
+                        <a href="/administrador/<%= productos[i].id_producto %>/editproducts"><i class="far fa-edit"></i></a>
+                    </div>
+                    <div>
+                        <!-- <a href="/administrador/<%= productos[i].id_producto %>"><i class="far fa-trash-alt"></i></i></a> -->
+                        <a>
+                            <form action="/administrador/borrar/<%= productos[i].id_producto%>" method="POST">
+                                <button>Eliminar</i></button>
+                            </form>
+                        </a>
+                    </div>
+                    </div>
+                </article>
+                </a>
+            </div>
+            <% } %>
+        </section>
+    </main>
+<!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>

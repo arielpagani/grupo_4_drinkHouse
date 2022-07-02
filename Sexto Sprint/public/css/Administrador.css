@@ -1,0 +1,69 @@
+.contenedor-articulos-admin {
+    margin: 30px;
+}
+
+.background-admin{
+    background-color: white;
+}
+
+.caja-articulo-admin{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 2px solid black;
+}
+
+.caja-articulo-admin div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.caja-articulo-admin div i{
+    color: black;
+    margin: 20px 0 0 0;
+}
+
+.caja-articulo-admin div h3{
+    margin: 7px 0 0 0;
+}
+
+.caja-articulo-admin div i:hover{
+    color: blue;
+}
+
+#crear-producto{
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: white;
+    background-color: rgb(126, 63, 126);
+    transition: all 500ms;
+    height: 40px;
+    border: none;
+    font-family: 'rajdhani';
+    width: 250px;
+    text-decoration: none;
+}
+
+
+#crear-producto:hover{
+    height: 45px;
+    font-size: 23px;
+    width: 270px;
+}
+
+.itemizado {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.itemizado div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

@@ -1,0 +1,109 @@
+.contenedor-register input {              /*estilos-login-recuadros-input*/
+    margin: 0 0 5px 0;
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contenedor-register .is-invalid{
+    border: 2px solid red;
+}
+
+.text-danger{
+    color: red;
+    font-weight: bold;
+}
+
+.contenedor-register h1 {              /*estilos-login-texto-hola*/
+    font-size: 40px;
+    margin: 0px;
+}
+
+.contenedor-register form{              /*estilos-login-formularios*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-register form label{              /*estilos-login-formularios*/
+    padding: 0 0 5px;
+}
+
+.contenedor-register {              /*estilos-login-contenedor-general*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e7e5e5;
+    border-radius: 30px;
+    width: 215px;
+    margin: 30px auto;
+    font-size: 15px;
+    padding: 50px;
+    transition: all 500ms ease;
+}
+
+.container-general{
+    height: 800px;
+}
+
+.contenedor-register div form a {              /*estilos-login*/
+    text-decoration: none;
+}
+
+.contenedor-register button:hover{              /*estilos-login*/
+    height: 50px;
+    font-size: 23px;
+    width: 270px;
+}
+
+.ingresar-button{
+    height: 50px;
+}
+
+.contenedor-register button{              /*estilos-login*/
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 7px;
+    font-weight: bold;
+    margin: 5px;
+    color: white;
+    background-color: rgb(126, 63, 126);
+    transition: all 500ms;
+    height: 40px;
+    border: none;
+    font-family: 'rajdhani';
+    width: 250px;
+}
+
+.volver-administrador{
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 3px;
+    transition: all 400ms;
+}
+
+
+.volver-administrador:hover{
+    background-color: hsl(0deg 0% 15% / 15%);
+    padding: 7px;
+}
+
+.contenedor-register form a{              /*estilos-login*/
+    color: black;
+    padding: 6px 0;
+}
+
+.contenedor-boton{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-boton label {
+    margin-right: 10px;
+}

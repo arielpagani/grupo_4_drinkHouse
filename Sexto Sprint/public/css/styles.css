@@ -1,0 +1,68 @@
+body {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+
+
+/*Inicio de Mobile*/
+
+@media  (max-width: 460px) {
+    /* ajuste de tamanions logo y barra de busqueda */
+    .header-container .header-busqueda input{
+        width: 300px;
+    }
+
+    .header-logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    /*----------------*/
+    .header-nav-catalogo .header-nav-container-general{
+        height: auto;
+    }
+
+    .botones-slider .centrar img{
+        width: 100%;
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+
+    .header-nav-catalogo.show{
+        right: 0;
+    }
+
+    .header-nav-catalogo{
+        position: fixed;
+        right: 500px;
+        background-color: hsl(0deg 0% 25% / 50%);
+        z-index: 10;
+        transition: 0.5s;
+      }
+      
+    
+} 
+    
+/*Fin del mobile*/
+
+/*Inicio de Desktop*/
+@media (min-width: 460px) {
+    .header-container-general #burger{
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    header .header-nav-catalogo{
+        height: 50px;
+    }
+
+    .contenedor-articulos {
+        width: 70%;
+        margin: auto;
+        /*height: 800px;*/
+        min-height: 700px;
+    }
+}
