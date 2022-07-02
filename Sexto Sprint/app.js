@@ -9,6 +9,7 @@ const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 //cokkies
 const cokkies = require("cookie-parser");
+const cookieParser = require('cookie-parser');
 
 //Middleware de aplicacion para la session
 app.use(session({
@@ -19,6 +20,7 @@ app.use(session({
 
 //Cookie de aplicacion global
 app.use(cokkies());
+app.use(cookieParser());
 
 //Middleware de aplicacion global
 app.use(userLoggedMiddleware);

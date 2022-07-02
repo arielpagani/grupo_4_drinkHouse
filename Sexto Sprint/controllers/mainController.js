@@ -37,7 +37,7 @@ const categoria = (req,res) => {
 }
 
 const carritoCompras = (req, res) => {
-    let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
+    let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/models/articulos.json")));
     let compras = articulos [2];
     res.render ("carritoCompras", {arreglo:compras});
 }

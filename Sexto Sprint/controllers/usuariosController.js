@@ -99,7 +99,10 @@ let usuariosController = {
                         res.cookie("userEmail", req.body.email, {maxAge: (1000*60) * 5})
                     }
 
+                    
+                 
                     return res.redirect("/views/profile")
+
                 }
                     return res.render ("login", {
                         errors: {
@@ -118,6 +121,7 @@ let usuariosController = {
                         },
                 });
         })
+
     },
 
     profile: function (req, res) {
