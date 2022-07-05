@@ -58,7 +58,7 @@ h2{
     display: flex;
     justify-content: center;
     background-color: white;
-    margin: 0;
+    /*margin: 0;*/
 }
 
 .centrar {                               /*home-carrusel*/
@@ -195,7 +195,7 @@ h2{
     display: flex;
     justify-content: center;
     background-color: white;
-    margin: 0;
+    /*margin: 0;*/
 }
 
 

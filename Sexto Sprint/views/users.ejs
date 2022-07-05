@@ -9,64 +9,32 @@
     <!-- header -->
     <%- include("./partials/header") %>
     <main class="background-admin">
-
         <section class="contenedor-articulos-admin">
-            <div class="itemizado">
-                <div>
-                <h3>Nombre</h3>
-                </div>
-                <div>
-                <h3>Apellido</h3>
-                </div>
-                <div>
-                <h3>Email</h3>
-                </div>
-                <div>
-                <h3>Telefono</h3>
-                </div>
-                <div>
-                <h3>Ver</h3>
-                </div>
-                <div>
-                <h3>Editar</h3>
-                </div>
-                <div>
-                <h3>Eliminar</h3>
-                </div>
-            </div>
-
             <% for ( let i = 0; i < usuarios.length; i++ ) { %>
-            <div>
-                <article>
-                    <div class="caja-articulo-admin">
-                    <div>
-                        <p><%= usuarios[i].nombre %></p>
-                    </div>
-                    <div>
-                        <p><%= usuarios[i].apellido %> </p>
-                    </div>
-                    <div>
-                        <p><%= usuarios[i].email %></p>
-                    </div>
-                    <div>
-                        <p><%= usuarios[i].telefono %> </p>
-                    </div>
-                    <div>
-                        <a href="/views/usuarios/<%= usuarios[i].id_usuario %>"><i class="far fa-eye"></i></a>
-                    </div>
-                    <div>
-                        <a href="/views/usuarios/<%= usuarios[i].id_usuario %>"><i class="far fa-edit"></i></a>
-                    </div>
-                    <div>
-                        <a>
-                            <form action="/views/borrar/<%= usuarios[i].id_usuario%>" method="POST">
-                                <button>Eliminar</i></button>
-                            </form>
-                        </a>
-                    </div>
-                    </div>
-                </article>
-                </a>
+            <div class="admin-detail-container">
+                <div class="admin-product-image">
+                    <img src="<%=usuarios[i].avatar%>" alt="imagen usuario">
+                </div>
+                <div class="admin-detail-text">
+                    <h4>Nombre</h4>
+                    <p><%= usuarios[i].nombre %></p>
+                    <h4>Apellido</h4>                  
+                    <p><%= usuarios[i].apellido %> </p>
+                    <h4>Email</h4>                 
+                    <p><%= usuarios[i].email %></p>
+                    <h4>Telefono</h4>         
+                    <p><%= usuarios[i].telefono %> </p>
+                </div>
+                <div class="button-edit">
+                    <a href="/views/usuarios/<%= usuarios[i].id_usuario %>"><i class="far fa-edit"></i></a>
+                </div>
+                <div class="button-detail">
+                    <a>
+                        <form action="/views/borrar/<%= usuarios[i].id_usuario%>" method="POST">
+                            <button>Eliminar</i></button>
+                        </form>
+                    </a>
+                </div>
             </div>
             <% } %>
         </section>

@@ -35,7 +35,7 @@ body {
     }
 
     .header-nav-catalogo{
-        position: fixed;
+        position: absolute;
         right: 500px;
         background-color: hsl(0deg 0% 25% / 50%);
         z-index: 10;
@@ -54,6 +54,12 @@ body {
     }
 }
 
+@media (max-width: 460px) {
+    .header-nav-container-general{
+        width: 100%;
+    }
+}
+
 @media (min-width: 800px) {
     header .header-nav-catalogo{
         height: 50px;
@@ -64,5 +70,15 @@ body {
         margin: auto;
         /*height: 800px;*/
         min-height: 700px;
+    }
+
+    .header-nav-container-general .header-nav-option{
+        margin: 0 15px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .columnas-carrito{
+        flex-direction: column;
     }
 }

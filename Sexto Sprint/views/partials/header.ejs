@@ -1,67 +1,3 @@
-<!--<header>
-    <div class="header-container">
-        <div class="header-logo-busqueda">
-            <div class="header-logo">
-            <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House"></a>
-            </div>
-            <div class="header-busqueda">
-                <label>¿Que vas a pedir?<button><i class="fas fa-search"></i></button></label>
-            </div>
-        </div>
-        <nav class="header-nav">
-            <div class="nav-left">
-                <% if (locals.isLogged) { %>
-                <div class="header-nav-container">
-                    <a class="botones-nav" href="/views/login"><i class="far fa-user"></i>Ingresa</a>
-                </div>
-                <div class="header-nav-container">
-                    <a class="botones-nav" href="/views/registro"><i class="far fa-list-alt"></i>Crea tu cuenta</a>
-                </div>
-            </div>
-            <div class="nav-right">
-                <% } else { %>
-                <div class="dropdown header-nav-container">
-                    <img src="<%= userLogged.avatar %> "><a>Hola <%= userLogged.nombre %>!</a>
-                    <i onclick = "myFunction()" class="fas fa-chevron-circle-down dropbtn"></i>
-                    <div id ="myDropdown" class="dropdown-content">
-                        <% if (locals.isAdmin) { %>
-                        <a href="/views/administrador"></i>Administrador</a>
-                        <% } %>
-                        <a href="/views/profile">My Profile</a>
-                        <a href="/views/logout">Logout</a>
-                    </div>
-                </div>
-                <div class="header-nav-container">
-                    <a class="botones-nav" href="/views/carritoCompras"><i class="fas fa-shopping-cart"></i>Carrito</a>
-                </div>
-                
-            </div>
-            <% } %>
-        </nav>
-    </div>           
-</header>
-<script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-    </script>
--->
 <header>
     <div class="header-container-general">
         <div class="header-container">
@@ -81,26 +17,22 @@
                         <a href="/views/register"><i class="far fa-list-alt"></i>Crea tu cuenta</a>
                     </div>
                 <% } else { %>
-                    <div class="dropdown header-nav-container">
-                        <a><%= userLogged.nombre %></a>
-                        <i onclick = "myFunction()" class="fas fa-chevron-circle-down dropbtn"></i>
-                        <div id ="myDropdown" class="dropdown-content">
-                            <% if (locals.isAdmin) { %>
-                            <div class="header-nav-container-drop">
+                    
+                        <% if (locals.isAdmin) { %>
+                            <div class="header-nav-option">
                                 <a href="/views/administrador"></i><i class="fas fa-tools"></i></a>
                             </div>
-                            <% } %>
-                            <div class="header-nav-container-drop">
-                                <a href="/views/profile"><i class="far fa-user"></i></a>
-                            </div>
-                            <div class="header-nav-container-drop">
-                                <a href="/views/logout"><i class="fas fa-sign-out-alt"></i></a>
-                            </div>
+                        <% } %>
+                        <div class="header-nav-option">
+                            <a href="/views/profile"><i class="far fa-user"></i></a>
                         </div>
-                    </div>
-                    <div class="header-nav-container">
-                        <a class="botones-nav" href="/views/carritoCompras"><i class="fas fa-shopping-cart"></i>Carrito</a>
-                    </div>
+                        <div class="header-nav-option">
+                            <a href="/views/logout"><i class="fas fa-sign-out-alt"></i></a>
+                        </div>
+                        <div class="header-nav-option">
+                            <a class="botones-nav" href="/views/carritoCompras"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    
                 <% } %>
             </div>
         </div>

@@ -1,5 +1,5 @@
 
-/* Menu desplegable*/
+/* Menu desplegable*
 .dropbtn{
   color: white;
   margin-left: 3px;
@@ -10,21 +10,30 @@
   display: none;
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) *
 .show {
   display:block;
 }
 
-.header-nav-container-drop{
-  margin:5px 0 0 30px;
-  transition: all 100ms;
-}
+
 
 
 .header-nav-container-drop:hover{
   animation: drop 2s linear infinite;
 }
+*/
 
+/*
+.header-nav-container-drop{
+  margin:5px 0 0 30px;
+  transition: all 100ms;
+}
+
+.header-nav-container-drop a{
+  color: white;
+}
+*/
+/*
 @keyframes drop {
   20%{
     transform: rotate(20deg);
@@ -33,9 +42,25 @@
     transform: rotate(-40deg);
   }
 }
+*/
 
 .header-container-general{
   align-items: center;
+}
+
+.header-nav-container-general a{
+  color: white;
+  margin: 3px;
+}
+
+.header-nav-option {
+  transition: all 400ms;
+}
+
+.header-nav-option:hover{
+  font-size: 20px;
+  padding: 5px;
+  background-color: rgb(126, 63, 126);
 }
 
 /* contenedor general del header*/
@@ -44,6 +69,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  /*flex-direction: column;*/
 }
 /* logo drinkhouse*/
 .header-logo img{
@@ -81,6 +107,10 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 8px 0;
+  flex-direction: row;
+  align-items: center;
+  /*height: 50px;*/
 }
 
 /*contendor de los botones*/
@@ -94,12 +124,14 @@
   margin: 3px;
 }
 
+
 /*texto de los botones*/
 .header-nav-container a{
   text-decoration: none;
-color: white;
-font-weight: bold;
+  color: white;
+  font-weight: bold;
 }
+
 
 /*iconos de los botones*/
 .header-nav-container-general .header-nav-container a i{
