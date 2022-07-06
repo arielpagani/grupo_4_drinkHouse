@@ -13,7 +13,7 @@
         <div class="contenedor-register">
             <form action="/administrador/<%= productos.id_producto %>/editproducts?_method=PUT" method="POST" enctype="multipart/form-data">
                 
-                <label for="categoria"><h2>Categoria</h2></label>
+                <label for="categoria">Categoria</label>
                 <select id="id_categoria">
                     <% for ( let i = 0; i < categorias.length; i++ ) { %>
                     <option id="<%= categorias[i].id_categoria %>"> <%= categorias[i].nombre %> </option>
@@ -46,7 +46,7 @@
 
                 </div><br>
 
-                <a class="volver-administrador" href="/views/administrador">Volver</a>
+                <a class="volver-administrador" href="/views/administrador">Atras</a>
                 
                 <div class="contenedor-boton">
 

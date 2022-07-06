@@ -42,13 +42,14 @@ let productoController = {
     },
     actualizar: function(req, res) {
         Productos.update({
+            id_categoria:req.body.categoria_seleccionada,
             marca:req.body.marca,
             precio:req.body.precio,
             descuento:req.body.descuento,
             descripcion:req.body.descripcion,
             imagen_producto:"/Images/ArticulosCreados/" + req.file.filename,
             stock:req.body.stock,
-            id_categoria:req.body.categoria_seleccionada
+            
         },  {
             where:{
                 id_producto: req.params.id_producto

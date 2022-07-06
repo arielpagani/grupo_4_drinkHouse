@@ -13,65 +13,32 @@
         <a id="crear-producto" href="/views/usuarios">Editar/Eliminar Usuarios</a>
         <h2>Catálogo de Productos</h2>
         <a id="crear-producto" href="/views/createProducts">Crear Producto +</a>
-
         <section class="contenedor-articulos-admin">
-            <div class="itemizado">
-                <div>
-                <h3>Categoria</h3>
-                </div>
-                <div>
-                <h3>Marca</h3>
-                </div>
-                <div>
-                <h3>Código</h3>
-                </div>
-                <div>
-                <h3>Stock</h3>
-                </div>
-                <div>
-                <h3>Ver</h3>
-                </div>
-                <div>
-                <h3>Editar</h3>
-                </div>
-                <div>
-                <h3>Eliminar</h3>
-                </div>
-            </div>
-
             <% for ( let i = 0; i < productos.length; i++ ) { %>
-            <div>
-                <article>
-                    <div class="caja-articulo-admin">
-                    <div>
-                        <p><%= productos[i].Categoria.nombre %></p>
-                    </div>
-                    <div>
-                        <p><%= productos[i].marca %> </p>
-                    </div>
-                    <div>
-                        <p><%= productos[i].id_producto %></p>
-                    </div>
-                    <div>
-                        <p><%= productos[i].stock %> </p>
-                    </div>
-                    <div>
-                        <a href="/views/productDetail/<%= productos[i].id_producto %>"><i class="far fa-eye"></i></a>
-                    </div>
-                    <div>
-                        <a href="/administrador/<%= productos[i].id_producto %>/editproducts"><i class="far fa-edit"></i></a>
-                    </div>
-                    <div>
-                        <!-- <a href="/administrador/<%= productos[i].id_producto %>"><i class="far fa-trash-alt"></i></i></a> -->
-                        <a>
-                            <form action="/administrador/borrar/<%= productos[i].id_producto%>" method="POST">
-                                <button>Eliminar</i></button>
-                            </form>
-                        </a>
-                    </div>
-                    </div>
-                </article>
-                </a>
+            <div class="admin-detail-container">
+                <div class="admin-product-image">
+                    <img src="<%=productos[i].imagen_producto%>" alt="<%= productos[i].marca %>">
+                </div>
+                <div class="admin-detail-text">
+                    <h4>Categoria</h4>
+                    <p><%= productos[i].Categoria.nombre %></p>
+                    <h4>Marca</h4>
+                    <p><%= productos[i].marca %> </p>
+                    <h4>Código</h4>
+                    <p><%= productos[i].id_producto %></p>
+                    <h4>Stock</h4>
+                    <p><%= productos[i].stock %> </p>
+                </div>
+                <div class="button-edit">
+                    <a href="/administrador/<%= productos[i].id_producto %>/editproducts"><i class="far fa-edit"></i></a>
+                </div>
+                <div class="button-detail">
+                    <a>
+                        <form action="/administrador/borrar/<%= productos[i].id_producto%>" method="POST">
+                            <button>Eliminar</i></button>
+                        </form>
+                    </a>
+                </div>
             </div>
             <% } %>
         </section>

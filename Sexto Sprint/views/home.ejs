@@ -2,64 +2,50 @@
 <html lang="es">
 <!-- head -->
 <head>       
-    <script src="/carrusel.js"></script>
+    <script src="/slider.js"></script>
     <%- include("./partials/head") %>
 </head>
 <body>
     <!-- header -->
     <%- include("./partials/header") %>
 <main>
-    <section class="contenedor">
-        <div class="botones-slider">
-            <div class="atras botones">&#60</div>
-            <div class="adelante botones">&#62</div>
-        </div>
-        <img class="centrar" src="images/img1.PNG" alt="Imagen promo">
-    </section>  
-    <section class="productos">
-        <h2>PRODUCTOS</h2>
-        <div class="flex-container">
-            <div class="flex-item-left">
-                <div>
-                    <a href="/views/product/3"><i class="fas fa-beer all-centrado"></i><p>Cervezas</p></a>
-                </div>
-                <div>
-                    <a href="/views/product/1"><i class="fas fa-wine-glass-alt all-centrado"></i><p>Vinos</p></a>
-                </div>
-            </div>
-            <div class="flex-item-right">
-                <div>
-                    <a href="/views/product/4"><i class="fas fa-glass-whiskey all-centrado"></i><p>Whiskeys</p></a>
-                </div>
-                <div class="producto-licor">
-                    <a href="/views/product/2"><i class="fas fa-wine-bottle all-centrado"></i><p>Licores</p></a>
-                </div>
-                <div class="flex-item-final">
-                    <a href="/views/product/catalogo"><i class="fas fa-list all-centrado"></i><p>Catálogo</p></a>
-                </div>
-            </div>
-        </div>
+    <section>
+        <%- include("./slider") %>
     </section>
-    <div class="home-titulos-productos">
-        <h2>Productos Destacados</h2>
+    <h2>Nuestras categorias</h2>
+    <div class="home-catalogo">
+        <a class="card" href="/views/product/3">
+            <img class="imagen" src="/images/cerveza.jpg" alt="imagen de articulo">
+            <p class="text"> Cerveza </p>
+        </a>
+        <a class="card" href="/views/product/4">
+            <img class="imagen" src="/images/whisky.jpeg" alt="imagen de articulo">
+            <p class="text"> Whisky </p>
+        </a>
+        <a class="card" href="/views/product/2">
+            <img class="imagen" src="/images/licor.jpg" alt="imagen de articulo">
+            <p class="text"> Licor </p>
+        </a>
+        <a class="card" href="/views/product/1">
+            <img class="imagen" src="/images/vino.jpeg" alt="imagen de articulo">
+            <p class="text"> Vino </p>
+        </a>
     </div>
-    <section class="contenedor-articulos">
+    <h2>Mas populares</h2>
+    <div class="home-productos-populares-container">
         <% for ( let i = 0; i < productos.length; i++ ) { %>
-        <div>
-            <a href="/views/productDetail/<%= productos[i].id_producto %>">
-            <article>
-                <img src="<%= productos[i].imagen_producto %>" alt="imagen de articulo">
-                <div class="caja-articulo">
-                    <h2> <%= productos[i].marca %> </h2>
-                    <p> <%= productos[i].Categoria.nombre %> </p>
-                    <p> $<%= productos[i].precio %> </p>
-                    <p> Descuento: <%= productos[i].descuento %> % off</p>
+            <div class="home-productos-populares">
+                <div class="image-product-container">
+                    <a href="/views/productDetail/<%= productos[i].id_producto %>"><img class="imagen-producto" src="<%= productos[i].imagen_producto %>" alt="imagen de articulo"></a>
                 </div>
-            </article>
-            </a>
-        </div>
+                <div class="product-description">
+                    <h3><%= productos[i].marca %></h3>
+                    <p>$<%= productos[i].precio %></p>
+                    <p><a href="/" id="carrito"><i class="fas fa-shopping-basket"></i>Agregar al carrito</a></p>
+                </div>
+            </div>
         <% } %>
-    </section>
+    </div>
     <section class="marcas">
         <div class="contenedor-marcas">
             <img class="img-marcas" src="/images/marcas/branca.png" alt="logo branca">

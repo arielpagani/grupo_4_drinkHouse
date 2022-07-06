@@ -18,10 +18,7 @@
 } */
 
 .product-imagenes img{
-    width: 150px;
-    border: 1px solid rgba(0,0,0,.1);
-    max-width: 290px;
-  
+    max-width: 300px;
 }
 
 .product-details{
@@ -31,20 +28,22 @@
     margin: 10px;
     justify-content: space-between; */
     display: flex;
-flex-direction: column;
+    flex-direction: column;
     /*align-items: center;
     /*justify-content: center;*/
     /*justify-content: space-evenly;*/
     /*padding: 0px 40px;*/
     /*flex-wrap: wrap;*/
     /*display: block;*/
+    width: 350px;
 }
 
+/*
 .product-description{
     margin: 0 10%;
     text-align: justify;
 }
-
+*/
 /*
 .product-details-bottom{
     display: flex;
@@ -53,14 +52,26 @@ flex-direction: column;
 */
 
 .product-details-bottom button{
-    border-radius: 15px;
+    border-radius: 3px;
+    font-size: 20px;
     padding: 7px;
     font-weight: bold;
     margin: 5px;
     color: white;
-    background-color: black;
+    background-color: rgb(126, 63, 126);
     transition: all 500ms;
+    height: 40px;
+    border: none;
+    font-family: 'rajdhani';
+    width: 250px;
 }
+
+.product-details-bottom button:hover{
+    height: 50px;
+    font-size: 25px;
+    width: 270px;
+}
+
 /*
 .product-details-top {
     /*margin-top: 20px;*/
@@ -98,26 +109,37 @@ flex-direction: column;
     text-transform: capitalize;
 }
 
+/*
 .product-description p{
     margin: 0px;
     padding: 20px;
 }
+*/
 
 .product-details-bottom{
-    width: 80%;
+    /*width: 80%;*/
     display: flex;
-    margin: auto;
+    /*margin: auto;*/
     flex-direction: column;
-    padding: 10px;
+    /*padding: 10px;*/
     /*height: 50%;*/
     /*justify-content: end;*/
+    align-items: center;
+    height: 120px;
 }
 
+.titulo-productos{
+    display: flex;
+    justify-content: center;
+}
+
+/*
 .product-details-bottom button:hover{
     background: rgb(170, 255, 0);
     color: rgb(0, 0, 0);
     border: 2px solid rgb(137, 104, 237);
 }
+*/
 
 .titulo-productos{
     display: flex;
@@ -136,4 +158,8 @@ flex-direction: column;
 .ruta h4{
     margin: 0px;
     padding-top: 15px;
+}
+
+.ruta h4 a{
+    text-decoration: none;
 }

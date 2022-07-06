@@ -1,11 +1,12 @@
 .marcas{                                            /*home-marcas-banner*/
-    background-color: rgb(137, 104, 237);
+    background: linear-gradient( 45deg, #091833, #711c91, #910087, #091833, #711c91, #910087, #091833 );
+    background-size: 600%, 100%;
+    animation: animatebghome 10s linear infinite;
     border-bottom: none;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 50px 0;
 }
 
 .contenedor-marcas{                                       /*home-marcas*/
@@ -18,44 +19,20 @@ width: 100px;
 
 .centrar {                               /*home-carrusel*/
     margin: auto;
-    min-width: 0em;
+    width: 100%;
 }
 
 
 .contenedor {                           /*home-contenedor-carrusel\*/
     display: flex;
     background-color: black;
+    width: 100%;
+    margin-bottom: 25px;
 }
 
 .botones-slider{                         /*home-botones-direccion*/
     display: flex;
     align-items: center;
-}
-
-.flex-item-left {                   /*home-slider-productos-left*/
-    display: flex;
-}
-
-.flex-item-right {                  /*home-slider-productos-right*/
-    display: flex;
-}
-
-.flex-container {                         /*home-slider-productos*/
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px 0;
-}
-
-.fab {                                         /*home-boton-wsp*/
-    padding: 10px;
-    font-size: 20px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
 }
 
 .fab:hover {                                            /*home-boton-wsp*/
@@ -68,76 +45,283 @@ width: 100px;
     position: fixed;
     right: 20px;
     bottom: 160px;
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
 }
 
-.all-centrado{              /*home-centrado*/
+h2{                   
+    color: black;
     display: flex;
     justify-content: center;
+    background-color: white;
+    /*margin: 0;*/
+}
+
+.centrar {                               /*home-carrusel*/
+    margin: auto;
+    width: 100%;
+}
+
+/*--------- botones de atras y adelante promos inicio ----------*/
+.atras{
+    position: absolute;
+    left: 5%;
+    background: rgb(170, 255, 0);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 25px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.adelante{
+    position: absolute;
+    right: 5%;
+    background: rgb(170, 255, 0);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 25px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.contenedor {                           /*home-contenedor-carrusel\*/
+    display: flex;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.botones-slider{                         /*home-botones-direccion*/
+    display: flex;
     align-items: center;
 }
 
-.botones {                          /*home-botones-carrusel*/
-    font-size: 28px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: rgb(170, 255, 0.7);
-    text-align: center;
-    font-weight: bold;
+    
+.fa-whatsapp, .boton-editar {                                  /*home-boton-wsp*/
+    background: rgb(170, 255, 0);
     color: white;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3 ease;
-}
-
-.productos div i {                  /*home-nav-productos-categorias*/
-    color: rgb(137, 104, 237);
-    border: 2px solid;
-    width: 100px;
-    height: 100px;
-    font-size: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 160px;
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
     text-align: center;
-    margin: 0 5px 0;
-    border-radius: 100px;
-    box-sizing: border-box;
-}
-
-.producto-licor i{                  /*home-nav-productos-categorias*/
-    transform: rotate(-45deg);
-}
-
-.productos div a p {            /*home-estilo-textos-nav*/
-    color: black;
-    font-size: 22px;
-    font-weight: bold;
     text-decoration: none;
-    margin: 10px;
+    border-radius: 50%;
 }
 
-main h2{                   /*home-palabra-productos*/ 
-    display: flex;
+/*----- slider de promos -----*/
+.home-slider{
+    width: 100%;
     justify-content: center;
-    margin: 0;
-    padding-top: 25px;
+    display: flex;
 }
 
-.productos {
-    margin: 5px;
+/*----- imagen de slider -----*/
+.home-slider img{
+    width: 70%;
+}
+
+/*----- cards de categorias inicio -----*/
+.home-catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     background-color: white;
+    padding: 50px;
 }
 
-body{
-    background-color: rgb(137, 104, 237);
+/*
+.card {
+    width: 250px;
+    border-radius: 4px;
+    
+    display: grid;
+    place-items: center;
+    grid-template-areas: 'main';
+    
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+
+    border: 1px solid rgb(204, 204, 204);
+}
+*/
+.card > * {
+    grid-area: main;
 }
 
-.home-titulos-productos{
+.card > .text {
+    opacity: 0;
+    color: white;
+    font-size: 1.8em;
+    transition: opacity 400ms, transform 400ms;
+    flex-direction: column;
+}
+
+.card:is(:hover, :focus) > .imagen {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.card:is(:hover, :focus) > .text{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.imagen{
+    width: 100%;
+    aspect-ratio: 1/1.7;
+    transition: transform 400ms, filter 400ms;
+}
+/*----- cards de categorias fin -----*/
+
+
+
+
+/*----- texto mas populares -----*/
+h2{
+    color: black;
     display: flex;
     justify-content: center;
+    background-color: white;
+    /*margin: 0;*/
 }
 
-.home-titulos-productos h2{
+
+
+
+/*----- productos populares inicio-----*/
+
+/*contenedor general*/
+.home-productos-populares-container{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-wrap: wrap;
+    padding: 30px;
+    /*height: 400px;*/
+}
+
+.image-product-container{
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.product-description{
+    width: 100%;
+    background-color: white;
     color: black;
-    padding: 0;
-    margin: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    /*justify-content: end;*/
 }
 
+/*contenedor de producto*/
+.home-productos-populares{
+    width: 150px;
+    margin: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 400ms;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/*imagen*/
+.imagen-producto{
+    width: 100%;
+    aspect-ratio: 1/1.7;
+    margin-top: 17px;
+}
+
+/*titulo de producto*/
+.home-productos-populares h3{
+    margin: 0;
+    font-size: 16px;
+    height: 30px;
+    text-align: center;
+}
+
+/*precio y carrito*/
+.home-productos-populares p{
+    font-weight: bold;
+    margin: 2px;
+    color: black;
+}
+
+/*carrito*/
+.home-productos-populares a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+}
+
+#carrito{
+    height: 20px;
+    transition: all 400ms;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: white;
+    width: 100%;
+}
+
+/*---- productos poipulares fin---------*/
+
+
+
+/*--------- animaciones hover inicio ---------*/
+.home-productos-populares:hover{
+    background: linear-gradient(
+        45deg,
+        #091833,
+        #711c91,
+        #910087,
+        #091833,
+        #711c91,
+        #910087,
+        #091833
+    );
+    background-size: 600%, 100%;
+    animation: animatebghome 10s linear infinite;
+    /*padding-bottom: 10px;*/
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    transform: scale(1.1,1.1);
+    /*color: white;*/
+}
+
+@keyframes animatebghome {
+    0% {
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 100% 0%;
+    }
+}
+
+
+
+#carrito:hover{
+    background-color: hsl(0deg 0% 15% / 15%);
+    border-radius: 3px;
+    height: 30px;
+}
+/*--------- animaciones hover final ---------*/

@@ -1,13 +1,14 @@
+/*
 footer .fab{
     padding: 0px;
 }
 
-footer .logo {                      /*logo del footer*/
+footer .logo {                      /*logo del footer*
     line-height: 160px;
     float: left;
 }
 
-footer .logo img {                  /* tamanio imagen logo */
+footer .logo img {                  /* tamanio imagen logo *
     height: 60px;
 }
 
@@ -37,11 +38,37 @@ footer nav div ul {
     background-color: black;
     color: white;
     position: absolute;
-    /* bottom: 0; */
+    /* bottom: 0; *
     width: 100%;
 }
 
 .pie nav div ul li a {
     color: white;
     font-size: 13px;
+}
+*/
+
+.footer-container{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+.info-container{
+    font-size: 12px;
+    padding: 5px;
+}
+
+.info-container h2{
+    color: white;
+    margin: 0;
+    background-color: black;
+}
+
+.info-container a,
+.info-container i{
+    text-decoration: none;
+    color: white;
 }
