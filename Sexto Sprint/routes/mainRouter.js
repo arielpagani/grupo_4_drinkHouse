@@ -41,8 +41,8 @@ const uploadAvatar = multer({storage:storageAvatar})
 router.get("/", mainController.home);
 
 // Ruta a Register
-router.get("/views/registro", usuariosController.crear);
-router.post("/views/registro", uploadAvatar.single("avatar"),registerMiddleware,usuariosController.guardado);
+router.get("/views/register", usuariosController.crear);
+router.post("/views/register", uploadAvatar.single("avatar"),registerMiddleware,usuariosController.guardado);
 
 // Ruta a Login
 router.get("/views/login", guestMiddleware,usuariosController.login);

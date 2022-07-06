@@ -7,7 +7,7 @@ const Usuarios = db.Usuarios;
 let usuariosController = {
 
     crear: function (req, res) {
-        res.render("registro")
+        res.render("register")
     },
 
     guardado: function(req, res) {
@@ -21,7 +21,7 @@ let usuariosController = {
         .then(function(usuario) {
         console.log(usuario)
         if (usuario){
-            return res.render("registro", {
+            return res.render("register", {
                 errors: {
                     email:{
                         msg:"Este usuario ya se encuentra registrado"
@@ -31,7 +31,7 @@ let usuariosController = {
             })
         }
         if (resultValidation.errors.length > 0){
-            return res.render("registro", {
+            return res.render("register", {
                 errors: resultValidation.mapped(),
                 oldData:req.body
             })

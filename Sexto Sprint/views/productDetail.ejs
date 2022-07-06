@@ -4,7 +4,7 @@
 <%- include("./partials/head") %>
 <body>
     <script>
-        document.title = '<%= productos.Categoria.nombre %> | DrinkHouse'
+        document.title = '<%= productos.marca %> | DrinkHouse'
     </script>
     <!-- header -->
     <%- include("./partials/header") %>
@@ -16,10 +16,9 @@
             <div class="product-imagenes">
                 <img src="<%=productos.imagen_producto%>" alt="imagen-producto">
             </div>
-            
             <div class="product-details">
                 <div class="product-details-top">
-                    <h2><%=productos.titulo%></h2>
+                    <h2><%=productos.marca%></h2>
                     <h3>$<%=productos.precio%></h3>
                     <h3><%=productos.descuento%>% OFF</h3>
                 </div>
@@ -39,18 +38,10 @@
     </div>
     <section class="contenedor-articulos">
         <% for ( let i = 0; i < similares.length; i++ ) { %>
-            <div>
-                <a href="/views/productDetail/<%= similares[i].id_producto %>">
-                <article>
-                    <img src="<%= similares[i].imagen_producto %>" alt="imagen de articulo">
-                    <div class="caja-articulo">
-                        <h2> <%= similares[i].marca %> </h2>
-                        <p> $<%= similares[i].precio %> </p>
-                        <p> Descuento: <%= similares[i].descuento %> % off</p>
-                    </div>
-                </article>
-                </a>
-            </div>
+            <a class="card" href="/views/productDetail/<%= similares[i].id_producto %>">
+                <img class="imagen" src="<%= similares[i].imagen_producto %>" alt="imagen de articulo">
+                <p class="text"> $<%= similares[i].precio %> </p>
+            </a>
         <% } %>
     </section>
     <!-- footer -->

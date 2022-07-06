@@ -29,17 +29,18 @@ const categoria = (req,res) => {
             }).then(function(productos) {
                 res.render("categoria", {productos})   
         })
-    } db.Productos.findAll({order:[["id_categoria","ASC"]]})
+    } else {db.Productos.findAll({order:[["id_categoria","ASC"]]})
         .then(function(productos) {
             res.render("categoria", {productos})       
-    })
+    })}
     // return res.render("categoria", {arreglo:articulos, url:req.params.categoria});
 }
 
 const carritoCompras = (req, res) => {
-    let articulos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/Productos/articulos.json")));
-    let compras = articulos [2];
-    res.render ("carritoCompras", {arreglo:compras});
+    db.Productos.findAll({order:Sequelize.literal("rand()"), limit:4,include:[{model: db.Categorias}]})
+    .then((productos) =>{
+        res.render('carritoCompras', {arreglo:productos})
+    })
 }
 
 //CONTROLADOR DE DETALLE DE PRODUCTO, FUNCIONANDO CON LA BASE DE DATOS

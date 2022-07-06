@@ -1,9 +1,16 @@
+.contenedor-nav-opciones{
+    background-color: black;
+    margin: 5px;
+}
+
 .contenedor-articulos{                  /*catalogo Articulos*/
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 0;
-    margin: 5px;
+    /*padding: 10px 0;*/
+    /*margin: 25px;*/
     background-color: white;
+    justify-content: space-around;
+    padding: 25px 0px;
 }
 
 .contenedor-articulos article{
@@ -15,6 +22,8 @@
     margin: auto;
     margin-bottom: 20px;
     margin-top: 20px;
+    background-color: white;
+    border-radius: 3px;
 }
 
 .contenedor-articulos article:hover{
@@ -57,20 +66,18 @@
     color: black;
 }
 
-.nav_catalogo{                          /*Nav del catalogo*/   
+.nav-catalogo{                          /*Nav del catalogo*/   
     display: flex;
-    padding: 15px 30%;
-    box-sizing: border-box;
-    justify-content: space-around;
-    background-color: black;
-    margin: 0 0 15px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 15px;
 }
 
 .nav_catalogo a{                           
     color: white;
     font-weight: bold;
     transition: all 500ms ease;
+    text-decoration: none;
 }
 
 .nav_catalogo a .fa-wine-bottle{                           
@@ -84,15 +91,27 @@
     border-radius: 10px;
 }
 
-.titulo-h3{
-    display: flex;
-    justify-content: center;
+.contenedor-nav-opciones h3,
+.contenedor-nav-opciones a{
     color: white;
-    background-color: black;
-    padding: 10px 0 0 0;
-    margin: 10px 0 0 0;
+    text-decoration: none;
 }
 
+.contenedor-nav-opciones h3{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.nav-catalogo i{
+    margin: 5px;
+}
+
+.nav-left-catalogo,
+.nav-right-catalogo{
+    display: flex;
+    justify-content: space-around;
+}
 
                                  /* Media query para se muestren de a 2 articulos en tablets */
 @media (max-width: 768px){
@@ -100,4 +119,49 @@
         flex: 45%;
         
     }
+}
+
+/* estilos nuevos*/
+
+.card {
+    width: 200px;
+    border-radius: 4px;
+    height: 340px;
+    display: grid;
+    place-items: center;
+    grid-template-areas: 'main';
+    
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+
+    margin: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.card > * {
+    grid-area: main;
+}
+
+.card > .text {
+    opacity: 0;
+    color: white;
+    font-size: 1.8em;
+    transition: opacity 400ms, transform 400ms;
+}
+
+.card:is(:hover, :focus) > .imagen {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.card:is(:hover, :focus) > .text{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.imagen{
+    width: 100%;
+    aspect-ratio: 1/1.7;
+    transition: transform 400ms, filter 400ms
 }
