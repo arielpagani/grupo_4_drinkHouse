@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+
+<body>
+    <script>
+        document.title = 'Editar Producto | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <div class="contenedor-register">
+            <form action="/administrador/<%= productos.id_producto %>/editproducts?_method=PUT" method="POST" enctype="multipart/form-data">
+                
+                <label for="categoria">Categoria</label>
+                <select id="id_categoria">
+                    <% for ( let i = 0; i < categorias.length; i++ ) { %>
+                    <option id="<%= categorias[i].id_categoria %>"> <%= categorias[i].nombre %> </option>
+                    <% } %>
+                </select> <br>
+                <input type="hidden" value="<%= categorias[0].id_categoria %>" id="categoria_seleccionada" name="categoria_seleccionada">
+
+                <label for="marca">Marca</label>
+                <input type="text" name="marca" placeholder="Marca" value="<%= productos.marca %>">
+
+                <label for="codigo">Código de Producto</label>
+                <input type="text" name="id_producto" placeholder="Marca" value="<%= productos.id_producto %>" readonly>
+
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" placeholder="Precio" value="<%= productos.precio %>" >
+
+                <label for="descuento">Descuento</label>
+                <input type="number" name="descuento" placeholder="Descuento" value="<%= productos.descuento%>">
+
+                <label for="descripcion">Descripcion</label>
+                <input name="descripcion" id="descripcion" value="<%= productos.descripcion%>">
+
+                <img width="50px" src="<%= productos.imagen_producto %>" alt="Imagen Producto" >
+                <input type="file" name="imagen_producto"/>
+                
+                <div class="contenedor-boton">
+                
+                <label for="stock">Stock</label>
+                <input type="number" name="stock" placeholder="Stock" value="<%= productos.stock %>">
+
+                </div><br>
+
+                <a class="volver-administrador" href="/views/administrador">Atras</a>
+                
+                <div class="contenedor-boton">
+
+                <button type ="submit">Guardar</button>
+
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+<script>
+    const seleccion =document.getElementById("id_categoria");
+    seleccion.addEventListener("change",function(e){
+    let categoriaSeleccionada = document.getElementById("categoria_seleccionada");
+    const indiceSeleccionado = seleccion.selectedIndex;
+    categoriaSeleccionada.value = seleccion[indiceSeleccionado].id;
+    })
+    </script>
+
+<!-- footer -->
+<%- include("./partials/footer") %>
+
+</html>
