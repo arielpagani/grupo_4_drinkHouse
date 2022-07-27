@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+
+<body>
+    <script>
+        document.title = 'Editar Producto | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <div class="contenedor-register">
+            <form action="/administrador/<%= productos.id_producto %>/editproducts?_method=PUT" method="POST" enctype="multipart/form-data">
+                
+                <label for="categoria">Categoria</label>
+                <label for="categoria"></label>
+                    <input type="text"
+                    name="id_categoria"
+                    id="categoriaForm"
+                    class= "<%= locals.errors && errors.id_categoria ? 'is-invalid' : null %>"
+                    
+                    value= "<%= categorias[productos.id_categoria-1].nombre %>">
+                    
+                    <section class="erroresId_categoria"> 
+                        <ul>
+                        </ul>
+                    </section>
+                    <% if (locals.errors && errors.id_categoria) { %>
+                        <div class="text-danger">
+                            <%= errors.id_categoria.msg %>
+                        </div>
+                    <% } %>
+                <label for="marca">Marca</label>
+                <input type="text" name="marca" placeholder="Marca" value="<%= productos.marca %>" class="marcaForm">
+                <section class="erroresMarca"> 
+                    <ul>
+                    </ul>
+                </section>
+
+                <label for="codigo">Código de Producto</label>
+                <input type="text" name="id_producto" placeholder="Marca" value="<%= productos.id_producto %>" readonly>
+
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" placeholder="Precio" value="<%= productos.precio %>" class="precioForm">
+                <section class="erroresPrecio"> 
+                    <ul>
+                    </ul>
+                </section>
+
+                <label for="descuento">Descuento</label>
+                <input type="number" name="descuento" placeholder="Descuento" value="<%= productos.descuento%>">
+
+                <label for="descripcion">Descripcion</label>
+                <input name="descripcion" id="descripcion" value="<%= productos.descripcion%>" class="descripcionForm">
+                <section class="erroresDescripcion"> 
+                    <ul>
+                    </ul>
+                </section>
+
+                <img style="visibility: visible;" width="50px" src="<%= productos.imagen_producto %>" alt="Imagen Producto" name="imagen_producto_old" class="imagen_producto_old" id="imagen_producto_old">
+                <label for="Nombre">Modificar imagen</label>
+                <input type="checkbox" onchange="imagenVisible('imagen_producto_old'), cargaVisible('imagen_producto')" name="cambiar_imagen">
+                <input style="visibility:hidden;" type="file" name="imagen_producto" class="imagenForm" id="imagen_producto"/>
+                <section class="erroresImagen_producto"> 
+                    <ul>
+                    </ul>
+                </section>
+                
+                <div class="contenedor-boton">
+                
+                <label for="stock">Stock</label>
+                <input type="number" name="stock" placeholder="Stock" value="<%= productos.stock %>" class="stockForm">
+                <section class="erroresStock"> 
+                    <ul>
+                    </ul>
+                </section>
+
+                </div><br>
+
+                <a class="volver-administrador" href="/views/administrador">Atras</a>
+                
+                <div class="contenedor-boton">
+
+                <button type ="submit">Guardar</button>
+
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+<script>
+    const seleccion =document.getElementById("id_categoria");
+    seleccion.addEventListener("change",function(e){
+    let categoriaSeleccionada = document.getElementById("categoria_seleccionada");
+    const indiceSeleccionado = seleccion.selectedIndex;
+    categoriaSeleccionada.value = seleccion[indiceSeleccionado].id;
+    })
+
+    
+    function imagenVisible(id){
+        let imagen_producto_old = document.getElementById("imagen_producto_old")
+        if (imagen_producto_old.style.visibility=="hidden" ){
+            imagen_producto_old.style.visibility="visible"
+        }else {
+            imagen_producto_old.style.visibility="hidden"
+        }
+    }
+
+    function cargaVisible(id){
+        let imagen_producto = document.getElementById("imagen_producto")
+        if (imagen_producto.style.visibility=="visible" ){
+            imagen_producto.style.visibility="hidden"
+        }else {
+            imagen_producto.style.visibility="visible"
+        }
+    }
+
+    // Validaciones Front-End
+window.addEventListener("load", function(){
+    let marcaForm= document.querySelector(".marcaForm");
+    let precioForm= document.querySelector(".precioForm");
+    let descripcionForm= document.querySelector(".descripcionForm");
+    let imagenForm= document.querySelector(".imagenForm");
+    let stockForm= document.querySelector(".stockForm");
+    let cambiar_imagen = document.querySelector(".cambiar_imagen")
+    let imagen_producto_old = document.querySelector(".imagen_producto_old")
+        
+    marcaForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(marcaForm.value == ""){
+                    errores.push("Debe completar el campo")
+                } else if(marcaForm.value.length <= 5){
+                    errores.push("Mínimo 5 caracteres")
+                }
+                if (errores.length > 0){           
+                    let erroresMarca = document.querySelector(".erroresMarca ul");
+                        errores.forEach(error => {
+                        erroresMarca.innerHTML = error
+                        })
+                }
+                if (marcaForm.value != "" && marcaForm.value.length >= 5){
+                     let erroresMarca = document.querySelector(".erroresMarca ul");
+                        erroresMarca.innerText = ""
+                }
+        });
+
+        precioForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(precioForm.value == ""){
+                    errores.push("Debe completar el campo")
+                }
+                
+                if (errores.length > 0){           
+                    let erroresPrecio = document.querySelector(".erroresPrecio ul");
+                        errores.forEach(error => {
+                        erroresPrecio.innerHTML = error
+                        })
+                }
+                if (precioForm.value != ""){
+                     let erroresPrecio = document.querySelector(".erroresPrecio ul");
+                        erroresPrecio.innerText = ""
+                }
+        });
+
+        descripcionForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(descripcionForm.value.length < 20){
+                    errores.push("Mínimo 20 caracteres")
+                }
+                
+                if (errores.length > 0){           
+                    let erroresDescripcion = document.querySelector(".erroresDescripcion ul");
+                        errores.forEach(error => {
+                        erroresDescripcion.innerHTML = error
+                        })
+                }
+                if (descripcionForm.value.length > 20){
+                     let erroresDescripcion = document.querySelector(".erroresDescripcion ul");
+                        erroresDescripcion.innerText = ""
+                }
+        });
+
+        imagenForm.addEventListener("change", function(evento){
+            //capturo errores
+            const errores = [];
+            const extensionesPermitidas = /(.jpg|.jpeg|.png|.gif)$/i
+
+                if(!extensionesPermitidas.exec(imagenForm.value)){
+                    errores.push("Formatos válidos .JPG .JPEG .PNG .GIF")
+                }
+                if (errores.length > 0){           
+                    let erroresImagen= document.querySelector(".erroresImagen_producto ul");
+                        errores.forEach(error => {
+                        erroresImagen.innerHTML = error
+                        })
+                }
+                if (extensionesPermitidas.exec(imagenForm.value)){
+                    let erroresImagen= document.querySelector(".erroresImagen_producto ul");
+                       erroresImagen.innerText = ""
+               }
+        })
+
+        stockForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(stockForm.value == ""){
+                    errores.push("Debe completar el campo")
+                }
+                
+                if (errores.length > 0){           
+                    let erroresStock = document.querySelector(".erroresStock ul");
+                        errores.forEach(error => {
+                        erroresStock.innerHTML = error
+                        })
+                }
+                if (stockForm.value != ""){
+                     let erroresStock = document.querySelector(".erroresStock ul");
+                        erroresStock.innerText = ""
+                }
+        });
+})
+    </script>
+
+<!-- footer -->
+<%- include("./partials/footer") %>
+
+</html>
