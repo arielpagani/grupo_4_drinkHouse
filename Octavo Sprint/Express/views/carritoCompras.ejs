@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <script>
+        document.title = 'Carrito de Compras | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <div class="columnasCarrito">
+        <div class="contenedor-carrito">
+            <% for ( let i = 0; i < 4; i++) { %>
+                <div class="contenedor-producto">
+                    <div>
+                        <img src="<%=arreglo[i].imagen_producto%>" alt="imagen-producto">
+                    </div>
+                    <div class="detalleCarrito">
+                        <h2>categoria</h2>
+                        <h2><%=arreglo[i].marca%></h2>
+                        <input type="number" name="stock" value="1"  id="stock" min="1" max="<%=arreglo[i].stock%>">
+                        <h3>$<%=arreglo[i].precio%></h3>
+                        <div class="botones-carrito">
+                            <button>Eliminar</button>
+                        </div> 
+                    </div>
+                </div>
+            <% } %>
+        </div> 
+        <div class="contenedorFixed">
+            <div class="contenedor-detalle-compra">
+                <div class="subtotales">
+                    <h4>Subtotal:</h4>
+                    <h4>$<%=arreglo[1].precio%></h4>
+                </div>
+                <div class="subtotales">
+                    <h3>Total:</h3> 
+                    <h3>$<%=arreglo[1].precio%></h3>
+                </div>
+                <div class="botones-carrito">
+                    <button>Comprar</button>
+                    <a href="/views/product/catalogo"><button>Continuar Comprando</button></a>
+                </div>
+            </div>
+        </div> 
+    </div>
+<!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>
