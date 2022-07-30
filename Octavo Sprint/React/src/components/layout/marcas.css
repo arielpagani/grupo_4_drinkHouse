@@ -1,0 +1,25 @@
+.marcas {
+  background: linear-gradient(
+    45deg,
+    #091833,
+    #711c91,
+    #910087,
+    #091833,
+    #711c91,
+    #910087,
+    #091833
+  );
+  background-size: 600%, 100%;
+  animation: animatebghome 10s linear infinite;
+  border-bottom: none;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.marcas img{
+    width: 150px;
+    padding: 20px;
+}

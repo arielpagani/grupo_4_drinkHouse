@@ -1,0 +1,72 @@
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contenedor-avatar img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.edit-user-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-user-form label{
+    font-weight: bold;
+}
+
+.edit-user-form p{
+    margin: 0;
+    height: 70px;
+    margin-top: 10px;
+}
+
+.edit-user-form input{
+    border: none;
+    height: 40px;
+    border-radius: 3px;
+    background-color: rgb(255, 235, 255);
+    font-family: 'rajdhani';
+    font-weight: bold;
+    width: 190px;
+    padding-left: 10px;
+}
+
+.edit-user-form input:focus-visible{
+    height: 50px;
+    width: 220px;
+    font-size: 16px;
+}
+
+.save-button{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.save-button button{
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 7px;
+    font-weight: bold;
+    margin: 5px;
+    color: white;
+    background-color: rgb(126, 63, 126);
+    transition: all 500ms;
+    height: 40px;
+    border: none;
+    font-family: 'rajdhani';
+    width: 250px;
+}
+
+.save-button button:hover{
+    height: 50px;
+    font-size: 23px;
+    
+}

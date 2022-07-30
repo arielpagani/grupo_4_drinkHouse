@@ -1,0 +1,92 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+      45deg,
+      #091833,
+      #711c91,
+      #910087,
+      #091833,
+      #711c91,
+      #910087,
+      #091833
+  );
+  background-size: 600%, 100%;
+  animation: animatebghome 10s linear infinite;
+}
+
+/*------- fondo animado --------*/
+@keyframes animatebghome {
+  0% {
+      background-position: 0% 0%;
+  }
+  100%{
+      background-position: 100% 0%;
+  }
+}
+/*---fin fondo animado---*/
+
+/* ---- logo drinkhouse ---- */
+#logo {
+  width: 200px;
+}
+
+/* ---- button 1 ---- */
+.btn {
+  border: none;
+  width: 130px;
+  margin: 3px;
+  height: 30px;
+  background: none;
+  font-size: 18px;
+  border-radius: 3px;
+  transition: all 400ms;
+}
+
+.btn a{
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: rgb(126, 63, 126);
+  height: 35px;
+  font-size: 20px;
+}
+
+/* ---- search bar ---- */
+.bar{
+  border: 1px solid black;
+  width: 300px;
+  height: 40px;
+}
+
+/* ---- (logo search bar & 2 nav ---- */
+.top-header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* ---- resto del nav ---- */
+.bottom-header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+}
+
+#search {
+  font-size: 18px;
+  color: black;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  text-align: center;
+  width: 350px;
+}
