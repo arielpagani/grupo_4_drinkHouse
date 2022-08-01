@@ -20,10 +20,10 @@ module.exports = {
       let respuesta = {
         count: productos.length,
         countByCategory: {
-          "Cervezas: ": contador[3],
-          "Whiskeys: ": contador[4],
-          "Licores: ": contador[2],
-          "Vinos: ": contador[1],
+          "Cervezas": contador[3],
+          "Whiskeys": contador[4],
+          "Licores": contador[2],
+          "Vinos": contador[1],
         },
         products: newArray,
       };

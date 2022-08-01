@@ -16,9 +16,6 @@ function Header() {
           <button className="btn">
             <Link to="/usuarios">Usuarios</Link>
           </button>
-          <button className="btn">
-            <Link to="/admin">Administrador</Link>
-          </button>
         </div>
         <div className="bottom-header">
           <button className="btn">

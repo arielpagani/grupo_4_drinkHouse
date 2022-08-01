@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import './userDetail.css';
 
 function UserDetail() {
   let { id } = useParams();
@@ -16,8 +17,8 @@ function UserDetail() {
   }, []);
 
   return (
-    <div className="product-display">
-      <img src={usuario.avatar} alt="imagen" />
+    <div className="user-display">
+      <img className='avatar' src={usuario.avatar} alt="imagen" />
       <div className="product-details">
         <p>ID: {usuario.id}</p>
         <p>Nombre: {usuario.nombre}</p>

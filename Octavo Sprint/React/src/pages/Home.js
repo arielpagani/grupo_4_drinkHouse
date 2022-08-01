@@ -1,9 +1,12 @@
-import ProductList from "../components/display/ProductList";
+import Dashboard from "../components/display/Dashboard";
+import LastUser from "../components/display/LastUser";
+import '../index.css';
 
 function Home() {
   return (
-    <div className="home">
-      <ProductList/>
+    <div className="wrapper">
+      <Dashboard />
+      <LastUser />
     </div>
   );
 }

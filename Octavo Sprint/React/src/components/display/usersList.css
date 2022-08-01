@@ -1,0 +1,7 @@
+.contenedor-users{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 600px;
+    align-items: center;
+}
