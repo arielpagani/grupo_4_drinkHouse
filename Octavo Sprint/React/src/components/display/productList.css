@@ -1,0 +1,5 @@
+.contenedor-articulos{               
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

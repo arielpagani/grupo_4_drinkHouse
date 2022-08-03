@@ -1,0 +1,19 @@
+.product-display{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-display img{
+    width: 400px;
+}
+
+.product-details{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.product-details p{
+    border-bottom: 1px solid black;
+}
