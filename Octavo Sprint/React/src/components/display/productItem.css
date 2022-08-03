@@ -1,0 +1,23 @@
+.card{
+    width: 300px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card p{
+    margin: 10px;
+}
+
+.card1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.text{
+    font-weight: bold;
+}
