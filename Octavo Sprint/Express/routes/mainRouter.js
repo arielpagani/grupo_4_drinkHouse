@@ -3,6 +3,7 @@ const router = express.Router();
 const mainController = require("../controllers/mainController");
 const productosController = require("../controllers/productosController");
 const usuariosController = require("../controllers/usuariosController");
+const ordenesController = require('../controllers/ordenesController');
 const multer = require("multer");
 const path = require("path");
 
@@ -45,6 +46,10 @@ router.get("/", mainController.home);
 // Ruta a Register
 router.get("/views/register", usuariosController.crear);
 router.post("/views/register", uploadAvatar.single("avatar"),registerMiddleware,usuariosController.guardado);
+
+//rutas a crear orden
+router.get('/crearOrden', ordenesController.crear);
+router.get('/crearOrden', ordenesController.guardado);
 
 // Ruta a Login
 router.get("/views/login", guestMiddleware,usuariosController.login);

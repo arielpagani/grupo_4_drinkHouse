@@ -30,7 +30,7 @@ function LastUser() {
 
   return (
     <div>
-      <h2>Last User</h2>
+      <h2>Ultimo usuario agregado</h2>
       <UsersItem
         key={lastUser.id}
         id={lastUser.id}

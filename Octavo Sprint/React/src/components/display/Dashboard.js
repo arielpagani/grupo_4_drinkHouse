@@ -36,7 +36,7 @@ function Dashboard() {
 
   return (
     <div>
-      <h2>Last product</h2>
+      <h2>Ultimo producto agregado</h2>
       <ProductItem
         key={lastProduct.id}
         id={lastProduct.id}
@@ -44,7 +44,7 @@ function Dashboard() {
         description={lastProduct.description}
         detail={"/productos/" + lastProduct.id}
       />
-      <h2>Count By Category</h2>
+      <h2>Productos por categoria</h2>
       <div className="count">
         <p className="text">Cervezas: {countByCategory.Cervezas}</p>
         <p className="text">Whiskeys: {countByCategory.Whiskeys}</p>

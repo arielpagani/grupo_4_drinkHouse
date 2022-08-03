@@ -19,6 +19,7 @@ const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const cokkies = require("cookie-parser");
 const { listarProductos, buscarIdProducto } = require('./controllers/api/ProductosController');
 const { listarUsuarios, buscarIdUsuario } = require('./controllers/api/UsuariosController');
+const { listarOrdenes, ordenesProductos, listado } = require('./controllers/api/OrdenesController');
 
 //Middleware de aplicacion para la session
 app.use(session({
@@ -41,6 +42,10 @@ app.use(methodOverride("_method"));
 app.use(express.static("public"));
 
 app.set("view engine", "ejs");
+
+app.use('/api/ordenes/listar', listado);
+app.use('/api/ordenes/:id', ordenesProductos);
+app.use('/api/ordenes', listarOrdenes);
 
 app.use('/api/productos/:id',buscarIdProducto);
 app.use("/api/productos", listarProductos);
