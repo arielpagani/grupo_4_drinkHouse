@@ -28,6 +28,9 @@
                 <div class="button-edit">
                     <a href="/views/usuarios/<%= usuarios[i].id_usuario %>"><i class="far fa-edit"></i></a>
                 </div>
+                <div class="button-edit">
+                    <a href="/views/profile/<%= usuarios[i].id_usuario %>"><i class="far fa-eye"></i></a>
+                </div>
                 <div class="button-detail">
                     <a>
                         <form action="/views/borrar/<%= usuarios[i].id_usuario%>" method="POST">

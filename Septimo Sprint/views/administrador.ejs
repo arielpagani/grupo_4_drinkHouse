@@ -32,6 +32,9 @@
                 <div class="button-edit">
                     <a href="/administrador/<%= productos[i].id_producto %>/editproducts"><i class="far fa-edit"></i></a>
                 </div>
+                <div class="button-edit">
+                    <a href="/views/productDetail/<%= productos[i].id_producto %>"><i class="far fa-eye"></i></a>
+                </div>
                 <div class="button-detail">
                     <a>
                         <form action="/administrador/borrar/<%= productos[i].id_producto%>" method="POST">

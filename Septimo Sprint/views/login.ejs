@@ -15,7 +15,11 @@
                 <form id="formLogin" action="/views/login" method="POST">
                     <label><b>Ingresá tu usuario</b></label>
                     <!-- falta en require en la version original -->
-                    <input class="usuarioForm" type="text" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+                    <input id="usuarioForm"
+                    type="text"
+                    name="email"
+                    value="<%= locals.oldData ? oldData.email : null %>"
+                    class= "<%= locals.errors && errors.email ? 'is-invalid' : null %>">
                     <section class="mostrarErrores"> 
                         <ul>
                         </ul>
@@ -26,7 +30,10 @@
                     </div>
                     <% } %>
                     <label><b>Ingresá tu Password</b></label>
-                    <input class="passwordForm" type="password" name="password">
+                    <input id="passwordForm"
+                    type="password"
+                    name="password"
+                    class= "<%= locals.errors && errors.password? 'is-invalid' : null %>">
                     <section class="mostrarErroresPassword"> 
                         <ul>
                         </ul>
@@ -37,6 +44,8 @@
                         </div>
                         <% } %>
                 <div class="checkbox-recuerdame">
+                    <label>Mostrar contraseña</label>
+                    <input type="checkbox" onclick="mostrarPass()"> 
                     <label for="Nombre">Recuérdame</label>
                     <input type="checkbox" name="recordar_usuario">
                 </div>
@@ -54,14 +63,25 @@
 </body>
 <script>
 
+    //checkbox Mostrar contraseña
+    function mostrarPass() {
+        let mostrar = document.querySelector("#passwordForm");
+        if(mostrar.type === "password"){
+            mostrar.type = "text";
+        }else{
+            mostrar.type = "password"
+        }
+    }
+
     window.addEventListener("load", function(){
         //capturo el formulario
         let form = document.querySelector("#formLogin");
         //capturo el body de usuario
-        let usuarioForm= document.querySelector(".usuarioForm");
+        let usuarioForm= document.querySelector("#usuarioForm");
         //capturo el body de password
-        let passwordForm= document.querySelector(".passwordForm");
+        let passwordForm= document.querySelector("#passwordForm");
         //le pido que genere un evento al salir del casillero de usuarioForm
+        
         usuarioForm.addEventListener("blur", function(evento){
             const errores = [];
             //formato de mail valido
@@ -69,37 +89,41 @@
             
             if(usuarioForm.value == ""){
                 errores.push("Debe completar el campo")
-                if (errores.length > 0){           
-                    let mostrarErrores = document.querySelector(".mostrarErrores ul");
-                        errores.forEach(error => {
-                        mostrarErrores.innerHTML = error
-                        })
-                }
             } else if(!emailValido.test(usuarioForm.value)){
                 errores.push("Formato de mail inválido")
-                console.log(errores)
-                if (errores.length > 0){           
+            }
+            if (errores.length > 0){           
                     let mostrarErrores = document.querySelector(".mostrarErrores ul");
                         errores.forEach(error => {
                         mostrarErrores.innerHTML = error
                         })
                 }
-            }
+            if (usuarioForm.value != "" && emailValido.test(usuarioForm.value)){
+                let erroresNombre = document.querySelector(".mostrarErrores ul");
+                   erroresNombre.innerText = ""
+                   
+            }   
         })
     
         passwordForm.addEventListener("blur", function(evento){
             const errores = [];        
             if(passwordForm.value == ""){
                 errores.push("Debe completar el campo")
-                console.log(errores)
-                if (errores.length > 0){           
+                
+            }else if (passwordForm.value.length < 5){
+                console.log (passwordForm.value.length)
+                errores.push("Mínimo 5 caracteres")
+            }  
+            if (errores.length > 0){           
                     let mostrarErroresPassword = document.querySelector(".mostrarErroresPassword ul");
                         errores.forEach(error => {
-                            console.log(error)
                         mostrarErroresPassword.innerHTML = error
                         })
-                }
-            }                  
+                }  
+            if (passwordForm.value != "" && passwordForm.value.length > 5){
+            let erroresNombre = document.querySelector(".mostrarErroresPassword ul");
+               erroresNombre.innerText = ""  
+            }           
         })
     })
     </script>

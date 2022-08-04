@@ -19,7 +19,6 @@ let usuariosController = {
             }
         })
         .then(function(usuario) {
-        console.log(usuario)
         if (usuario){
             return res.render("register", {
                 errors: {
@@ -82,12 +81,19 @@ let usuariosController = {
 
     loginProcces: function (req, res) {
         const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){
+            return res.render("login", {
+                errors: resultValidation.mapped(),
+                oldData:req.body
+            })
+        }
         Usuarios.findOne({
             where:{
                 email:req.body.email
             }
         })
         .then(function(usuario) {
+            
             if (usuario) {
                 let passwordValid = bcryptjs.compareSync(req.body.password, usuario.password);
                 if (passwordValid) {
@@ -126,11 +132,41 @@ let usuariosController = {
         })
     },
 
-    listarUsuariosPorId: function (req, res) {
+    profileId: function (req, res) {
         Usuarios.findByPk(req.params.id_usuario)
         .then(function(user) {
             res.render("userprofile", {user})
         })
+    },
+
+    listarUsuariosPorId: function (req, res) {
+        Usuarios.findByPk(req.params.id_usuario)
+        .then(function(user) {
+            res.render("editUser", {user})
+        })
+    },
+
+    actualizarUsuarioAdmin: function(req, res) {
+        if (req.body.password){
+            passwordNew = bcryptjs.hashSync(req.body.password, 10)
+        }
+        const passwordOld = req.body.passwordOld
+            passwordNew = passwordOld
+        
+        Usuarios.update({
+            nombre:req.body.nombre,
+            apellido:req.body.apellido,
+            telefono:req.body.telefono,
+            direccion:req.body.direccion,
+            avatar:"/Images/Avatares/" + req.file.filename,
+            administrador: req.body.administrador,
+            password:passwordNew,
+        },  {
+            where:{
+                id_usuario: req.params.id_usuario
+            }
+        })
+        res.redirect("/views/usuarios");
     },
 
     borrarCuenta: function(req, res) {

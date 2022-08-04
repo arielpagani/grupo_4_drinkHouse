@@ -51,7 +51,7 @@
     text-decoration: none;
 }
 
-.contenedor-register button:hover{              /*estilos-login*/
+.contenedor-register button:hover,.contenedor-register a input:hover{              /*estilos-login*/
     height: 50px;
     font-size: 23px;
     width: 270px;
@@ -61,7 +61,7 @@
     height: 50px;
 }
 
-.contenedor-register button{              /*estilos-login*/
+.contenedor-register button, .contenedor-register a input{              /*estilos-login*/
     border-radius: 3px;
     font-size: 20px;
     padding: 7px;
@@ -114,3 +114,16 @@
     margin: 0px;
     font-weight: bold;
 } 
+
+.checkbox-recuerdame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.erroresNombre ul, .erroresApellido ul, .erroresUsuario ul, .erroresPassword ul, .erroresDireccion ul, .erroresTelefono ul, .erroresFechaDeNacimiento ul, .erroresAvatar ul, .erroresMarca ul, .erroresPrecio ul, .erroresDescripcion ul, .erroresImagen ul, .erroresStock ul, .erroresImagen_producto ul, .erroresId_categoria ul{
+    color: red;
+    padding: 0 0 5px;
+    margin: 0px;
+    font-weight: bold;
+}

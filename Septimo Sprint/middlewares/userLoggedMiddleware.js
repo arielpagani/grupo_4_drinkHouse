@@ -9,14 +9,12 @@ function userLoggedMiddleware(req, res, next){
 	let userFromCookie = req.cookies.userEmail
 
 	if (userFromCookie){
-		console.log("buscando la Cookie "+ userFromCookie)
 		Usuarios.findOne({
 			where:{
 				email:userFromCookie
 			}
 		})
 		.then(function(usuario) {
-			// console.log("encontro al usuario "+ usuario.id_usuario)
 			if (usuario) {
 				if (req.session) {
 					req.session.userLogged = usuario
@@ -25,7 +23,6 @@ function userLoggedMiddleware(req, res, next){
 		})
 	}
     let userLogged = req.session.userLogged;
-	// console.log ("guardando en la sesion al usuario "+ userLogged)
     if (userLogged) {
         res.locals.isAdmin = userLogged.adminstrador;
 		res.locals.isLogged = true;

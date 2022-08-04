@@ -6,10 +6,6 @@ module.exports = (sequelize, datatypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        id_categoria:{
-            type:datatypes.INTEGER,
-            ForeignKey:true
-        },
         marca:{
             type:datatypes.STRING(45)
         },
@@ -27,6 +23,10 @@ module.exports = (sequelize, datatypes) => {
         },
         stock:{
             type:datatypes.INTEGER
+        },
+        id_categoria:{
+            type:datatypes.INTEGER,
+            ForeignKey:true
         },
     };
     let config = {
