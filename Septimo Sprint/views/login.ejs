@@ -110,7 +110,7 @@
             if(passwordForm.value == ""){
                 errores.push("Debe completar el campo")
                 
-            }else if (passwordForm.value.length < 5){
+            }else if (passwordForm.value.length <= 5){
                 console.log (passwordForm.value.length)
                 errores.push("Mínimo 5 caracteres")
             }  
@@ -120,7 +120,7 @@
                         mostrarErroresPassword.innerHTML = error
                         })
                 }  
-            if (passwordForm.value != "" && passwordForm.value.length > 5){
+            if (passwordForm.value != "" && passwordForm.value.length >= 5){
             let erroresNombre = document.querySelector(".mostrarErroresPassword ul");
                erroresNombre.innerText = ""  
             }           

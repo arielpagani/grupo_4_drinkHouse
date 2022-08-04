@@ -245,7 +245,7 @@
 
                 if(passwordForm.value == ""){
                     errores.push("Debe completar el campo")
-                } else if(passwordForm.value.length < 7){
+                } else if(passwordForm.value.length <= 7){
                     errores.push("Mínimo 7 caracteres")
                 }
                 if (errores.length > 0){           
@@ -254,7 +254,7 @@
                         erroresPassword.innerHTML = error
                         })
                 }
-                if (passwordForm.value != "" && passwordForm.value.length > 7){
+                if (passwordForm.value != "" && passwordForm.value.length >= 7){
                     let erroresPassword = document.querySelector(".erroresPassword ul");
                        erroresPassword.innerText = ""
                }
