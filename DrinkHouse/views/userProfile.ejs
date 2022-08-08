@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <div class="profile-container">
+		<div class="contenedor-avatar">
+			<img src="<%= user.avatar %> ">
+		</div>
+		<div class="edit-user-form">
+			<form>
+				<label for="name">Nombre</label>
+				<p><input type="text" name="name" value="<%= user.nombre %>"></p>
+				<label for="last-name">Apellido</label>
+				<p><input type="text" name="last-name" value="<%= user.apellido %>"></p>
+				<label for="email">Email</label>
+				<p><input type="text" name="email" value="<%= user.email %>"></p>
+				<label for="fecha">Fecha de Nacimiento</label>
+				<p><input type="text" name="fecha" value="123456"></p>
+				<label for="telefono">Telefono</label>
+				<p><input type="text" name="telefono" value="<%= user.telefono %>"></p>
+				<label for="direccion">Direccion</label>
+				<p><input type="text" name="direccion" value="<%= user.direccion %>"></p>
+			</form>
+		</div>
+	</div>
+    <!-- footer -->
+    <%- include("./partials/footer") %>
+</body>
+</html>

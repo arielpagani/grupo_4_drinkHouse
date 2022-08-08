@@ -1,0 +1,89 @@
+<header>
+    <div class="header-container-general">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="/"><img src="/images/Drink_House_SVG.svg" alt="logo de Drink House"></a>
+            </div>
+            <div class="header-busqueda">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="¿Que vas a pedir?" />
+            </div>
+            <div class="header-nav-container-general">
+                <% if (!isLogged) { %>
+                    <div class="header-nav-container">
+                        <a href="/views/login"><i class="far fa-user"></i>Ingresa</a>
+                    </div>
+                    <div class="header-nav-container">
+                        <a href="/views/register"><i class="far fa-list-alt"></i>Crea tu cuenta</a>
+                    </div>
+                <% } else { %>
+                    
+                        <% if (userLogged.administrador) { %>
+                            <div class="header-nav-option">
+                                <a href="/views/administrador"><i class="fas fa-cog"></i></i></a>
+                            </div>
+                        <% } %>
+                        <div class="header-nav-option">
+                            <a href="/views/profile"><i class="far fa-user"></i></a>
+                        </div>
+                        <div class="header-nav-option">
+                            <a href="/views/logout"><i class="fas fa-sign-out-alt"></i></a>
+                        </div>
+                        <div class="header-nav-option">
+                            <a class="botones-nav" href="/views/carritoCompras"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    
+                <% } %>
+            </div>
+        </div>
+        <div id="burger">
+            <a href="javascript:void(0);" class="icon" onclick="burger()"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="header-nav-catalogo">
+            <div class="header-nav-container-general">
+                <div class="header-nav-container">
+                    <a href="/views/product/3"><i class="fas fa-beer"></i>Cervezas</a>
+                </div>
+                <div class="header-nav-container">
+                    <a href="/views/product/1"><i class="fas fa-wine-glass-alt "></i>Vinos</a>
+                </div>
+                <div class="header-nav-container">
+                    <a href="/views/product/4"><i class="fas fa-glass-whiskey "></i>Whiskeys</a>
+                </div>
+                <div class="header-nav-container">
+                    <a href="/views/product/2"><i class="fas fa-wine-bottle "></i>Licores</a>
+                </div>
+                <div class="header-nav-container">
+                    <a href="/views/product/catalogo"><i class="fas fa-list "></i>Catálogo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function burger(){
+            var x = document.querySelector('.header-nav-catalogo');
+            x.classList.toggle('show');
+        }
+    </script>     
+</header>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+<body>
+    <script>
+        document.title = 'Administrador | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main class="background-admin">
+        <section class="contenedor-articulos-admin">
+            <% for ( let i = 0; i < usuarios.length; i++ ) { %>
+            <div class="admin-detail-container">
+                <div class="admin-product-image">
+                    <img src="<%=usuarios[i].avatar%>" alt="imagen usuario">
+                </div>
+                <div class="admin-detail-text">
+                    <h4>Nombre</h4>
+                    <p><%= usuarios[i].nombre %></p>
+                    <h4>Apellido</h4>                  
+                    <p><%= usuarios[i].apellido %> </p>
+                    <h4>Email</h4>                 
+                    <p><%= usuarios[i].email %></p>
+                    <h4>Telefono</h4>         
+                    <p><%= usuarios[i].telefono %> </p>
+                </div>
+                <div class="button-edit">
+                    <a href="/views/profile/<%= usuarios[i].id_usuario %>"><i class="far fa-eye"></i></a>
+                </div>
+                <div class="button-detail">
+                    <a>
+                        <form action="/views/borrar/<%= usuarios[i].id_usuario%>" method="POST">
+                            <button>Eliminar</i></button>
+                        </form>
+                    </a>
+                </div>
+            </div>
+            <% } %>
+        </section>
+    </main>
+<!-- footer -->
+<%- include("./partials/footer") %>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head -->
+<%- include("./partials/head") %>
+
+<body>
+    <script>
+        document.title = 'Crear Producto | DrinkHouse'
+    </script>
+    <!-- header -->
+    <%- include("./partials/header") %>
+    <main>
+        <div class="contenedor-register">
+            <form action="/views/createProducts" method="POST" enctype="multipart/form-data">
+                <label for="categoria"></label>
+                    <input type="text"
+                    name="id_categoria"
+                    placeholder="Categoria"
+                    id="categoriaForm"
+                    class= "<%= locals.errors && errors.id_categoria ? 'is-invalid' : null %>"
+                    value= "<%= locals.oldData ? oldData.id_categoria : null %>">
+                    <section class="erroresId_categoria"> 
+                        <ul>
+                        </ul>
+                    </section>
+                    <% if (locals.errors && errors.id_categoria) { %>
+                        <div class="text-danger">
+                            <%= errors.id_categoria.msg %>
+                        </div>
+                    <% } %>
+                <br>
+                <label for="marca"></label>
+                <input type="text"
+                name="marca"
+                placeholder="Marca"
+                id="marcaForm"
+                class= "<%= locals.errors && errors.marca ? 'is-invalid' : null %>"
+                value= "<%= locals.oldData ? oldData.marca : null %>">
+                <section class="erroresMarca"> 
+                    <ul>
+                    </ul>
+                </section>
+                <% if (locals.errors && errors.marca) { %>
+                    <div class="text-danger">
+                        <%= errors.marca.msg %>
+                    </div>
+                <% } %>
+                
+                <br>
+                <input type="number"
+                name="precio"
+                placeholder="Precio"
+                id="precioForm"
+                class= "<%= locals.errors && errors.precio ? 'is-invalid' : null %>"
+                value= "<%= locals.oldData ? oldData.precio : null %>">
+                <section class="erroresPrecio"> 
+                    <ul>
+                    </ul>
+                </section>
+                <% if (locals.errors && errors.precio) { %>
+                    <div class="text-danger">
+                        <%= errors.precio.msg %>
+                    </div>
+                <% } %>
+
+                <br>
+                <input type="number" name="descuento" placeholder="Descuento">
+
+                <br>
+                <textarea name="descripcion"
+                placeholder="Descripcion del producto"
+                cols="30"
+                rows="5"
+                id="descripcionForm"
+                class= "<%= locals.errors && errors.descripcion ? 'is-invalid' : null %>"
+                value= "<%= locals.oldData ? oldData.descripcion : null %>"
+                ></textarea>
+                <section class="erroresDescripcion"> 
+                    <ul>
+                    </ul>
+                </section>
+                <% if (locals.errors && errors.descripcion) { %>
+                    <div class="text-danger">
+                        <%= errors.descripcion.msg %>
+                    </div>
+                <% } %>
+
+                <br>
+                <input type="file"
+                name="imagen_producto"
+                id="imagenForm"
+                class= "<%= locals.errors && errors.imagen_producto ? 'is-invalid' : null %>"
+                value= "<%= locals.oldData ? oldData.imagen_producto : null %>">
+                <section class="erroresImagen"> 
+                    <ul>
+                    </ul>
+                </section>
+                <% if (locals.errors && errors.imagen_producto) { %>
+                    <div class="text-danger">
+                        <%= errors.imagen_producto.msg %>
+                    </div>
+                <% } %>
+                
+                <div class="contenedor-boton">
+                <br>
+                <input type="number"
+                name="stock"
+                placeholder="Stock"
+                id="stockForm"
+                class= "<%= locals.errors && errors.stock ? 'is-invalid' : null %>"
+                value= "<%= locals.oldData ? oldData.stock : null %>">
+                <section class="erroresStock"> 
+                    <ul>
+                    </ul>
+                </section>
+                <% if (locals.errors && errors.stock) { %>
+                    <div class="text-danger">
+                        <%= errors.stock.msg %>
+                    </div>
+                <% } %>
+
+                </div><br>
+
+                <div class="contenedor-boton">
+                    <a href="/views/administrador"><input type="button" value="Atras"></a>
+                    <button type ="submit">Guardar</button>
+                    <button type ="reset">Borrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+<script>
+
+// Validaciones Front-End
+window.addEventListener("load", function(){
+    let categoriaForm= document.querySelector("#categoriaForm");
+    let marcaForm= document.querySelector("#marcaForm");
+    let precioForm= document.querySelector("#precioForm");
+    let descripcionForm= document.querySelector("#descripcionForm");
+    let imagenForm= document.querySelector("#imagenForm");
+    let stockForm= document.querySelector("#stockForm");
+
+    categoriaForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(categoriaForm.value == ""){
+                    errores.push("Debe completar el campo")
+                } else if(categoriaForm.value !== "Vino" || categoriaForm.value !== "Cerveza" ||categoriaForm.value !== "Licor" ||categoriaForm.value !== "Whiskey"){
+                    errores.push("Categorias válidas Vino, Cerveza, Licor, Whiskey")
+                }
+                if (errores.length > 0){           
+                    let erroresCategoria = document.querySelector(".erroresId_categoria ul");
+                        errores.forEach(error => {
+                        erroresCategoria.innerHTML = error
+                        })
+                }
+                if (categoriaForm.value != "" && (categoriaForm.value == "Vino" || categoriaForm.value == "Cerveza" ||categoriaForm.value == "Licor" ||categoriaForm.value == "Whiskey")){
+                     let erroresCategoria = document.querySelector(".erroresId_categoria ul");
+                        erroresCategoria.innerText = ""
+                }
+        });
+
+    marcaForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(marcaForm.value == ""){
+                    errores.push("Debe completar el campo")
+                } else if(marcaForm.value.length <= 5){
+                    errores.push("Mínimo 5 caracteres")
+                }
+                if (errores.length > 0){           
+                    let erroresMarca = document.querySelector(".erroresMarca ul");
+                        errores.forEach(error => {
+                        erroresMarca.innerHTML = error
+                        })
+                }
+                if (marcaForm.value != "" && marcaForm.value.length >= 5){
+                     let erroresMarca = document.querySelector(".erroresMarca ul");
+                        erroresMarca.innerText = ""
+                }
+        });
+
+        precioForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(precioForm.value == ""){
+                    errores.push("Debe completar el campo")
+                }
+                
+                if (errores.length > 0){           
+                    let erroresPrecio = document.querySelector(".erroresPrecio ul");
+                        errores.forEach(error => {
+                        erroresPrecio.innerHTML = error
+                        })
+                }
+                if (precioForm.value != ""){
+                     let erroresPrecio = document.querySelector(".erroresPrecio ul");
+                        erroresPrecio.innerText = ""
+                }
+        });
+
+        descripcionForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(descripcionForm.value == ""){
+                    errores.push("Debe completar el campo")
+                } else if(descripcionForm.value.length < 20){
+                    errores.push("Mínimo 20 caracteres")
+                }
+                
+                if (errores.length > 0){           
+                    let erroresDescripcion = document.querySelector(".erroresDescripcion ul");
+                        errores.forEach(error => {
+                        erroresDescripcion.innerHTML = error
+                        })
+                }
+                if (descripcionForm.value != "" && descripcionForm.value.length > 20){
+                     let erroresDescripcion = document.querySelector(".erroresDescripcion ul");
+                        erroresDescripcion.innerText = ""
+                }
+        });
+
+        imagenForm.addEventListener("change", function(evento){
+            //capturo errores
+            const errores = [];
+            const extensionesPermitidas = /(.jpg|.jpeg|.png|.gif)$/i
+
+                if(!extensionesPermitidas.exec(imagenForm.value)){
+                    errores.push("Formatos válidos .JPG .JPEG .PNG .GIF")
+                }
+                if (errores.length > 0){           
+                    let erroresImagen= document.querySelector(".erroresImagen ul");
+                        errores.forEach(error => {
+                        erroresImagen.innerHTML = error
+                        })
+                }
+                if (extensionesPermitidas.exec(imagenForm.value)){
+                    let erroresImagen= document.querySelector(".erroresImagen ul");
+                       erroresImagen.innerText = ""
+               }
+        })
+
+        stockForm.addEventListener("blur", function(evento){
+            //capturo errores
+            const errores = [];
+
+                if(stockForm.value == ""){
+                    errores.push("Debe completar el campo")
+                }
+                
+                if (errores.length > 0){           
+                    let erroresStock = document.querySelector(".erroresStock ul");
+                        errores.forEach(error => {
+                        erroresStock.innerHTML = error
+                        })
+                }
+                if (stockForm.value != ""){
+                     let erroresStock = document.querySelector(".erroresStock ul");
+                        erroresStock.innerText = ""
+                }
+        });
+})
+
+</script>
+
+<!-- footer -->
+<%- include("./partials/footer") %>
+
+</html>
